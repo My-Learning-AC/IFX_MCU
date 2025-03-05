@@ -1,0 +1,212 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.972 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf00000b2
+IOR (0x 28002000, 0x f00000b2) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x08000e6c
+IOR (0x 40210010, 0x 08000e6c) n.e.d.
+0x00002f41
+IOR (0x 40210014, 0x 00002f41) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x0000000f
+IOR (0x 4021000c, 0x 0000000f) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
+0x00000002
+IOR (0x 402020c4, 0x 00000002) n.e.d.
+
+****Part is in NORMAL Protection State****
+
+0x00fc0302
+IOR (0x 4023003c, 0x 00fc0302) n.e.d.
+IOW (0x 4023003c, 0x 00fc0302)
+0x00fc0302
+IOR (0x 4023003c, 0x 00fc0302) n.e.d.
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+IOW (0x 40237c00, 0x 00000002)
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+PC Value of Master 15 is 2
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+PC Value of Master 15 is 2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : CheckFactoryHash in NORMAL
+START
+-----------------------------------------------------------------------------------
+
+SROM_CheckFactoryHash: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 27000001)
+0x27000001
+IOR (0x 4022004c, 0x 27000001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_CheckFactoryHash: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : CheckFactoryHash in NORMAL
+___________________________________________________________________________________
+
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

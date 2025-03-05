@@ -1,0 +1,1713 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.972 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x08000e6c
+IOR (0x 40210010, 0x 08000e6c) n.e.d.
+0x00002f41
+IOR (0x 40210014, 0x 00002f41) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x0000000f
+IOR (0x 4021000c, 0x 0000000f) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+Reading SFlash row number : 56
+0x00000094
+IOR (0x 17007000, 0x 00000094) n.e.d.
+0x00000002
+IOR (0x 17007004, 0x 00000002) n.e.d.
+0x28000000
+IOR (0x 17007008, 0x 28000000) n.e.d.
+0x8a00037f
+IOR (0x 1700700c, 0x 8a00037f) n.e.d.
+0x00000000
+IOR (0x 17007010, 0x 00000000) n.e.d.
+0x8700ff49
+IOR (0x 17007014, 0x 8700ff49) n.e.d.
+0x00000081
+IOR (0x 17007018, 0x 00000081) n.e.d.
+0x8e00037f
+IOR (0x 1700701c, 0x 8e00037f) n.e.d.
+0x00000000
+IOR (0x 17007020, 0x 00000000) n.e.d.
+0x8700ff49
+IOR (0x 17007024, 0x 8700ff49) n.e.d.
+0x0000000f
+IOR (0x 17007028, 0x 0000000f) n.e.d.
+0x92b5001b
+IOR (0x 1700702c, 0x 92b5001b) n.e.d.
+0x92b50022
+IOR (0x 17007030, 0x 92b50022) n.e.d.
+0x921f004a
+IOR (0x 17007034, 0x 921f004a) n.e.d.
+0x92bf010b
+IOR (0x 17007038, 0x 92bf010b) n.e.d.
+0x921f010c
+IOR (0x 1700703c, 0x 921f010c) n.e.d.
+0x92b5004f
+IOR (0x 17007040, 0x 92b5004f) n.e.d.
+0xffff0019
+IOR (0x 17007044, 0x ffff0019) n.e.d.
+0xffff001a
+IOR (0x 17007048, 0x ffff001a) n.e.d.
+0xffff002a
+IOR (0x 1700704c, 0x ffff002a) n.e.d.
+0xffff002b
+IOR (0x 17007050, 0x ffff002b) n.e.d.
+0xffff002c
+IOR (0x 17007054, 0x ffff002c) n.e.d.
+0x92bf0043
+IOR (0x 17007058, 0x 92bf0043) n.e.d.
+0x92b5010d
+IOR (0x 1700705c, 0x 92b5010d) n.e.d.
+0xffff001e
+IOR (0x 17007060, 0x ffff001e) n.e.d.
+0x92b5000e
+IOR (0x 17007064, 0x 92b5000e) n.e.d.
+0x00000000
+IOR (0x 17007068, 0x 00000000) n.e.d.
+0x00000001
+IOR (0x 1700706c, 0x 00000001) n.e.d.
+0x00000044
+IOR (0x 17007070, 0x 00000044) n.e.d.
+0x80000024
+IOR (0x 17007074, 0x 80000024) n.e.d.
+0x00ff0004
+IOR (0x 17007078, 0x 00ff0004) n.e.d.
+0x00ff0004
+IOR (0x 1700707c, 0x 00ff0004) n.e.d.
+0x00000001
+IOR (0x 17007080, 0x 00000001) n.e.d.
+0x00000000
+IOR (0x 17007084, 0x 00000000) n.e.d.
+0x80000068
+IOR (0x 17007088, 0x 80000068) n.e.d.
+0x00010007
+IOR (0x 1700708c, 0x 00010007) n.e.d.
+0x00010007
+IOR (0x 17007090, 0x 00010007) n.e.d.
+0x00000000
+IOR (0x 17007094, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007098, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700709c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070a0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070a4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070a8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070ac, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070b0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070b4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070b8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070bc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070c0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070c4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070c8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070cc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070d0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070d4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070d8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070dc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070e0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070e4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070e8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070ec, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070f0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070f4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070f8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170070fc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007100, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007104, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007108, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700710c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007110, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007114, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007118, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700711c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007120, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007124, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007128, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700712c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007130, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007134, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007138, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700713c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007140, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007144, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007148, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700714c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007150, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007154, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007158, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700715c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007160, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007164, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007168, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700716c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007170, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007174, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007178, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700717c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007180, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007184, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007188, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700718c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007190, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007194, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007198, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700719c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071a0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071a4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071a8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071ac, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071b0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071b4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071b8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071bc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071c0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071c4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071c8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071cc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071d0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071d4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071d8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071dc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071e0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071e4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071e8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071ec, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071f0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071f4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071f8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170071fc, 0x 00000000) n.e.d.
+Reading SFlash row number : 59
+0x00000030
+IOR (0x 17007600, 0x 00000030) n.e.d.
+0x00000000
+IOR (0x 17007604, 0x 00000000) n.e.d.
+0x00000001
+IOR (0x 17007608, 0x 00000001) n.e.d.
+0x00000068
+IOR (0x 1700760c, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 17007610, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 17007614, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 17007618, 0x 00ff0007) n.e.d.
+0x00000001
+IOR (0x 1700761c, 0x 00000001) n.e.d.
+0x00000068
+IOR (0x 17007620, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 17007624, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 17007628, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 1700762c, 0x 00ff0007) n.e.d.
+0x00000000
+IOR (0x 17007630, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007634, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007638, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700763c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007640, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007644, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007648, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700764c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007650, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007654, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007658, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700765c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007660, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007664, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007668, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700766c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007670, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007674, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007678, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700767c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007680, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007684, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007688, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700768c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007690, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007694, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007698, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700769c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076a0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076a4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076a8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076ac, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076b0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076b4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076b8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076bc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076c0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076c4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076c8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076cc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076d0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076d4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076d8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076dc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076e0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076e4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076e8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076ec, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076f0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076f4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076f8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170076fc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007700, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007704, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007708, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700770c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007710, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007714, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007718, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700771c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007720, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007724, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007728, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700772c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007730, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007734, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007738, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700773c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007740, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007744, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007748, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700774c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007750, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007754, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007758, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700775c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007760, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007764, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007768, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700776c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007770, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007774, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007778, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700777c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007780, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007784, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007788, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700778c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007790, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007794, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007798, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 1700779c, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077a0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077a4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077a8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077ac, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077b0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077b4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077b8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077bc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077c0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077c4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077c8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077cc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077d0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077d4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077d8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077dc, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077e0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077e4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077e8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077ec, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077f0, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077f4, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077f8, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 170077fc, 0x 00000000) n.e.d.
+0x00000002
+IOR (0x 17007004, 0x 00000002) n.e.d.
+0x0000000f
+IOR (0x 17007028, 0x 0000000f) n.e.d.
+0x00000000
+IOR (0x 17007068, 0x 00000000) n.e.d.
+0x00000001
+IOR (0x 1700706c, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 17007080, 0x 00000001) n.e.d.
+Number of FWPU IN BPROT :0x00000000
+Number of EWPU IN BPROT :0x00000001
+Number of ERPU IN BPROT :0x00000001
+0x00000002
+IOR (0x 402020c4, 0x 00000002) n.e.d.
+
+****Part is in NORMAL Protection State****
+
+SiliconID API: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 00000100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa072e850
+IOR (0x 28002000, 0x a072e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146a: Read All FWPU in BPROT
+START
+-----------------------------------------------------------------------------------
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146a: Read All FWPU in BPROT
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146b: Read All ERPU in BPROT
+START
+-----------------------------------------------------------------------------------
+
+Read ERPU with index :0
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020000)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000044
+IOR (0x 17007070, 0x 00000044) n.e.d.
+0x00000044
+IOR (0x 28002600, 0x 00000044) n.e.d.
+INFO: 0x 00000044, PASS
+
+0x80000024
+IOR (0x 17007074, 0x 80000024) n.e.d.
+0x80000024
+IOR (0x 28002604, 0x 80000024) n.e.d.
+INFO: 0x 80000024, PASS
+
+0x00ff0004
+IOR (0x 17007078, 0x 00ff0004) n.e.d.
+0x00ff0004
+IOR (0x 28002608, 0x 00ff0004) n.e.d.
+INFO: 0x 00ff0004, PASS
+
+0x00ff0004
+IOR (0x 1700707c, 0x 00ff0004) n.e.d.
+0x00ff0004
+IOR (0x 2800260c, 0x 00ff0004) n.e.d.
+INFO: 0x 00ff0004, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146b: Read All ERPU in BPROT
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146c: Read All EWPU in BPROT
+START
+-----------------------------------------------------------------------------------
+
+Read EWPU with index:0
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010000)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000000
+IOR (0x 17007084, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 28002600, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+0x80000068
+IOR (0x 17007088, 0x 80000068) n.e.d.
+0x80000068
+IOR (0x 28002604, 0x 80000068) n.e.d.
+INFO: 0x 80000068, PASS
+
+0x00010007
+IOR (0x 1700708c, 0x 00010007) n.e.d.
+0x00010007
+IOR (0x 28002608, 0x 00010007) n.e.d.
+INFO: 0x 00010007, PASS
+
+0x00010007
+IOR (0x 17007090, 0x 00010007) n.e.d.
+0x00010007
+IOR (0x 2800260c, 0x 00010007) n.e.d.
+INFO: 0x 00010007, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146c: Read All EWPU in BPROT
+___________________________________________________________________________________
+
+0x00000000
+IOR (0x 17007604, 0x 00000000) n.e.d.
+0x00000001
+IOR (0x 17007608, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 1700761c, 0x 00000001) n.e.d.
+Number of FWPU IN APROT :0x00000000
+Number of EWPU IN APROT :0x00000001
+Number of ERPU IN APROT :0x00000001
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146d: Read All FWPU in APROT
+START
+-----------------------------------------------------------------------------------
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146d: Read All FWPU in APROT
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146e: Read all ERPU in APROT
+START
+-----------------------------------------------------------------------------------
+
+Read ERPU with index :0x00000001
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 1700760c, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007610, 0x 80000018) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+INFO: 0x 80000018, PASS
+
+0x00ff0007
+IOR (0x 17007614, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 17007618, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146e: Read all ERPU in APROT
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146f: Read all EWPU in APROT
+START
+-----------------------------------------------------------------------------------
+
+Read EWPU with index :0x00000001
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 17007620, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007624, 0x 80000018) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+INFO: 0x 80000018, PASS
+
+0x00ff0007
+IOR (0x 17007628, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 1700762c, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146f: Read all EWPU in APROT
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146g: WriteSWPU
+START
+-----------------------------------------------------------------------------------
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146g: WriteSWPU
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146h: WriteSWPU
+START
+-----------------------------------------------------------------------------------
+
+EWPU_APROT :0x00000001
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d210100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 17007620, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007624, 0x 80000018) n.e.d.
+0x00000018
+IOR (0x 28002604, 0x 00000018) n.e.d.
+INFO: 0x 00000018, PASS
+
+0x00ff0007
+IOR (0x 17007628, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 1700762c, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x00000018
+IOR (0x 28002604, 0x 00000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 00000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d110100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 17007620, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007624, 0x 80000018) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+INFO: 0x 80000018, PASS
+
+0x00ff0007
+IOR (0x 17007628, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 1700762c, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 17007620, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007624, 0x 80000018) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+INFO: 0x 80000018, PASS
+
+0x00ff0007
+IOR (0x 17007628, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 1700762c, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146h: WriteSWPU
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test AA146i: WriteSWPU
+START
+-----------------------------------------------------------------------------------
+
+FWPU :0x00000001
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d220100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 1700760c, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007610, 0x 80000018) n.e.d.
+0x00000018
+IOR (0x 28002604, 0x 00000018) n.e.d.
+INFO: 0x 00000018, PASS
+
+0x00ff0007
+IOR (0x 17007614, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 17007618, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x00000018
+IOR (0x 28002604, 0x 00000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 00000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d120100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 1700760c, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007610, 0x 80000018) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+INFO: 0x 80000018, PASS
+
+0x00ff0007
+IOR (0x 17007614, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 17007618, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d020100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00000068
+IOR (0x 1700760c, 0x 00000068) n.e.d.
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+INFO: 0x 00000068, PASS
+
+0x80000018
+IOR (0x 17007610, 0x 80000018) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+INFO: 0x 80000018, PASS
+
+0x00ff0007
+IOR (0x 17007614, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+0x00ff0007
+IOR (0x 17007618, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+INFO: 0x 00ff0007, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test AA146i: WriteSWPU
+___________________________________________________________________________________
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d000000)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000c2, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d020200)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000c2, PASS
+
+0x00000068
+IOR (0x 28002600, 0x 00000068) n.e.d.
+0x80000018
+IOR (0x 28002604, 0x 80000018) n.e.d.
+0x00ff0007
+IOR (0x 28002608, 0x 00ff0007) n.e.d.
+0x00ff0007
+IOR (0x 2800260c, 0x 00ff0007) n.e.d.
+SROM_WriteSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+IOW (0x 28002008, 0x 00000068)
+IOW (0x 2800200c, 0x 80000018)
+IOW (0x 28002010, 0x 00ff0007)
+IOW (0x 28002014, 0x 00ff0007)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2d010200)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_WriteSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000c2, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c000000)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000c2, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c020200)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000c2, PASS
+
+SROM_ReadSwpu API: Start
+IOW (0x 28002004, 0x 28002600)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2c010200)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_ReadSwpu API: End
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000c2, PASS
+
+Execution time is 4 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

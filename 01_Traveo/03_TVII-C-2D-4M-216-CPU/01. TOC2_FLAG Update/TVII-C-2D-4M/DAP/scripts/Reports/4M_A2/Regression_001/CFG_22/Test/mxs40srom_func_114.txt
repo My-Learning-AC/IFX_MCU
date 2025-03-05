@@ -1,0 +1,828 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.975 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x28002010
+IOR (0x 40210010, 0x 28002010) n.e.d.
+0x00000065
+IOR (0x 40210014, 0x 00000065) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x0000003b
+IOR (0x 4021000c, 0x 0000003b) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 1
+DUT name: 0x70
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x28002010
+IOR (0x 40210010, 0x 28002010) n.e.d.
+0x00000065
+IOR (0x 40210014, 0x 00000065) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x0000003b
+IOR (0x 4021000c, 0x 0000003b) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : Read TOC1 contents into a list: 
+START
+-----------------------------------------------------------------------------------
+
+Reading SFlash row number : 60
+0x00000038
+IOR (0x 17007800, 0x 00000038) n.e.d.
+0x01211219
+IOR (0x 17007804, 0x 01211219) n.e.d.
+0xffffffff
+IOR (0x 17007808, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700780c, 0x ffffffff) n.e.d.
+0x00000009
+IOR (0x 17007810, 0x 00000009) n.e.d.
+0x00000000
+IOR (0x 17007814, 0x 00000000) n.e.d.
+0x17000600
+IOR (0x 17007818, 0x 17000600) n.e.d.
+0x17002000
+IOR (0x 1700781c, 0x 17002000) n.e.d.
+0x00000000
+IOR (0x 17007820, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 17007824, 0x 00000000) n.e.d.
+0x17007000
+IOR (0x 17007828, 0x 17007000) n.e.d.
+0x16000000
+IOR (0x 1700782c, 0x 16000000) n.e.d.
+0x00000000
+IOR (0x 17007830, 0x 00000000) n.e.d.
+0x17001c00
+IOR (0x 17007834, 0x 17001c00) n.e.d.
+0xffffffff
+IOR (0x 17007838, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700783c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007840, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007844, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007848, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700784c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007850, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007854, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007858, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700785c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007860, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007864, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007868, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700786c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007870, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007874, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007878, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700787c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007880, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007884, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007888, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700788c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007890, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007894, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007898, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700789c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170078fc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007900, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007904, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007908, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700790c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007910, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007914, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007918, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700791c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007920, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007924, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007928, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700792c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007930, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007934, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007938, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700793c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007940, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007944, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007948, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700794c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007950, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007954, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007958, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700795c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007960, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007964, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007968, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700796c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007970, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007974, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007978, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700797c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007980, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007984, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007988, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700798c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007990, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007994, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17007998, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700799c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170079fc, 0x ffffffff) n.e.d.
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : Read TOC1 contents into a list: 
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : Compare TOC1 contents against the expected values: 
+START
+-----------------------------------------------------------------------------------
+
+INFO: 0x 00000038, PASS
+
+INFO: 0x 01211219, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x 00000009, PASS
+
+INFO: 0x 00000000, PASS
+
+INFO: 0x 17000600, PASS
+
+INFO: 0x 17002000, PASS
+
+INFO: 0x 00000000, PASS
+
+INFO: 0x 00000000, PASS
+
+INFO: 0x 17007000, PASS
+
+INFO: 0x 16000000, PASS
+
+INFO: 0x 00000000, PASS
+
+INFO: 0x 17001c00, expected 0x ffffffff, FAIL
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+INFO: 0x ffffffff, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : Compare TOC1 contents against the expected values: 
+___________________________________________________________________________________
+
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

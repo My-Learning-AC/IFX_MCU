@@ -1,0 +1,229 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.975 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf0000004
+IOR (0x 28002000, 0x f0000004) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 402020c4, 0x 00000001) n.e.d.
+
+****Part is in VIRGIN Protection State****
+
+0x00000001
+IOR (0x 402020c4, 0x 00000001) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test func_135: SROM_ReadFuseByteMargin API: Low resistance,-50% from nominal 
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByteMargin: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2b000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000029
+IOR (0x 28002000, 0x a0000029) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByteMargin: End
+INFO: 0x a0000029, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test func_135: SROM_ReadFuseByteMargin API: Low resistance,-50% from nominal 
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test func_135: SROM_ReadFuseByteMargin API: Nominal resistance(default read condition) 
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByteMargin: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2b100000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000029
+IOR (0x 28002000, 0x a0000029) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByteMargin: End
+INFO: 0x a0000029, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test func_135: SROM_ReadFuseByteMargin API: Nominal resistance(default read condition) 
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test func_135: SROM_ReadFuseByteMargin API: High resistance (+50% from nominal) 
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByteMargin: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2b200000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000029
+IOR (0x 28002000, 0x a0000029) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByteMargin: End
+INFO: 0x a0000029, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test func_135: SROM_ReadFuseByteMargin API: High resistance (+50% from nominal) 
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test func_135: SROM_ReadFuseByteMargin API: Higher resistance(+100%  from nominal)
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByteMargin: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2b300000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000029
+IOR (0x 28002000, 0x a0000029) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByteMargin: End
+INFO: 0x a0000029, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test func_135: SROM_ReadFuseByteMargin API: Higher resistance(+100%  from nominal)
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test func_135: SROM_ReadFuseByteMargin API: Higher resistance(+100%  from nominal) and Invalid fuse address
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByteMargin: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2b312800)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 28002000, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_ReadFuseByteMargin: End
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test func_135: SROM_ReadFuseByteMargin API: Higher resistance(+100%  from nominal) and Invalid fuse address
+___________________________________________________________________________________
+
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

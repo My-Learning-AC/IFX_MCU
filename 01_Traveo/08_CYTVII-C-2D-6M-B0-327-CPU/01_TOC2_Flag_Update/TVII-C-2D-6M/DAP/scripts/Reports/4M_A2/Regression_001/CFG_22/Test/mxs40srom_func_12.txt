@@ -1,0 +1,497 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.974 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf000000f
+IOR (0x 28002000, 0x f000000f) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x6c1002aa
+IOR (0x 40210010, 0x 6c1002aa) n.e.d.
+0xb18e8765
+IOR (0x 40210014, 0x b18e8765) n.e.d.
+0x4a95fd2e
+IOR (0x 40210018, 0x 4a95fd2e) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT STATUS 
+
+0x00000012
+IOR (0x 4021000c, 0x 00000012) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+SiliconID API: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 00000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa051e850
+IOR (0x 28002000, 0x a051e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+retrunVal = 0xa051e850
+protectionState = 1
+lifeCycleStage = 5
+
+****Part is in VIRGIN Protection State****
+
+
+****Part is in SORT lifecycle State****
+
+
+Protection State is 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test mxs40srom_func_12: ReadFuseByte: VALIDATE API behavior with invalid efuse addr
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03008001)
+0x03008001
+IOR (0x 4022004c, 0x 03008001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 4022004c, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_ReadFuseByte: End
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test mxs40srom_func_12: ReadFuseByte: VALIDATE API behavior with invalid efuse addr
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test mxs40srom_func_12: ReadFuseByte: VALIDATE API behavior with invalid efuse addr
+START
+-----------------------------------------------------------------------------------
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 03008100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 28002000, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_ReadFuseByte: End
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test mxs40srom_func_12: ReadFuseByte: VALIDATE API behavior with invalid efuse addr
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test mxs40srom_func_12a: BLOWFUSEBIT: VALIDATE API behavior with invalid byte_addr_offset
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01203001)
+0x01203001
+IOR (0x 4022004c, 0x 01203001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 4022004c, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_BlowFuseBit: End, result = 0xf0000002
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test mxs40srom_func_12a: BLOWFUSEBIT: VALIDATE API behavior with invalid byte_addr_offset
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test mxs40srom_func_12b: BLOWFUSEBIT: VALIDATE API behavior with invalid byte_addr_offset
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 01203000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 28002000, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_BlowFuseBit: End, result = 0xf0000002
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test mxs40srom_func_12b: BLOWFUSEBIT: VALIDATE API behavior with invalid byte_addr_offset
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test mxs40srom_func_12c: BLOWFUSEBIT: VALIDATE API behavior with invalid macro
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01004001)
+0x01004001
+IOR (0x 4022004c, 0x 01004001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 4022004c, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_BlowFuseBit: End, result = 0xf0000002
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test mxs40srom_func_12c: BLOWFUSEBIT: VALIDATE API behavior with invalid macro
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test mxs40srom_func_12d: BLOWFUSEBIT: VALIDATE API behavior with invalid macro
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 01203000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000002
+IOR (0x 28002000, 0x f0000002) n.e.d.
+Srom_ReturnCheck: END
+Invalid EFuse Address !
+
+SROM_BlowFuseBit: End, result = 0xf0000002
+INFO: 0x f0000002, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test mxs40srom_func_12d: BLOWFUSEBIT: VALIDATE API behavior with invalid macro
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x6c1002aa
+IOR (0x 40210010, 0x 6c1002aa) n.e.d.
+0xb18e8765
+IOR (0x 40210014, 0x b18e8765) n.e.d.
+0x4a95fd2e
+IOR (0x 40210018, 0x 4a95fd2e) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT STATUS 
+
+0x00000012
+IOR (0x 4021000c, 0x 00000012) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

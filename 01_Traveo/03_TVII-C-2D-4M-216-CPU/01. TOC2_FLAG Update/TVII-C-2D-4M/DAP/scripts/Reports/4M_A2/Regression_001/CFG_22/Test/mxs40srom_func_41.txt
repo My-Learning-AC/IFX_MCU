@@ -1,0 +1,1664 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.975 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x28002008
+IOR (0x 40210010, 0x 28002008) n.e.d.
+0x000000e1
+IOR (0x 40210014, 0x 000000e1) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x0000003a
+IOR (0x 4021000c, 0x 0000003a) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 402020c4, 0x 00000001) n.e.d.
+
+****Part is in VIRGIN Protection State****
+
+Reading SFlash row number : 1
+0xb07c00ff
+IOR (0x 17000200, 0x b07c00ff) n.e.d.
+0x40261248
+IOR (0x 17000204, 0x 40261248) n.e.d.
+0x80000000
+IOR (0x 17000208, 0x 80000000) n.e.d.
+0x202080b0
+IOR (0x 1700020c, 0x 202080b0) n.e.d.
+0x85000040
+IOR (0x 17000210, 0x 85000040) n.e.d.
+0x0080330e
+IOR (0x 17000214, 0x 0080330e) n.e.d.
+0x00000002
+IOR (0x 17000218, 0x 00000002) n.e.d.
+0x00000062
+IOR (0x 1700021c, 0x 00000062) n.e.d.
+0x00000062
+IOR (0x 17000220, 0x 00000062) n.e.d.
+0x00000062
+IOR (0x 17000224, 0x 00000062) n.e.d.
+0x060f0078
+IOR (0x 17000228, 0x 060f0078) n.e.d.
+0x90000023
+IOR (0x 1700022c, 0x 90000023) n.e.d.
+0x00da50f4
+IOR (0x 17000230, 0x 00da50f4) n.e.d.
+0x00000000
+IOR (0x 17000234, 0x 00000000) n.e.d.
+0xa2230024
+IOR (0x 17000238, 0x a2230024) n.e.d.
+0x80a050ad
+IOR (0x 1700023c, 0x 80a050ad) n.e.d.
+0x00000521
+IOR (0x 17000240, 0x 00000521) n.e.d.
+0x00000050
+IOR (0x 17000244, 0x 00000050) n.e.d.
+0x001f0000
+IOR (0x 17000248, 0x 001f0000) n.e.d.
+0x8000031f
+IOR (0x 1700024c, 0x 8000031f) n.e.d.
+0x262064b0
+IOR (0x 17000250, 0x 262064b0) n.e.d.
+0x00280040
+IOR (0x 17000254, 0x 00280040) n.e.d.
+0x119c3c00
+IOR (0x 17000258, 0x 119c3c00) n.e.d.
+0x8a280724
+IOR (0x 1700025c, 0x 8a280724) n.e.d.
+0x218005c7
+IOR (0x 17000260, 0x 218005c7) n.e.d.
+0x22000648
+IOR (0x 17000264, 0x 22000648) n.e.d.
+0x22000004
+IOR (0x 17000268, 0x 22000004) n.e.d.
+0x22000649
+IOR (0x 1700026c, 0x 22000649) n.e.d.
+0x218005c8
+IOR (0x 17000270, 0x 218005c8) n.e.d.
+0x23000005
+IOR (0x 17000274, 0x 23000005) n.e.d.
+0x0667080e
+IOR (0x 17000278, 0x 0667080e) n.e.d.
+0x00000522
+IOR (0x 1700027c, 0x 00000522) n.e.d.
+0x000000a2
+IOR (0x 17000280, 0x 000000a2) n.e.d.
+0x000000a2
+IOR (0x 17000284, 0x 000000a2) n.e.d.
+0x00000022
+IOR (0x 17000288, 0x 00000022) n.e.d.
+0x80000123
+IOR (0x 1700028c, 0x 80000123) n.e.d.
+0x262064b0
+IOR (0x 17000290, 0x 262064b0) n.e.d.
+0x00200040
+IOR (0x 17000294, 0x 00200040) n.e.d.
+0x129c3200
+IOR (0x 17000298, 0x 129c3200) n.e.d.
+0x99000000
+IOR (0x 1700029c, 0x 99000000) n.e.d.
+0x99005000
+IOR (0x 170002a0, 0x 99005000) n.e.d.
+0x99000000
+IOR (0x 170002a4, 0x 99000000) n.e.d.
+0x00010039
+IOR (0x 170002a8, 0x 00010039) n.e.d.
+0x71990030
+IOR (0x 170002ac, 0x 71990030) n.e.d.
+0x0003fc00
+IOR (0x 170002b0, 0x 0003fc00) n.e.d.
+0x71990680
+IOR (0x 170002b4, 0x 71990680) n.e.d.
+0x0003fc00
+IOR (0x 170002b8, 0x 0003fc00) n.e.d.
+0x71990000
+IOR (0x 170002bc, 0x 71990000) n.e.d.
+0x0003fc00
+IOR (0x 170002c0, 0x 0003fc00) n.e.d.
+0x719906b0
+IOR (0x 170002c4, 0x 719906b0) n.e.d.
+0x0003fc00
+IOR (0x 170002c8, 0x 0003fc00) n.e.d.
+0x71990030
+IOR (0x 170002cc, 0x 71990030) n.e.d.
+0x7103fc00
+IOR (0x 170002d0, 0x 7103fc00) n.e.d.
+0x0069cc80
+IOR (0x 170002d4, 0x 0069cc80) n.e.d.
+0x00000100
+IOR (0x 170002d8, 0x 00000100) n.e.d.
+0xb2000000
+IOR (0x 170002dc, 0x b2000000) n.e.d.
+0x4027ff00
+IOR (0x 170002e0, 0x 4027ff00) n.e.d.
+0x00001217
+IOR (0x 170002e4, 0x 00001217) n.e.d.
+0x00100000
+IOR (0x 170002e8, 0x 00100000) n.e.d.
+0x800000f3
+IOR (0x 170002ec, 0x 800000f3) n.e.d.
+0x261248b0
+IOR (0x 170002f0, 0x 261248b0) n.e.d.
+0x00000040
+IOR (0x 170002f4, 0x 00000040) n.e.d.
+0x20083000
+IOR (0x 170002f8, 0x 20083000) n.e.d.
+0x00002900
+IOR (0x 170002fc, 0x 00002900) n.e.d.
+0xffffffff
+IOR (0x 17000300, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000304, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000308, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700030c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000310, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000314, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000318, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700031c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000320, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000324, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000328, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700032c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000330, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000334, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000338, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700033c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000340, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000344, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000348, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700034c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000350, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000354, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000358, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700035c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000360, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000364, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000368, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700036c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000370, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000374, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000378, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700037c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000380, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000384, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000388, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700038c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000390, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000394, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000398, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700039c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170003fc, 0x ffffffff) n.e.d.
+Row Checksum is 0x000130fe
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test  SROM_Calibrate: Restore Hash on trims and call Calibrate API
+START
+-----------------------------------------------------------------------------------
+
+SROM_Calibrate: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 13000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_Calibrate: End
+Calibrate API Returned success! 0xa0000000
+SROM_Calibrate: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 13000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_Calibrate: End
+Changing hashValue to valid hash : PASSED, Check logs
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test  SROM_Calibrate: Restore Hash on trims and call Calibrate API
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test  SROM_Calibrate: EnableEfuse = 0
+START
+-----------------------------------------------------------------------------------
+
+SROM_Calibrate: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 13000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_Calibrate: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test  SROM_Calibrate: EnableEfuse = 0
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test  Corrupt Hash on Trims
+START
+-----------------------------------------------------------------------------------
+
+0xb07c00ff
+IOR (0x 17000200, 0x b07c00ff) n.e.d.
+0xb07c00ff
+IOR (0x 17000200, 0x b07c00ff) n.e.d.
+Changing Trim Value at 0x17000200 from 0xB07C00FF to 0xB0FF00FF
+0xb07c00ff
+0x40261248
+0x80000000
+0x202080b0
+0x85000040
+0x0080330e
+0x00000002
+0x00000062
+0x00000062
+0x00000062
+0x060f0078
+0x90000023
+0x00da50f4
+0x00000000
+0xa2230024
+0x80a050ad
+0x00000521
+0x00000050
+0x001f0000
+0x8000031f
+0x262064b0
+0x00280040
+0x119c3c00
+0x8a280724
+0x218005c7
+0x22000648
+0x22000004
+0x22000649
+0x218005c8
+0x23000005
+0x0667080e
+0x00000522
+0x000000a2
+0x000000a2
+0x00000022
+0x80000123
+0x262064b0
+0x00200040
+0x129c3200
+0x99000000
+0x99005000
+0x99000000
+0x00010039
+0x71990030
+0x0003fc00
+0x71990680
+0x0003fc00
+0x71990000
+0x0003fc00
+0x719906b0
+0x0003fc00
+0x71990030
+0x7103fc00
+0x0069cc80
+0x00000100
+0xb2000000
+0x4027ff00
+0x00001217
+0x00100000
+0x800000f3
+0x261248b0
+0x00000040
+0x20083000
+0x00002900
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+offsetWordAddress is 0
+Changed word: 0xB0FF00FF
+WriteRow API: Start
+Num of words is 128
+Populate SRAM with  dataIntegCheck if needed
+IOW (0x 28002004, 0x 00000000)
+Populate SRAM with flash address:0x17000200
+
+IOW (0x 28002008, 0x 17000200)
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x b0ff00ff)
+IOW (0x 28002604, 0x 40261248)
+IOW (0x 28002608, 0x 80000000)
+IOW (0x 2800260c, 0x 202080b0)
+IOW (0x 28002610, 0x 85000040)
+IOW (0x 28002614, 0x 0080330e)
+IOW (0x 28002618, 0x 00000002)
+IOW (0x 2800261c, 0x 00000062)
+IOW (0x 28002620, 0x 00000062)
+IOW (0x 28002624, 0x 00000062)
+IOW (0x 28002628, 0x 060f0078)
+IOW (0x 2800262c, 0x 90000023)
+IOW (0x 28002630, 0x 00da50f4)
+IOW (0x 28002634, 0x 00000000)
+IOW (0x 28002638, 0x a2230024)
+IOW (0x 2800263c, 0x 80a050ad)
+IOW (0x 28002640, 0x 00000521)
+IOW (0x 28002644, 0x 00000050)
+IOW (0x 28002648, 0x 001f0000)
+IOW (0x 2800264c, 0x 8000031f)
+IOW (0x 28002650, 0x 262064b0)
+IOW (0x 28002654, 0x 00280040)
+IOW (0x 28002658, 0x 119c3c00)
+IOW (0x 2800265c, 0x 8a280724)
+IOW (0x 28002660, 0x 218005c7)
+IOW (0x 28002664, 0x 22000648)
+IOW (0x 28002668, 0x 22000004)
+IOW (0x 2800266c, 0x 22000649)
+IOW (0x 28002670, 0x 218005c8)
+IOW (0x 28002674, 0x 23000005)
+IOW (0x 28002678, 0x 0667080e)
+IOW (0x 2800267c, 0x 00000522)
+IOW (0x 28002680, 0x 000000a2)
+IOW (0x 28002684, 0x 000000a2)
+IOW (0x 28002688, 0x 00000022)
+IOW (0x 2800268c, 0x 80000123)
+IOW (0x 28002690, 0x 262064b0)
+IOW (0x 28002694, 0x 00200040)
+IOW (0x 28002698, 0x 129c3200)
+IOW (0x 2800269c, 0x 99000000)
+IOW (0x 280026a0, 0x 99005000)
+IOW (0x 280026a4, 0x 99000000)
+IOW (0x 280026a8, 0x 00010039)
+IOW (0x 280026ac, 0x 71990030)
+IOW (0x 280026b0, 0x 0003fc00)
+IOW (0x 280026b4, 0x 71990680)
+IOW (0x 280026b8, 0x 0003fc00)
+IOW (0x 280026bc, 0x 71990000)
+IOW (0x 280026c0, 0x 0003fc00)
+IOW (0x 280026c4, 0x 719906b0)
+IOW (0x 280026c8, 0x 0003fc00)
+IOW (0x 280026cc, 0x 71990030)
+IOW (0x 280026d0, 0x 7103fc00)
+IOW (0x 280026d4, 0x 0069cc80)
+IOW (0x 280026d8, 0x 00000100)
+IOW (0x 280026dc, 0x b2000000)
+IOW (0x 280026e0, 0x 4027ff00)
+IOW (0x 280026e4, 0x 00001217)
+IOW (0x 280026e8, 0x 00100000)
+IOW (0x 280026ec, 0x 800000f3)
+IOW (0x 280026f0, 0x 261248b0)
+IOW (0x 280026f4, 0x 00000040)
+IOW (0x 280026f8, 0x 20083000)
+IOW (0x 280026fc, 0x 00002900)
+IOW (0x 28002700, 0x ffffffff)
+IOW (0x 28002704, 0x ffffffff)
+IOW (0x 28002708, 0x ffffffff)
+IOW (0x 2800270c, 0x ffffffff)
+IOW (0x 28002710, 0x ffffffff)
+IOW (0x 28002714, 0x ffffffff)
+IOW (0x 28002718, 0x ffffffff)
+IOW (0x 2800271c, 0x ffffffff)
+IOW (0x 28002720, 0x ffffffff)
+IOW (0x 28002724, 0x ffffffff)
+IOW (0x 28002728, 0x ffffffff)
+IOW (0x 2800272c, 0x ffffffff)
+IOW (0x 28002730, 0x ffffffff)
+IOW (0x 28002734, 0x ffffffff)
+IOW (0x 28002738, 0x ffffffff)
+IOW (0x 2800273c, 0x ffffffff)
+IOW (0x 28002740, 0x ffffffff)
+IOW (0x 28002744, 0x ffffffff)
+IOW (0x 28002748, 0x ffffffff)
+IOW (0x 2800274c, 0x ffffffff)
+IOW (0x 28002750, 0x ffffffff)
+IOW (0x 28002754, 0x ffffffff)
+IOW (0x 28002758, 0x ffffffff)
+IOW (0x 2800275c, 0x ffffffff)
+IOW (0x 28002760, 0x ffffffff)
+IOW (0x 28002764, 0x ffffffff)
+IOW (0x 28002768, 0x ffffffff)
+IOW (0x 2800276c, 0x ffffffff)
+IOW (0x 28002770, 0x ffffffff)
+IOW (0x 28002774, 0x ffffffff)
+IOW (0x 28002778, 0x ffffffff)
+IOW (0x 2800277c, 0x ffffffff)
+IOW (0x 28002780, 0x ffffffff)
+IOW (0x 28002784, 0x ffffffff)
+IOW (0x 28002788, 0x ffffffff)
+IOW (0x 2800278c, 0x ffffffff)
+IOW (0x 28002790, 0x ffffffff)
+IOW (0x 28002794, 0x ffffffff)
+IOW (0x 28002798, 0x ffffffff)
+IOW (0x 2800279c, 0x ffffffff)
+IOW (0x 280027a0, 0x ffffffff)
+IOW (0x 280027a4, 0x ffffffff)
+IOW (0x 280027a8, 0x ffffffff)
+IOW (0x 280027ac, 0x ffffffff)
+IOW (0x 280027b0, 0x ffffffff)
+IOW (0x 280027b4, 0x ffffffff)
+IOW (0x 280027b8, 0x ffffffff)
+IOW (0x 280027bc, 0x ffffffff)
+IOW (0x 280027c0, 0x ffffffff)
+IOW (0x 280027c4, 0x ffffffff)
+IOW (0x 280027c8, 0x ffffffff)
+IOW (0x 280027cc, 0x ffffffff)
+IOW (0x 280027d0, 0x ffffffff)
+IOW (0x 280027d4, 0x ffffffff)
+IOW (0x 280027d8, 0x ffffffff)
+IOW (0x 280027dc, 0x ffffffff)
+IOW (0x 280027e0, 0x ffffffff)
+IOW (0x 280027e4, 0x ffffffff)
+IOW (0x 280027e8, 0x ffffffff)
+IOW (0x 280027ec, 0x ffffffff)
+IOW (0x 280027f0, 0x ffffffff)
+IOW (0x 280027f4, 0x ffffffff)
+IOW (0x 280027f8, 0x ffffffff)
+IOW (0x 280027fc, 0x ffffffff)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 05000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 5: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 6: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 7: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 8: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 9: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 10: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 11: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 12: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 13: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 14: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 15: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 16: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 17: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 18: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 19: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 20: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 21: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 22: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 23: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 24: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 25: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 26: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 27: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 28: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 29: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 30: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 31: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 32: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 33: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 34: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 35: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 36: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 37: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 38: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 39: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 40: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 41: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 42: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 43: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 44: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 45: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 46: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 47: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 48: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 49: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 50: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 51: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 52: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 53: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 54: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 55: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 56: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 57: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 58: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 59: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 60: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 61: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 62: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 63: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 64: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 65: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 66: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 67: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 68: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 69: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 70: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 71: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 72: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 73: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 74: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 75: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 76: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 77: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+WriteRow API: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test  Corrupt Hash on Trims
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test  SROM_Calibrate: When hash on trims is corrupted
+START
+-----------------------------------------------------------------------------------
+
+SROM_Calibrate: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 13000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf100007c
+IOR (0x 28002000, 0x f100007c) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+SROM_Calibrate: End
+INFO: 0x f1000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test  SROM_Calibrate: When hash on trims is corrupted
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test  SROM_Calibrate: Restore Hash on trims and call Calibrate API
+START
+-----------------------------------------------------------------------------------
+
+SROM_Calibrate: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 13000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf100007c
+IOR (0x 28002000, 0x f100007c) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+SROM_Calibrate: End
+Calibrate API Returned STATUS_HASH_FAILED(0xF100007C)
+Restoring Proper HashValue to 0x7C
+Changing hashValue to 0x7C
+0xb0ff00ff
+0x40261248
+0x80000000
+0x202080b0
+0x85000040
+0x0080330e
+0x00000002
+0x00000062
+0x00000062
+0x00000062
+0x060f0078
+0x90000023
+0x00da50f4
+0x00000000
+0xa2230024
+0x80a050ad
+0x00000521
+0x00000050
+0x001f0000
+0x8000031f
+0x262064b0
+0x00280040
+0x119c3c00
+0x8a280724
+0x218005c7
+0x22000648
+0x22000004
+0x22000649
+0x218005c8
+0x23000005
+0x0667080e
+0x00000522
+0x000000a2
+0x000000a2
+0x00000022
+0x80000123
+0x262064b0
+0x00200040
+0x129c3200
+0x99000000
+0x99005000
+0x99000000
+0x00010039
+0x71990030
+0x0003fc00
+0x71990680
+0x0003fc00
+0x71990000
+0x0003fc00
+0x719906b0
+0x0003fc00
+0x71990030
+0x7103fc00
+0x0069cc80
+0x00000100
+0xb2000000
+0x4027ff00
+0x00001217
+0x00100000
+0x800000f3
+0x261248b0
+0x00000040
+0x20083000
+0x00002900
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+0xffffffff
+Changed word: 0xB07C00FF
+WriteRow API: Start
+Num of words is 128
+Populate SRAM with  dataIntegCheck if needed
+IOW (0x 28002004, 0x 00000000)
+Populate SRAM with flash address:0x17000200
+
+IOW (0x 28002008, 0x 17000200)
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x b07c00ff)
+IOW (0x 28002604, 0x 40261248)
+IOW (0x 28002608, 0x 80000000)
+IOW (0x 2800260c, 0x 202080b0)
+IOW (0x 28002610, 0x 85000040)
+IOW (0x 28002614, 0x 0080330e)
+IOW (0x 28002618, 0x 00000002)
+IOW (0x 2800261c, 0x 00000062)
+IOW (0x 28002620, 0x 00000062)
+IOW (0x 28002624, 0x 00000062)
+IOW (0x 28002628, 0x 060f0078)
+IOW (0x 2800262c, 0x 90000023)
+IOW (0x 28002630, 0x 00da50f4)
+IOW (0x 28002634, 0x 00000000)
+IOW (0x 28002638, 0x a2230024)
+IOW (0x 2800263c, 0x 80a050ad)
+IOW (0x 28002640, 0x 00000521)
+IOW (0x 28002644, 0x 00000050)
+IOW (0x 28002648, 0x 001f0000)
+IOW (0x 2800264c, 0x 8000031f)
+IOW (0x 28002650, 0x 262064b0)
+IOW (0x 28002654, 0x 00280040)
+IOW (0x 28002658, 0x 119c3c00)
+IOW (0x 2800265c, 0x 8a280724)
+IOW (0x 28002660, 0x 218005c7)
+IOW (0x 28002664, 0x 22000648)
+IOW (0x 28002668, 0x 22000004)
+IOW (0x 2800266c, 0x 22000649)
+IOW (0x 28002670, 0x 218005c8)
+IOW (0x 28002674, 0x 23000005)
+IOW (0x 28002678, 0x 0667080e)
+IOW (0x 2800267c, 0x 00000522)
+IOW (0x 28002680, 0x 000000a2)
+IOW (0x 28002684, 0x 000000a2)
+IOW (0x 28002688, 0x 00000022)
+IOW (0x 2800268c, 0x 80000123)
+IOW (0x 28002690, 0x 262064b0)
+IOW (0x 28002694, 0x 00200040)
+IOW (0x 28002698, 0x 129c3200)
+IOW (0x 2800269c, 0x 99000000)
+IOW (0x 280026a0, 0x 99005000)
+IOW (0x 280026a4, 0x 99000000)
+IOW (0x 280026a8, 0x 00010039)
+IOW (0x 280026ac, 0x 71990030)
+IOW (0x 280026b0, 0x 0003fc00)
+IOW (0x 280026b4, 0x 71990680)
+IOW (0x 280026b8, 0x 0003fc00)
+IOW (0x 280026bc, 0x 71990000)
+IOW (0x 280026c0, 0x 0003fc00)
+IOW (0x 280026c4, 0x 719906b0)
+IOW (0x 280026c8, 0x 0003fc00)
+IOW (0x 280026cc, 0x 71990030)
+IOW (0x 280026d0, 0x 7103fc00)
+IOW (0x 280026d4, 0x 0069cc80)
+IOW (0x 280026d8, 0x 00000100)
+IOW (0x 280026dc, 0x b2000000)
+IOW (0x 280026e0, 0x 4027ff00)
+IOW (0x 280026e4, 0x 00001217)
+IOW (0x 280026e8, 0x 00100000)
+IOW (0x 280026ec, 0x 800000f3)
+IOW (0x 280026f0, 0x 261248b0)
+IOW (0x 280026f4, 0x 00000040)
+IOW (0x 280026f8, 0x 20083000)
+IOW (0x 280026fc, 0x 00002900)
+IOW (0x 28002700, 0x ffffffff)
+IOW (0x 28002704, 0x ffffffff)
+IOW (0x 28002708, 0x ffffffff)
+IOW (0x 2800270c, 0x ffffffff)
+IOW (0x 28002710, 0x ffffffff)
+IOW (0x 28002714, 0x ffffffff)
+IOW (0x 28002718, 0x ffffffff)
+IOW (0x 2800271c, 0x ffffffff)
+IOW (0x 28002720, 0x ffffffff)
+IOW (0x 28002724, 0x ffffffff)
+IOW (0x 28002728, 0x ffffffff)
+IOW (0x 2800272c, 0x ffffffff)
+IOW (0x 28002730, 0x ffffffff)
+IOW (0x 28002734, 0x ffffffff)
+IOW (0x 28002738, 0x ffffffff)
+IOW (0x 2800273c, 0x ffffffff)
+IOW (0x 28002740, 0x ffffffff)
+IOW (0x 28002744, 0x ffffffff)
+IOW (0x 28002748, 0x ffffffff)
+IOW (0x 2800274c, 0x ffffffff)
+IOW (0x 28002750, 0x ffffffff)
+IOW (0x 28002754, 0x ffffffff)
+IOW (0x 28002758, 0x ffffffff)
+IOW (0x 2800275c, 0x ffffffff)
+IOW (0x 28002760, 0x ffffffff)
+IOW (0x 28002764, 0x ffffffff)
+IOW (0x 28002768, 0x ffffffff)
+IOW (0x 2800276c, 0x ffffffff)
+IOW (0x 28002770, 0x ffffffff)
+IOW (0x 28002774, 0x ffffffff)
+IOW (0x 28002778, 0x ffffffff)
+IOW (0x 2800277c, 0x ffffffff)
+IOW (0x 28002780, 0x ffffffff)
+IOW (0x 28002784, 0x ffffffff)
+IOW (0x 28002788, 0x ffffffff)
+IOW (0x 2800278c, 0x ffffffff)
+IOW (0x 28002790, 0x ffffffff)
+IOW (0x 28002794, 0x ffffffff)
+IOW (0x 28002798, 0x ffffffff)
+IOW (0x 2800279c, 0x ffffffff)
+IOW (0x 280027a0, 0x ffffffff)
+IOW (0x 280027a4, 0x ffffffff)
+IOW (0x 280027a8, 0x ffffffff)
+IOW (0x 280027ac, 0x ffffffff)
+IOW (0x 280027b0, 0x ffffffff)
+IOW (0x 280027b4, 0x ffffffff)
+IOW (0x 280027b8, 0x ffffffff)
+IOW (0x 280027bc, 0x ffffffff)
+IOW (0x 280027c0, 0x ffffffff)
+IOW (0x 280027c4, 0x ffffffff)
+IOW (0x 280027c8, 0x ffffffff)
+IOW (0x 280027cc, 0x ffffffff)
+IOW (0x 280027d0, 0x ffffffff)
+IOW (0x 280027d4, 0x ffffffff)
+IOW (0x 280027d8, 0x ffffffff)
+IOW (0x 280027dc, 0x ffffffff)
+IOW (0x 280027e0, 0x ffffffff)
+IOW (0x 280027e4, 0x ffffffff)
+IOW (0x 280027e8, 0x ffffffff)
+IOW (0x 280027ec, 0x ffffffff)
+IOW (0x 280027f0, 0x ffffffff)
+IOW (0x 280027f4, 0x ffffffff)
+IOW (0x 280027f8, 0x ffffffff)
+IOW (0x 280027fc, 0x ffffffff)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 05000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 5: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 6: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 7: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 8: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 9: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 10: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 11: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 12: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 13: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 14: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 15: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 16: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 17: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 18: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 19: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 20: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 21: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 22: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 23: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 24: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 25: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 26: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 27: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 28: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 29: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 30: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 31: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 32: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 33: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 34: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 35: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 36: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 37: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 38: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 39: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 40: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 41: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 42: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 43: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 44: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 45: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 46: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 47: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 48: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 49: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 50: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 51: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 52: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 53: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 54: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 55: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 56: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 57: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 58: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 59: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 60: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 61: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 62: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 63: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 64: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 65: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 66: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 67: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 68: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 69: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 70: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 71: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 72: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 73: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 74: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 75: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 76: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 77: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 78: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+WriteRow API: End
+0xb07c00ff
+IOR (0x 17000200, 0x b07c00ff) n.e.d.
+Changing hashValue to 0x7C: PASSED
+SROM_Calibrate: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 13000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_Calibrate: End
+Changing hashValue to valid hash : PASSED, Check logs
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test  SROM_Calibrate: Restore Hash on trims and call Calibrate API
+___________________________________________________________________________________
+
+Execution time is 4 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

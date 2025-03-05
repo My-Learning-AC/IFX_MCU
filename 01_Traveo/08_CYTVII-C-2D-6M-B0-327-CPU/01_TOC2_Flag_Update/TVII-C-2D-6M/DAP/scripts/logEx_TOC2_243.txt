@@ -1,0 +1,30 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x10
+DUT NAME_2 : 0x10
+DUT NAME_2 : 0x10
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x10
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x10
+Warn : Interface already configured, ignoring
+Warn : Transport "swd" was already selected
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 256.256.0
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 0.000 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : traveo2.dap: powering down debug domain...
+Warn : Failed to power down Debug Domains

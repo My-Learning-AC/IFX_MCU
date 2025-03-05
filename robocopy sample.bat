@@ -1,0 +1,1 @@
+robocopy "C:\01_Infineon_MCU\Backup" "C:\03_Learnings\IFX_MCU" /E /Z /XO

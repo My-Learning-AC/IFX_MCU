@@ -1,0 +1,1703 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.979 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0x00000000
+IOR (0x 28002000, 0x 00000000) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
+-----------------------------------------------------------------------
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+PC Value of Master 15 is 2
+0x00fc0302
+IOR (0x 4023003c, 0x 00fc0302) n.e.d.
+IOW (0x 4023003c, 0x 00fc0302)
+0x00fc0302
+IOR (0x 4023003c, 0x 00fc0302) n.e.d.
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+IOW (0x 40237c00, 0x 00000002)
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+PC Value of Master 15 is 2
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+PC Value of Master 15 is 2
+Prog PPU-0
+-----------------------------------------------------------------------
+Slave Address
+IOR (0x 40010000, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010004, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010010, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010014, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010018, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001001c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010020, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010024, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010030, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010034, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010038, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001003c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-1
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010040, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010044, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010050, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010054, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010058, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001005c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010060, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010064, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010070, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010074, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010078, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001007c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-2
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010080, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010084, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010090, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010094, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010098, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001009c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-3
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400100fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-4
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010100, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010104, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010110, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010114, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010118, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001011c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010120, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010124, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010130, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010134, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010138, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001013c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-5
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010140, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010144, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010150, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010154, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010158, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001015c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010160, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010164, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010170, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010174, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010178, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001017c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-6
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010180, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010184, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010190, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010194, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010198, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001019c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-7
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400101fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-8
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010200, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010204, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010210, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010214, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010218, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001021c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010220, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010224, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010230, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010234, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010238, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001023c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-9
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010240, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010244, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010250, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010254, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010258, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001025c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010260, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010264, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010270, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010274, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010278, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001027c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-10
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010280, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010284, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010290, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010294, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010298, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001029c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-11
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400102fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-12
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010300, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010304, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010310, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010314, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010318, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001031c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010320, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010324, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010330, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010334, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010338, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001033c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-13
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010340, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010344, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010350, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010354, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010358, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001035c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010360, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010364, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010370, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010374, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010378, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001037c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-14
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010380, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010384, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010390, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010394, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010398, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001039c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-15
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400103fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-16
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010400, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010404, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010410, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010414, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010418, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001041c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010420, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010424, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010430, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010434, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010438, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001043c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-17
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010440, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010444, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010450, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010454, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010458, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001045c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010460, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010464, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010470, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010474, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010478, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001047c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-18
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010480, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010484, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010490, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010494, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010498, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001049c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-19
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400104fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-20
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010500, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010504, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010510, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010514, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010518, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001051c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010520, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010524, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010530, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010534, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010538, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001053c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-21
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010540, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010544, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010550, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010554, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010558, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001055c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010560, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010564, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010570, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010574, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010578, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001057c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-22
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010580, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010584, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010590, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010594, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010598, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001059c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-23
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400105fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-24
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010600, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010604, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010610, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010614, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010618, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001061c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010620, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010624, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010630, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010634, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010638, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001063c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-25
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010640, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010644, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010650, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010654, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010658, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001065c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010660, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010664, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010670, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010674, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010678, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001067c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-26
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010680, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010684, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010690, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010694, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010698, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001069c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-27
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400106fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-28
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010700, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010704, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010710, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010714, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010718, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001071c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010720, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010724, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010730, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010734, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010738, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001073c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-29
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010740, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010744, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010750, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010754, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010758, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001075c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010760, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010764, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010770, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010774, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010778, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001077c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-30
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010780, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010784, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010790, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010794, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 40010798, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 4001079c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107a0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107a4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107b0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107b4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107b8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107bc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+Prog PPU-31
+-----------------------------------------------------------------------
+Slave Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107c0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107c4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107d0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107d4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107d8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Slave Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107dc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Address
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107e0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Size
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107e4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107f0, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-1
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107f4, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-2
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107f8, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Master Attribute-3
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 400107fc, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+-----------------------------------------------------------------------
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...
+Info : SWD DPIDR 0x6ba02477

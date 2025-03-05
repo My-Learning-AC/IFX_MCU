@@ -1,0 +1,3965 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.976 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 402020c4, 0x 00000001) expected 0x00000000
+0x33869fee
+IOR (0x 4022006c, 0x 33869fee) n.e.d.
+IOW (0x 28000100, 0x 11223344)
+0x11223344
+IOR (0x 28000100, 0x 11223344) expected 0x00000000
+IOW (0x 40201340, 0x fa050003)
+After power up
+
+IOW (0x 28000100, 0x 55443322)
+0x55443322
+IOR (0x 28000100, 0x 55443322) n.e.d.
+SiliconID API: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 00000001)
+0x00000001
+IOR (0x 4022004c, 0x 00000001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa013010b
+IOR (0x 4022004c, 0x a013010b) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+a013010b 
+
+SiliconID API: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 00000101)
+0x00000101
+IOR (0x 4022004c, 0x 00000101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa061e850
+IOR (0x 4022004c, 0x a061e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+a061e850 
+
+SiliconID API: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 00000201)
+0x00000201
+IOR (0x 4022004c, 0x 00000201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa3010701
+IOR (0x 4022004c, 0x a3010701) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+a3010701 
+
+
+Protection State Is NOT as Expected!!!
+
+
+
+********** DEVICE INFO *******
+
+FailCount: 0.
+
+0x00000001
+IOR (0x 402020c4, 0x 00000001) n.e.d.
+
+Protection State(expected virgin) = 0x00000001 
+
+SROM_GenerateHash: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 1e000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+Generated Hash Value in SRAM SCRATCH +4
+0xb6cef889
+IOR (0x 28002004, 0x b6cef889) n.e.d.
+0x687d927e
+IOR (0x 28002008, 0x 687d927e) n.e.d.
+0xdb43e311
+IOR (0x 2800200c, 0x db43e311) n.e.d.
+0x5c6432c7
+IOR (0x 28002010, 0x 5c6432c7) n.e.d.
+0x0000003d
+IOR (0x 28002014, 0x 0000003d) n.e.d.
+SROM_GenerateHash: End
+GenerateHASH API for FACTORY_HASH with Valid Object: PASS!!
+
+0xb6cef889
+IOR (0x 28002004, 0x b6cef889) n.e.d.
+0x687d927e
+IOR (0x 28002008, 0x 687d927e) n.e.d.
+0xdb43e311
+IOR (0x 2800200c, 0x db43e311) n.e.d.
+0x5c6432c7
+IOR (0x 28002010, 0x 5c6432c7) n.e.d.
+0x0000003d
+IOR (0x 28002014, 0x 0000003d) n.e.d.
+ hash_word_0  = 0xb6cef889
+
+ hash_word_1  = 0x687d927e
+
+ hash_word_2  = 0xdb43e311
+
+ hash_word_3  = 0x5c6432c7
+
+ hash_grp_zeros  = 0x0000003d
+
+
+ Hash_Word 0x00000000  = 0x00000089
+
+
+ Hash_Word 0x00000001  = 0x000000f8
+
+
+ Hash_Word 0x00000002  = 0x000000ce
+
+
+ Hash_Word 0x00000003  = 0x000000b6
+
+
+ Hash_Word 0x00000004  = 0x0000007e
+
+
+ Hash_Word 0x00000005  = 0x00000092
+
+
+ Hash_Word 0x00000006  = 0x0000007d
+
+
+ Hash_Word 0x00000007  = 0x00000068
+
+
+ Hash_Word 0x00000008  = 0x00000011
+
+
+ Hash_Word 0x00000009  = 0x000000e3
+
+
+ Hash_Word 0x0000000a  = 0x00000043
+
+
+ Hash_Word 0x0000000b  = 0x000000db
+
+
+ Hash_Word 0x0000000c  = 0x000000c7
+
+
+ Hash_Word 0x0000000d  = 0x00000032
+
+
+ Hash_Word 0x0000000e  = 0x00000064
+
+
+ Hash_Word 0x0000000f  = 0x0000005c
+
+ length  = 0x00000010
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000000 with val  0x00000089
+
+Blow fuse bit - BitAddr :0, MacroAddr: 0, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01060001)
+0x01060001
+IOR (0x 4022004c, 0x 01060001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001801)
+0x03001801
+IOR (0x 4022004c, 0x 03001801) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :3, MacroAddr: 0, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01060301)
+0x01060301
+IOR (0x 4022004c, 0x 01060301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001801)
+0x03001801
+IOR (0x 4022004c, 0x 03001801) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000009
+IOR (0x 4022004c, 0x a0000009) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 0, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01060701)
+0x01060701
+IOR (0x 4022004c, 0x 01060701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001801)
+0x03001801
+IOR (0x 4022004c, 0x 03001801) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000089
+IOR (0x 4022004c, 0x a0000089) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000001 with val  0x000000f8
+
+Blow fuse bit - BitAddr :3, MacroAddr: 1, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01061301)
+0x01061301
+IOR (0x 4022004c, 0x 01061301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001901)
+0x03001901
+IOR (0x 4022004c, 0x 03001901) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000008
+IOR (0x 4022004c, 0x a0000008) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 1, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01061401)
+0x01061401
+IOR (0x 4022004c, 0x 01061401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001901)
+0x03001901
+IOR (0x 4022004c, 0x 03001901) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000018
+IOR (0x 4022004c, 0x a0000018) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 1, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01061501)
+0x01061501
+IOR (0x 4022004c, 0x 01061501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001901)
+0x03001901
+IOR (0x 4022004c, 0x 03001901) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000038
+IOR (0x 4022004c, 0x a0000038) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 1, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01061601)
+0x01061601
+IOR (0x 4022004c, 0x 01061601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001901)
+0x03001901
+IOR (0x 4022004c, 0x 03001901) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000078
+IOR (0x 4022004c, 0x a0000078) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 1, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01061701)
+0x01061701
+IOR (0x 4022004c, 0x 01061701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001901)
+0x03001901
+IOR (0x 4022004c, 0x 03001901) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000f8
+IOR (0x 4022004c, 0x a00000f8) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000002 with val  0x000000ce
+
+Blow fuse bit - BitAddr :1, MacroAddr: 2, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01062101)
+0x01062101
+IOR (0x 4022004c, 0x 01062101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001a01)
+0x03001a01
+IOR (0x 4022004c, 0x 03001a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000002
+IOR (0x 4022004c, 0x a0000002) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :2, MacroAddr: 2, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01062201)
+0x01062201
+IOR (0x 4022004c, 0x 01062201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001a01)
+0x03001a01
+IOR (0x 4022004c, 0x 03001a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000006
+IOR (0x 4022004c, 0x a0000006) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :3, MacroAddr: 2, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01062301)
+0x01062301
+IOR (0x 4022004c, 0x 01062301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001a01)
+0x03001a01
+IOR (0x 4022004c, 0x 03001a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000000e
+IOR (0x 4022004c, 0x a000000e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 2, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01062601)
+0x01062601
+IOR (0x 4022004c, 0x 01062601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001a01)
+0x03001a01
+IOR (0x 4022004c, 0x 03001a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000004e
+IOR (0x 4022004c, 0x a000004e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 2, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01062701)
+0x01062701
+IOR (0x 4022004c, 0x 01062701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001a01)
+0x03001a01
+IOR (0x 4022004c, 0x 03001a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ce
+IOR (0x 4022004c, 0x a00000ce) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000003 with val  0x000000b6
+
+Blow fuse bit - BitAddr :1, MacroAddr: 3, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01063101)
+0x01063101
+IOR (0x 4022004c, 0x 01063101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001b01)
+0x03001b01
+IOR (0x 4022004c, 0x 03001b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000002
+IOR (0x 4022004c, 0x a0000002) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :2, MacroAddr: 3, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01063201)
+0x01063201
+IOR (0x 4022004c, 0x 01063201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001b01)
+0x03001b01
+IOR (0x 4022004c, 0x 03001b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000006
+IOR (0x 4022004c, 0x a0000006) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 3, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01063401)
+0x01063401
+IOR (0x 4022004c, 0x 01063401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001b01)
+0x03001b01
+IOR (0x 4022004c, 0x 03001b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000016
+IOR (0x 4022004c, 0x a0000016) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 3, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01063501)
+0x01063501
+IOR (0x 4022004c, 0x 01063501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001b01)
+0x03001b01
+IOR (0x 4022004c, 0x 03001b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000036
+IOR (0x 4022004c, 0x a0000036) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 3, ByteAddrOffset: 6
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01063701)
+0x01063701
+IOR (0x 4022004c, 0x 01063701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001b01)
+0x03001b01
+IOR (0x 4022004c, 0x 03001b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000b6
+IOR (0x 4022004c, 0x a00000b6) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000004 with val  0x0000007e
+
+Blow fuse bit - BitAddr :1, MacroAddr: 0, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01070101)
+0x01070101
+IOR (0x 4022004c, 0x 01070101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000002
+IOR (0x 4022004c, 0x a0000002) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :2, MacroAddr: 0, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01070201)
+0x01070201
+IOR (0x 4022004c, 0x 01070201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000006
+IOR (0x 4022004c, 0x a0000006) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :3, MacroAddr: 0, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01070301)
+0x01070301
+IOR (0x 4022004c, 0x 01070301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000000e
+IOR (0x 4022004c, 0x a000000e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 0, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01070401)
+0x01070401
+IOR (0x 4022004c, 0x 01070401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000001e
+IOR (0x 4022004c, 0x a000001e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 0, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01070501)
+0x01070501
+IOR (0x 4022004c, 0x 01070501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000003e
+IOR (0x 4022004c, 0x a000003e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 0, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01070601)
+0x01070601
+IOR (0x 4022004c, 0x 01070601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000007e
+IOR (0x 4022004c, 0x a000007e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000005 with val  0x00000092
+
+Blow fuse bit - BitAddr :1, MacroAddr: 1, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01071101)
+0x01071101
+IOR (0x 4022004c, 0x 01071101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001d01)
+0x03001d01
+IOR (0x 4022004c, 0x 03001d01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000002
+IOR (0x 4022004c, 0x a0000002) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 1, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01071401)
+0x01071401
+IOR (0x 4022004c, 0x 01071401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001d01)
+0x03001d01
+IOR (0x 4022004c, 0x 03001d01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000012
+IOR (0x 4022004c, 0x a0000012) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 1, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01071701)
+0x01071701
+IOR (0x 4022004c, 0x 01071701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001d01)
+0x03001d01
+IOR (0x 4022004c, 0x 03001d01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000092
+IOR (0x 4022004c, 0x a0000092) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000006 with val  0x0000007d
+
+Blow fuse bit - BitAddr :0, MacroAddr: 2, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01072001)
+0x01072001
+IOR (0x 4022004c, 0x 01072001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :2, MacroAddr: 2, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01072201)
+0x01072201
+IOR (0x 4022004c, 0x 01072201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000005
+IOR (0x 4022004c, 0x a0000005) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :3, MacroAddr: 2, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01072301)
+0x01072301
+IOR (0x 4022004c, 0x 01072301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000000d
+IOR (0x 4022004c, 0x a000000d) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 2, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01072401)
+0x01072401
+IOR (0x 4022004c, 0x 01072401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000001d
+IOR (0x 4022004c, 0x a000001d) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 2, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01072501)
+0x01072501
+IOR (0x 4022004c, 0x 01072501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000003d
+IOR (0x 4022004c, 0x a000003d) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 2, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01072601)
+0x01072601
+IOR (0x 4022004c, 0x 01072601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000007d
+IOR (0x 4022004c, 0x a000007d) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000007 with val  0x00000068
+
+Blow fuse bit - BitAddr :3, MacroAddr: 3, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01073301)
+0x01073301
+IOR (0x 4022004c, 0x 01073301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001f01)
+0x03001f01
+IOR (0x 4022004c, 0x 03001f01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000008
+IOR (0x 4022004c, 0x a0000008) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 3, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01073501)
+0x01073501
+IOR (0x 4022004c, 0x 01073501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001f01)
+0x03001f01
+IOR (0x 4022004c, 0x 03001f01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000028
+IOR (0x 4022004c, 0x a0000028) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 3, ByteAddrOffset: 7
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01073601)
+0x01073601
+IOR (0x 4022004c, 0x 01073601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001f01)
+0x03001f01
+IOR (0x 4022004c, 0x 03001f01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000068
+IOR (0x 4022004c, 0x a0000068) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000008 with val  0x00000011
+
+Blow fuse bit - BitAddr :0, MacroAddr: 0, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01080001)
+0x01080001
+IOR (0x 4022004c, 0x 01080001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002001)
+0x03002001
+IOR (0x 4022004c, 0x 03002001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 0, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01080401)
+0x01080401
+IOR (0x 4022004c, 0x 01080401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002001)
+0x03002001
+IOR (0x 4022004c, 0x 03002001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000011
+IOR (0x 4022004c, 0x a0000011) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x00000009 with val  0x000000e3
+
+Blow fuse bit - BitAddr :0, MacroAddr: 1, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01081001)
+0x01081001
+IOR (0x 4022004c, 0x 01081001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002101)
+0x03002101
+IOR (0x 4022004c, 0x 03002101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :1, MacroAddr: 1, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01081101)
+0x01081101
+IOR (0x 4022004c, 0x 01081101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002101)
+0x03002101
+IOR (0x 4022004c, 0x 03002101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000003
+IOR (0x 4022004c, 0x a0000003) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 1, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01081501)
+0x01081501
+IOR (0x 4022004c, 0x 01081501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002101)
+0x03002101
+IOR (0x 4022004c, 0x 03002101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000023
+IOR (0x 4022004c, 0x a0000023) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 1, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01081601)
+0x01081601
+IOR (0x 4022004c, 0x 01081601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002101)
+0x03002101
+IOR (0x 4022004c, 0x 03002101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000063
+IOR (0x 4022004c, 0x a0000063) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 1, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01081701)
+0x01081701
+IOR (0x 4022004c, 0x 01081701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002101)
+0x03002101
+IOR (0x 4022004c, 0x 03002101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000e3
+IOR (0x 4022004c, 0x a00000e3) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x0000000a with val  0x00000043
+
+Blow fuse bit - BitAddr :0, MacroAddr: 2, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01082001)
+0x01082001
+IOR (0x 4022004c, 0x 01082001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002201)
+0x03002201
+IOR (0x 4022004c, 0x 03002201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :1, MacroAddr: 2, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01082101)
+0x01082101
+IOR (0x 4022004c, 0x 01082101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002201)
+0x03002201
+IOR (0x 4022004c, 0x 03002201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000003
+IOR (0x 4022004c, 0x a0000003) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 2, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01082601)
+0x01082601
+IOR (0x 4022004c, 0x 01082601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002201)
+0x03002201
+IOR (0x 4022004c, 0x 03002201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000043
+IOR (0x 4022004c, 0x a0000043) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x0000000b with val  0x000000db
+
+Blow fuse bit - BitAddr :0, MacroAddr: 3, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01083001)
+0x01083001
+IOR (0x 4022004c, 0x 01083001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :1, MacroAddr: 3, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01083101)
+0x01083101
+IOR (0x 4022004c, 0x 01083101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000003
+IOR (0x 4022004c, 0x a0000003) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :3, MacroAddr: 3, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01083301)
+0x01083301
+IOR (0x 4022004c, 0x 01083301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000000b
+IOR (0x 4022004c, 0x a000000b) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 3, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01083401)
+0x01083401
+IOR (0x 4022004c, 0x 01083401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000001b
+IOR (0x 4022004c, 0x a000001b) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 3, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01083601)
+0x01083601
+IOR (0x 4022004c, 0x 01083601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000005b
+IOR (0x 4022004c, 0x a000005b) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 3, ByteAddrOffset: 8
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01083701)
+0x01083701
+IOR (0x 4022004c, 0x 01083701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000db
+IOR (0x 4022004c, 0x a00000db) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x0000000c with val  0x000000c7
+
+Blow fuse bit - BitAddr :0, MacroAddr: 0, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01090001)
+0x01090001
+IOR (0x 4022004c, 0x 01090001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002401)
+0x03002401
+IOR (0x 4022004c, 0x 03002401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :1, MacroAddr: 0, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01090101)
+0x01090101
+IOR (0x 4022004c, 0x 01090101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002401)
+0x03002401
+IOR (0x 4022004c, 0x 03002401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000003
+IOR (0x 4022004c, 0x a0000003) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :2, MacroAddr: 0, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01090201)
+0x01090201
+IOR (0x 4022004c, 0x 01090201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002401)
+0x03002401
+IOR (0x 4022004c, 0x 03002401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000007
+IOR (0x 4022004c, 0x a0000007) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 0, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01090601)
+0x01090601
+IOR (0x 4022004c, 0x 01090601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002401)
+0x03002401
+IOR (0x 4022004c, 0x 03002401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000047
+IOR (0x 4022004c, 0x a0000047) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :7, MacroAddr: 0, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01090701)
+0x01090701
+IOR (0x 4022004c, 0x 01090701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002401)
+0x03002401
+IOR (0x 4022004c, 0x 03002401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000c7
+IOR (0x 4022004c, 0x a00000c7) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x0000000d with val  0x00000032
+
+Blow fuse bit - BitAddr :1, MacroAddr: 1, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01091101)
+0x01091101
+IOR (0x 4022004c, 0x 01091101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002501)
+0x03002501
+IOR (0x 4022004c, 0x 03002501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000002
+IOR (0x 4022004c, 0x a0000002) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 1, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01091401)
+0x01091401
+IOR (0x 4022004c, 0x 01091401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002501)
+0x03002501
+IOR (0x 4022004c, 0x 03002501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000012
+IOR (0x 4022004c, 0x a0000012) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 1, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01091501)
+0x01091501
+IOR (0x 4022004c, 0x 01091501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002501)
+0x03002501
+IOR (0x 4022004c, 0x 03002501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000032
+IOR (0x 4022004c, 0x a0000032) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x0000000e with val  0x00000064
+
+Blow fuse bit - BitAddr :2, MacroAddr: 2, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01092201)
+0x01092201
+IOR (0x 4022004c, 0x 01092201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002601)
+0x03002601
+IOR (0x 4022004c, 0x 03002601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000004
+IOR (0x 4022004c, 0x a0000004) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :5, MacroAddr: 2, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01092501)
+0x01092501
+IOR (0x 4022004c, 0x 01092501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002601)
+0x03002601
+IOR (0x 4022004c, 0x 03002601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000024
+IOR (0x 4022004c, 0x a0000024) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 2, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01092601)
+0x01092601
+IOR (0x 4022004c, 0x 01092601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002601)
+0x03002601
+IOR (0x 4022004c, 0x 03002601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000064
+IOR (0x 4022004c, 0x a0000064) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Factory Hash value is 
+
+
+Writing to efuse address 0x0000000f with val  0x0000005c
+
+Blow fuse bit - BitAddr :2, MacroAddr: 3, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01093201)
+0x01093201
+IOR (0x 4022004c, 0x 01093201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002701)
+0x03002701
+IOR (0x 4022004c, 0x 03002701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000004
+IOR (0x 4022004c, 0x a0000004) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :3, MacroAddr: 3, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01093301)
+0x01093301
+IOR (0x 4022004c, 0x 01093301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002701)
+0x03002701
+IOR (0x 4022004c, 0x 03002701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000000c
+IOR (0x 4022004c, 0x a000000c) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 3, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01093401)
+0x01093401
+IOR (0x 4022004c, 0x 01093401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002701)
+0x03002701
+IOR (0x 4022004c, 0x 03002701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000001c
+IOR (0x 4022004c, 0x a000001c) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 3, ByteAddrOffset: 9
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01093601)
+0x01093601
+IOR (0x 4022004c, 0x 01093601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002701)
+0x03002701
+IOR (0x 4022004c, 0x 03002701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000005c
+IOR (0x 4022004c, 0x a000005c) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+
+Writing to efuse address 0x0000002B factory group zeros.  = 0x00000055 
+
+Blow fuse bit - BitAddr :0, MacroAddr: 3, ByteAddrOffset: 10
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 010a3001)
+0x010a3001
+IOR (0x 4022004c, 0x 010a3001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002b01)
+0x03002b01
+IOR (0x 4022004c, 0x 03002b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000001
+IOR (0x 4022004c, 0x a0000001) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :2, MacroAddr: 3, ByteAddrOffset: 10
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 010a3201)
+0x010a3201
+IOR (0x 4022004c, 0x 010a3201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002b01)
+0x03002b01
+IOR (0x 4022004c, 0x 03002b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000005
+IOR (0x 4022004c, 0x a0000005) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :4, MacroAddr: 3, ByteAddrOffset: 10
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 010a3401)
+0x010a3401
+IOR (0x 4022004c, 0x 010a3401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002b01)
+0x03002b01
+IOR (0x 4022004c, 0x 03002b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000015
+IOR (0x 4022004c, 0x a0000015) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+Blow fuse bit - BitAddr :6, MacroAddr: 3, ByteAddrOffset: 10
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 010a3601)
+0x010a3601
+IOR (0x 4022004c, 0x 010a3601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002b01)
+0x03002b01
+IOR (0x 4022004c, 0x 03002b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000055
+IOR (0x 4022004c, 0x a0000055) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+blow valid efuse Byte: PASS!!
+
+
+
+Read Back factory hash to see if they are blown properly.
+
+
+Reading FactoryHash byte 0x00000018...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001801)
+0x03001801
+IOR (0x 4022004c, 0x 03001801) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000089
+IOR (0x 4022004c, 0x a0000089) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000019...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001901)
+0x03001901
+IOR (0x 4022004c, 0x 03001901) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000f8
+IOR (0x 4022004c, 0x a00000f8) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x0000001a...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001a01)
+0x03001a01
+IOR (0x 4022004c, 0x 03001a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ce
+IOR (0x 4022004c, 0x a00000ce) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x0000001b...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001b01)
+0x03001b01
+IOR (0x 4022004c, 0x 03001b01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000b6
+IOR (0x 4022004c, 0x a00000b6) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x0000001c...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001c01)
+0x03001c01
+IOR (0x 4022004c, 0x 03001c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000007e
+IOR (0x 4022004c, 0x a000007e) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x0000001d...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001d01)
+0x03001d01
+IOR (0x 4022004c, 0x 03001d01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000092
+IOR (0x 4022004c, 0x a0000092) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x0000001e...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001e01)
+0x03001e01
+IOR (0x 4022004c, 0x 03001e01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000007d
+IOR (0x 4022004c, 0x a000007d) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x0000001f...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03001f01)
+0x03001f01
+IOR (0x 4022004c, 0x 03001f01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000068
+IOR (0x 4022004c, 0x a0000068) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000020...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002001)
+0x03002001
+IOR (0x 4022004c, 0x 03002001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000011
+IOR (0x 4022004c, 0x a0000011) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000021...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002101)
+0x03002101
+IOR (0x 4022004c, 0x 03002101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000e3
+IOR (0x 4022004c, 0x a00000e3) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000022...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002201)
+0x03002201
+IOR (0x 4022004c, 0x 03002201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000043
+IOR (0x 4022004c, 0x a0000043) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000023...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002301)
+0x03002301
+IOR (0x 4022004c, 0x 03002301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000db
+IOR (0x 4022004c, 0x a00000db) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000024...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002401)
+0x03002401
+IOR (0x 4022004c, 0x 03002401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000c7
+IOR (0x 4022004c, 0x a00000c7) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000025...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002501)
+0x03002501
+IOR (0x 4022004c, 0x 03002501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000032
+IOR (0x 4022004c, 0x a0000032) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000026...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002601)
+0x03002601
+IOR (0x 4022004c, 0x 03002601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000064
+IOR (0x 4022004c, 0x a0000064) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+
+Reading FactoryHash byte 0x00000027...
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03002701)
+0x03002701
+IOR (0x 4022004c, 0x 03002701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa000005c
+IOR (0x 4022004c, 0x a000005c) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+
+Factory hash eFuse readback and match with programmed: PASS!!
+
+SROM_CheckFactoryHash: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 27000001)
+0x27000001
+IOR (0x 4022004c, 0x 27000001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_CheckFactoryHash: End
+
+CheckFactory Hash: PASS!!
+
+
+Entering function Blow_B_Fuse....
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01001601)
+0x01001601
+IOR (0x 4022004c, 0x 01001601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03000101)
+0x03000101
+IOR (0x 4022004c, 0x 03000101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000040
+IOR (0x 4022004c, 0x a0000040) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+Blow B Fusebit: PASS!!
+
+
+
+Blow_Fuse_Bit: Start
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 01001701)
+0x01001701
+IOR (0x 4022004c, 0x 01001701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03000101)
+0x03000101
+IOR (0x 4022004c, 0x 03000101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000c0
+IOR (0x 4022004c, 0x a00000c0) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+Blow_Fuse_Bit: End
+Blow B redundant Fusebit: PASS!!
+
+
+
+
+Exiting function Blow_B_Fuse....
+
+
+###########################Blow_B_Fuse Complete############################
+
+CPUSS WOUNDING:
+0x00000000
+IOR (0x 402020c0, 0x 00000000) n.e.d.
+AP_CTL:
+0x00000007
+IOR (0x 40201414, 0x 00000007) n.e.d.
+0x00000001
+IOR (0x 402020c4, 0x 00000001) expected 0x00000000
+0x33869fee
+IOR (0x 4022006c, 0x 33869fee) n.e.d.
+IOW (0x 28000100, 0x 11223344)
+0x11223344
+IOR (0x 28000100, 0x 11223344) expected 0x00000000
+IOW (0x 40201340, 0x fa050003)
+After power up
+
+IOW (0x 28000100, 0x 55443322)
+0x55443322
+IOR (0x 28000100, 0x 55443322) n.e.d.
+SiliconID API: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 00000001)
+0x00000001
+IOR (0x 4022004c, 0x 00000001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa013010b
+IOR (0x 4022004c, 0x a013010b) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+a013010b 
+
+SiliconID API: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 00000101)
+0x00000101
+IOR (0x 4022004c, 0x 00000101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa091e850
+IOR (0x 4022004c, 0x a091e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+a091e850 
+
+SiliconID API: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 00000201)
+0x00000201
+IOR (0x 4022004c, 0x 00000201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa3010701
+IOR (0x 4022004c, 0x a3010701) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+a3010701 
+
+
+Protection State Is NOT as Expected!!!
+
+
+
+********** DEVICE INFO *******
+
+FailCount: 0.
+
+Execution time is 8 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

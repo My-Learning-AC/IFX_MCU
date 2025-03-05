@@ -1,0 +1,51 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+DEPRECATED! use 'adapter speed' not 'adapter_khz'
+adapter speed: 200 kHz
+Warn : SFlash programming allowed for regions: Whole SFlash region
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.975 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 200 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : traveo2_ce_4m.cpu.cm0: hardware has 4 breakpoints, 2 watchpoints
+***************************************
+** Use overriden Main Flash size, kb: 512
+** Use overriden Work Flash size, kb: 128
+** Silicon: 0xE850, Family: 0x10B, Rev.: 0x13 (A2)
+** Detected Device: CYT3DLABHS
+** Flash Boot version: 3.1.0.563
+** SFlash version: 378766
+** Chip Protection: VIRGIN
+***************************************
+Info : traveo2_ce_4m.cpu.cm4: hardware has 0 breakpoints, 0 watchpoints
+Info : starting gdb server for traveo2_ce_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_ce_4m.cpu.cm4 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : SWD DPIDR 0x6ba02477
+Info : kitprog3: acquiring the device (mode: reset)...
+traveo2_ce_4m.cpu.cm0 halted due to debug-request, current mode: Thread 
+xPSR: 0x41000000 pc: 0x00000320 msp: 0x2805f800
+** Device acquired successfully
+Error executing event reset-deassert-post on target traveo2_ce_4m.cpu.cm4:
+target/mxs40/mxs40_common.cfg:109: Error: 
+in procedure 'ocd_process_reset' 
+in procedure 'ocd_process_reset_inner' called at file "embedded:startup.tcl", line 260
+in procedure 'mxs40_reset_deassert_post' called at file "target/traveo2_ce_4m_psvp.cfg", line 65
+at file "target/mxs40/mxs40_common.cfg", line 109
+TARGET: traveo2_ce_4m.cpu.cm4 - Not halted
+Info : traveo2_ce_4m.dap: powering down debug domain...

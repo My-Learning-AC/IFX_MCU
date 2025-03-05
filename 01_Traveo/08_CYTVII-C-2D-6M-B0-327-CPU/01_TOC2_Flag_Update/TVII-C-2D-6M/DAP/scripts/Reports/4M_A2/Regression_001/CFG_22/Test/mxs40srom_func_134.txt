@@ -1,0 +1,1708 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.974 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf0000004
+IOR (0x 28002000, 0x f0000004) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x28002010
+IOR (0x 40210010, 0x 28002010) n.e.d.
+0x00000065
+IOR (0x 40210014, 0x 00000065) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x0000003b
+IOR (0x 4021000c, 0x 0000003b) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : EraseSector: Work Flash Large Sector
+START
+-----------------------------------------------------------------------------------
+
+EraseSector: Start
+IOW (0x 28002004, 0x 14000000)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 14000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 5: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 6: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 7: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 8: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 9: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 10: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 11: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 12: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 13: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+EraseSector: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : EraseSector: Work Flash Large Sector
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000000)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000004)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000008)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400000c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000010)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000014)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000018)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400001c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000020)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000024)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000028)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400002c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000030)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000034)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000038)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400003c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : CheckSum of programmed Workflash row
+START
+-----------------------------------------------------------------------------------
+
+SROM_Checksum API: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 0b400000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+SROM_Checksum API: End
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+INFO: 0x a0000000, PASS
+
+0x00002940
+IOR (0x 40220050, 0x 00002940) n.e.d.
+INFO: 0x 00002940, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : CheckSum of programmed Workflash row
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : BlankCheck on programmed work flash
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlankCheck API: Start
+workflashAddr: 0x14000000
+wordsToBeChecked: 64
+Work flash addr: 0x14000000
+IOW (0x 28002004, 0x 14000000)
+IOW (0x 28002008, 0x 00000040)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2a000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000a4
+IOR (0x 28002000, 0x f00000a4) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+SROM_BlankCheck API: End
+INFO: 0x f00000a4, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : BlankCheck on programmed work flash
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : EraseSector: Work Flash Large Sector
+START
+-----------------------------------------------------------------------------------
+
+EraseSector: Start
+IOW (0x 28002004, 0x 14000000)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 14000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 5: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 6: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 7: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 8: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 9: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 10: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 11: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 12: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+EraseSector: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : EraseSector: Work Flash Large Sector
+___________________________________________________________________________________
+
+0xb5a727a5
+IOR (0x 14000000, 0x b5a727a5) n.e.d.
+0x85a1a5a8
+IOR (0x 14000004, 0x 85a1a5a8) n.e.d.
+0xe9a701b7
+IOR (0x 14000008, 0x e9a701b7) n.e.d.
+0xe5a5f1b1
+IOR (0x 1400000c, 0x e5a5f1b1) n.e.d.
+0xa5a7a025
+IOR (0x 14000010, 0x a5a7a025) n.e.d.
+0xa5f536d1
+IOR (0x 14000014, 0x a5f536d1) n.e.d.
+0xc5e325e9
+IOR (0x 14000018, 0x c5e325e9) n.e.d.
+0xb0c085a1
+IOR (0x 1400001c, 0x b0c085a1) n.e.d.
+0xb5ad91b4
+IOR (0x 14000020, 0x b5ad91b4) n.e.d.
+0xa535a07c
+IOR (0x 14000024, 0x a535a07c) n.e.d.
+0xafc12121
+IOR (0x 14000028, 0x afc12121) n.e.d.
+0xef8729aa
+IOR (0x 1400002c, 0x ef8729aa) n.e.d.
+0x89053461
+IOR (0x 14000030, 0x 89053461) n.e.d.
+0xb6253f7c
+IOR (0x 14000034, 0x b6253f7c) n.e.d.
+0x05b405a5
+IOR (0x 14000038, 0x 05b405a5) n.e.d.
+0x26b48fbd
+IOR (0x 1400003c, 0x 26b48fbd) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : BlankCheck on Erased work flash
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlankCheck API: Start
+workflashAddr: 0x14000000
+wordsToBeChecked: (0x800)
+Work flash addr: 0x14000000
+IOW (0x 28002004, 0x 14000000)
+IOW (0x 28002008, 0x 00000800)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2a000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xf00200a4
+IOR (0x 28002000, 0x f00200a4) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+SROM_BlankCheck API: End
+INFO: 0x f00200a4, expected 0x a0000000, FAIL
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : BlankCheck on Erased work flash
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000020)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000024)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000028)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400002c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000030)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000034)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000038)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400003c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000040)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000044)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000048)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400004c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000050)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000054)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 14000058)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
+ProgramRow: Start
+Num of words is 1
+IOW (0x 28002004, 0x 00000102)
+IOW (0x 28002008, 0x 1400005c)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 06010100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+ProgramRow: End
+INFO: 0x a0000000, PASS
+
+Execution time is 2 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : ProgramRow: WORK FLASH LG Sector page's 2nd half
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : BlankCheck on Erased work flash
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlankCheck API: Start
+workflashAddr: 0x14000000
+wordsToBeChecked: 64
+Work flash addr: 0x14000000
+IOW (0x 28002004, 0x 14000000)
+IOW (0x 28002008, 0x 00000040)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2a000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00008a4
+IOR (0x 28002000, 0x f00008a4) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+SROM_BlankCheck API: End
+INFO: 0x f00008a4, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : BlankCheck on Erased work flash
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : EraseSector: Work Flash Large Sector
+START
+-----------------------------------------------------------------------------------
+
+EraseSector: Start
+IOW (0x 28002004, 0x 14000000)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 14000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 5: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 6: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 7: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 8: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 9: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 10: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+EraseSector: End
+INFO: 0x a0000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : EraseSector: Work Flash Large Sector
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : BlankCheck on out of bound work flash
+START
+-----------------------------------------------------------------------------------
+
+SROM_BlankCheck API: Start
+workflashAddr: 335675392
+wordsToBeChecked: 64
+Work flash addr: 335675392
+IOW (0x 28002004, 0x 14020000)
+IOW (0x 28002008, 0x 00000040)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 2a000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf0000004
+IOR (0x 28002000, 0x f0000004) n.e.d.
+Srom_ReturnCheck: END
+Invalid flash Address !
+SROM_BlankCheck API: End
+INFO: 0x f0000004, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : BlankCheck on out of bound work flash
+___________________________________________________________________________________
+
+Execution time is 4 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

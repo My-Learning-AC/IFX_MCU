@@ -1,0 +1,361 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.973 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf00000c2
+IOR (0x 28002000, 0x f00000c2) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+0x00000002
+IOR (0x 402020c4, 0x 00000002) n.e.d.
+
+****Part is in NORMAL Protection State****
+
+SiliconID API: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 00000100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa072e850
+IOR (0x 28002000, 0x a072e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+SiliconID API: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 00000100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa072e850
+IOR (0x 28002000, 0x a072e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+retrunVal = 0xa072e850
+protectionState = 2
+lifeCycleStage = 7
+
+****Part is in NORMAL Protection State****
+
+
+
+****Part is in NORMAL_PROVISIONED Lifecycle State****
+
+0x17001c04
+IOR (0x 17000004, 0x 17001c04) n.e.d.
+0x00004000
+IOR (0x 17002000, 0x 00004000) n.e.d.
+IOW (0x 28001000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28001000, 0x deadbeef) n.e.d.
+0x810000fa
+IOR (0x 40261530, 0x 810000fa) n.e.d.
+0x0317000a
+IOR (0x 40261534, 0x 0317000a) n.e.d.
+0x0000086a
+IOR (0x 40261538, 0x 0000086a) n.e.d.
+0x80fd04ff
+IOR (0x 4026153c, 0x 80fd04ff) n.e.d.
+0x80fd04ff
+IOR (0x 4026153c, 0x 80fd04ff) n.e.d.
+0x00000005
+IOR (0x 40261540, 0x 00000005) n.e.d.
+0x00000000
+IOR (0x 4026c000, 0x 00000000) n.e.d.
+ here
+------------------ENABLE HFCLK1 FOR CM7------------------
+
+0x00000000
+IOR (0x 40261244, 0x 00000000) n.e.d.
+IOW (0x 40261244, 0x 80000000)
+0x80000000
+IOR (0x 40261244, 0x 80000000) n.e.d.
+------------------CM7_0/1 PWR_MODE Enable------------------
+
+0xfa050000
+IOR (0x 40201200, 0x fa050000) n.e.d.
+IOW (0x 40201200, 0x 05fa0003)
+0xfa050003
+IOR (0x 40201200, 0x fa050003) n.e.d.
+
+
+0x00000000
+IOR (0x 40201210, 0x 00000000) n.e.d.
+IOW (0x 40201210, 0x 05fa0003)
+0x00000000
+IOR (0x 40201210, 0x 00000000) n.e.d.
+------------------TCM Enable------------------
+
+0x0000001f
+IOR (0x 4020000c, 0x 0000001f) n.e.d.
+IOW (0x 4020000c, 0x 00800f67)
+0x00800f07
+IOR (0x 4020000c, 0x 00800f07) n.e.d.
+
+
+0x00000000
+IOR (0x 4020040c, 0x 00000000) n.e.d.
+IOW (0x 4020040c, 0x 00800f00)
+0x00000000
+IOR (0x 4020040c, 0x 00000000) n.e.d.
+------------------CPU_WAIT Clear------------------
+
+0x00800f07
+IOR (0x 4020000c, 0x 00800f07) n.e.d.
+IOW (0x 4020000c, 0x 00800f07)
+0x00800f07
+IOR (0x 4020000c, 0x 00800f07) n.e.d.
+
+
+0x00000000
+IOR (0x 4020040c, 0x 00000000) n.e.d.
+IOW (0x 4020040c, 0x 00000000)
+0x00000000
+IOR (0x 4020040c, 0x 00000000) n.e.d.
+-----------------------------------------
+
+ -----------------------FM BIST register access in normal: No Access, Write is not allowed-----------------------
+
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Info : SWD DPIDR 0x6ba02477
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+ -----------------------TST_XRES_SECURE.SECURE_DISABLE is set-----------------------
+
+ Bit 31 of the register should be set
+Info : SWD DPIDR 0x6ba02477
+0x80000000
+IORap (0x 40262054, 0x 80000000) n.e.d.
+INFO: 0x 00000001, PASS
+
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+ -----------------------TST_XRES_KEY.DISABLE is set-----------------------
+
+ Bit 14 of the register should be set
+Info : SWD DPIDR 0x6ba02477
+0x00004000
+IORap (0x 40262050, 0x 00004000) n.e.d.
+INFO: 0x 00000001, PASS
+
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+ -----------------------PWR_DDFT_XRES.DISABLE-----------------------
+
+ Bit 14 of the register should be set
+Info : SWD DPIDR 0x6ba02477
+0x00004000
+IORap (0x 4026204c, 0x 00004000) n.e.d.
+INFO: 0x 00000001, PASS
+
+Could not write data, so returning 0xA5A5A500 as error code
+INFO: 0x a5a5a500, PASS
+
+Execution time is 2 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...
+Info : SWD DPIDR 0x6ba02477

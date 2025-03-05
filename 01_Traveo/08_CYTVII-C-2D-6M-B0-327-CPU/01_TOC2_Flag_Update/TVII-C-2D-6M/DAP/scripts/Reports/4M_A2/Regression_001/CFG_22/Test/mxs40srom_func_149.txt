@@ -1,0 +1,7 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+embedded:startup.tcl:26: Error: Can't find CQ_SCRIPTS\SORT_VIRGIN\mxs40srom_func_149.tcl
+in procedure 'script' 
+at file "embedded:startup.tcl", line 26

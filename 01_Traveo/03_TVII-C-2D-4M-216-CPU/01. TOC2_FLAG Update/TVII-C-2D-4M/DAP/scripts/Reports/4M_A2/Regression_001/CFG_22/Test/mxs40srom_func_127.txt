@@ -1,0 +1,1084 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.974 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 402020c4, 0x 00000001) n.e.d.
+
+****Part is in VIRGIN Protection State****
+
+Reading SFlash row number : 3
+0x01123456
+IOR (0x 17000600, 0x 01123456) n.e.d.
+0x00080101
+IOR (0x 17000604, 0x 00080101) n.e.d.
+0x0079091e
+IOR (0x 17000608, 0x 0079091e) n.e.d.
+0xffffffff
+IOR (0x 1700060c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000610, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000614, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000618, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700061c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000620, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000624, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000628, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700062c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000630, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000634, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000638, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700063c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000640, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000644, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000648, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700064c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000650, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000654, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000658, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700065c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000660, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000664, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000668, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700066c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000670, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000674, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000678, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700067c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000680, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000684, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000688, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700068c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000690, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000694, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000698, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700069c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006fc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000700, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000704, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000708, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700070c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000710, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000714, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000718, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700071c, 0x ffffffff) n.e.d.
+0xffff0404
+IOR (0x 17000720, 0x ffff0404) n.e.d.
+0xffffffff
+IOR (0x 17000724, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000728, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700072c, 0x ffffffff) n.e.d.
+0x00000000
+IOR (0x 17000730, 0x 00000000) n.e.d.
+0x06ffff0e
+IOR (0x 17000734, 0x 06ffff0e) n.e.d.
+0x03ffff0b
+IOR (0x 17000738, 0x 03ffff0b) n.e.d.
+0xffffffff
+IOR (0x 1700073c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000740, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000744, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000748, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700074c, 0x ffffffff) n.e.d.
+0x20271f26
+IOR (0x 17000750, 0x 20271f26) n.e.d.
+0xffffffff
+IOR (0x 17000754, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000758, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700075c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000760, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000764, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000768, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700076c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000770, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000774, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000778, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700077c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000780, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000784, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000788, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700078c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000790, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000794, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000798, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700079c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007fc, 0x ffffffff) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test: UPDATE UID
+START
+-----------------------------------------------------------------------------------
+
+WriteRow API: Start
+Num of words is 128
+Populate SRAM with  dataIntegCheck if needed
+IOW (0x 28002004, 0x 00000000)
+Populate SRAM with flash address:0x17000600
+
+IOW (0x 28002008, 0x 17000600)
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x 01947fb4)
+IOW (0x 28002604, 0x 02032332)
+IOW (0x 28002608, 0x 00000000)
+IOW (0x 2800260c, 0x ffffffff)
+IOW (0x 28002610, 0x ffffffff)
+IOW (0x 28002614, 0x ffffffff)
+IOW (0x 28002618, 0x ffffffff)
+IOW (0x 2800261c, 0x ffffffff)
+IOW (0x 28002620, 0x ffffffff)
+IOW (0x 28002624, 0x ffffffff)
+IOW (0x 28002628, 0x ffffffff)
+IOW (0x 2800262c, 0x ffffffff)
+IOW (0x 28002630, 0x ffffffff)
+IOW (0x 28002634, 0x ffffffff)
+IOW (0x 28002638, 0x ffffffff)
+IOW (0x 2800263c, 0x ffffffff)
+IOW (0x 28002640, 0x ffffffff)
+IOW (0x 28002644, 0x ffffffff)
+IOW (0x 28002648, 0x ffffffff)
+IOW (0x 2800264c, 0x ffffffff)
+IOW (0x 28002650, 0x ffffffff)
+IOW (0x 28002654, 0x ffffffff)
+IOW (0x 28002658, 0x ffffffff)
+IOW (0x 2800265c, 0x ffffffff)
+IOW (0x 28002660, 0x ffffffff)
+IOW (0x 28002664, 0x ffffffff)
+IOW (0x 28002668, 0x ffffffff)
+IOW (0x 2800266c, 0x ffffffff)
+IOW (0x 28002670, 0x ffffffff)
+IOW (0x 28002674, 0x ffffffff)
+IOW (0x 28002678, 0x ffffffff)
+IOW (0x 2800267c, 0x ffffffff)
+IOW (0x 28002680, 0x ffffffff)
+IOW (0x 28002684, 0x ffffffff)
+IOW (0x 28002688, 0x ffffffff)
+IOW (0x 2800268c, 0x ffffffff)
+IOW (0x 28002690, 0x ffffffff)
+IOW (0x 28002694, 0x ffffffff)
+IOW (0x 28002698, 0x ffffffff)
+IOW (0x 2800269c, 0x ffffffff)
+IOW (0x 280026a0, 0x ffffffff)
+IOW (0x 280026a4, 0x ffffffff)
+IOW (0x 280026a8, 0x ffffffff)
+IOW (0x 280026ac, 0x ffffffff)
+IOW (0x 280026b0, 0x ffffffff)
+IOW (0x 280026b4, 0x ffffffff)
+IOW (0x 280026b8, 0x ffffffff)
+IOW (0x 280026bc, 0x ffffffff)
+IOW (0x 280026c0, 0x ffffffff)
+IOW (0x 280026c4, 0x ffffffff)
+IOW (0x 280026c8, 0x ffffffff)
+IOW (0x 280026cc, 0x ffffffff)
+IOW (0x 280026d0, 0x ffffffff)
+IOW (0x 280026d4, 0x ffffffff)
+IOW (0x 280026d8, 0x ffffffff)
+IOW (0x 280026dc, 0x ffffffff)
+IOW (0x 280026e0, 0x ffffffff)
+IOW (0x 280026e4, 0x ffffffff)
+IOW (0x 280026e8, 0x ffffffff)
+IOW (0x 280026ec, 0x ffffffff)
+IOW (0x 280026f0, 0x ffffffff)
+IOW (0x 280026f4, 0x ffffffff)
+IOW (0x 280026f8, 0x ffffffff)
+IOW (0x 280026fc, 0x ffffffff)
+IOW (0x 28002700, 0x ffffffff)
+IOW (0x 28002704, 0x ffffffff)
+IOW (0x 28002708, 0x ffffffff)
+IOW (0x 2800270c, 0x ffffffff)
+IOW (0x 28002710, 0x ffffffff)
+IOW (0x 28002714, 0x ffffffff)
+IOW (0x 28002718, 0x ffffffff)
+IOW (0x 2800271c, 0x ffffffff)
+IOW (0x 28002720, 0x ffff0404)
+IOW (0x 28002724, 0x ffffffff)
+IOW (0x 28002728, 0x ffffffff)
+IOW (0x 2800272c, 0x ffffffff)
+IOW (0x 28002730, 0x 00000000)
+IOW (0x 28002734, 0x 06ffff0e)
+IOW (0x 28002738, 0x 03ffff0b)
+IOW (0x 2800273c, 0x ffffffff)
+IOW (0x 28002740, 0x ffffffff)
+IOW (0x 28002744, 0x ffffffff)
+IOW (0x 28002748, 0x ffffffff)
+IOW (0x 2800274c, 0x ffffffff)
+IOW (0x 28002750, 0x 20271f26)
+IOW (0x 28002754, 0x ffffffff)
+IOW (0x 28002758, 0x ffffffff)
+IOW (0x 2800275c, 0x ffffffff)
+IOW (0x 28002760, 0x ffffffff)
+IOW (0x 28002764, 0x ffffffff)
+IOW (0x 28002768, 0x ffffffff)
+IOW (0x 2800276c, 0x ffffffff)
+IOW (0x 28002770, 0x ffffffff)
+IOW (0x 28002774, 0x ffffffff)
+IOW (0x 28002778, 0x ffffffff)
+IOW (0x 2800277c, 0x ffffffff)
+IOW (0x 28002780, 0x ffffffff)
+IOW (0x 28002784, 0x ffffffff)
+IOW (0x 28002788, 0x ffffffff)
+IOW (0x 2800278c, 0x ffffffff)
+IOW (0x 28002790, 0x ffffffff)
+IOW (0x 28002794, 0x ffffffff)
+IOW (0x 28002798, 0x ffffffff)
+IOW (0x 2800279c, 0x ffffffff)
+IOW (0x 280027a0, 0x ffffffff)
+IOW (0x 280027a4, 0x ffffffff)
+IOW (0x 280027a8, 0x ffffffff)
+IOW (0x 280027ac, 0x ffffffff)
+IOW (0x 280027b0, 0x ffffffff)
+IOW (0x 280027b4, 0x ffffffff)
+IOW (0x 280027b8, 0x ffffffff)
+IOW (0x 280027bc, 0x ffffffff)
+IOW (0x 280027c0, 0x ffffffff)
+IOW (0x 280027c4, 0x ffffffff)
+IOW (0x 280027c8, 0x ffffffff)
+IOW (0x 280027cc, 0x ffffffff)
+IOW (0x 280027d0, 0x ffffffff)
+IOW (0x 280027d4, 0x ffffffff)
+IOW (0x 280027d8, 0x ffffffff)
+IOW (0x 280027dc, 0x ffffffff)
+IOW (0x 280027e0, 0x ffffffff)
+IOW (0x 280027e4, 0x ffffffff)
+IOW (0x 280027e8, 0x ffffffff)
+IOW (0x 280027ec, 0x ffffffff)
+IOW (0x 280027f0, 0x ffffffff)
+IOW (0x 280027f4, 0x ffffffff)
+IOW (0x 280027f8, 0x ffffffff)
+IOW (0x 280027fc, 0x ffffffff)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 05000000)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Srom_ReturnCheck: START
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 0: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 1: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 2: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 3: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 4: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 5: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 6: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 7: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 8: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 9: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 10: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 11: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 12: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 13: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 14: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 15: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 16: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 17: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 18: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 19: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 20: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 21: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 22: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 23: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 24: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 25: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 26: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 27: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 28: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 29: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 30: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 31: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 32: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 33: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 34: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 35: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 36: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 37: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 38: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 39: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 40: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 41: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 42: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 43: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 44: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 45: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 46: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 47: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 48: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 49: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 50: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 51: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 52: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 53: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 54: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 55: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 56: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 57: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 58: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 59: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 60: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 61: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 62: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 63: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 64: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 65: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 66: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 67: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 68: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 69: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 70: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 71: Waiting for IPC Lock status to get released
+0x80000f02
+IOR (0x 4022005c, 0x 80000f02) n.e.d.
+Trial 72: Waiting for IPC Lock status to get released
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Trial 73: Waiting for IPC Lock status to get released
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+WriteRow API: End
+INFO: 0x a0000000, PASS
+
+0x01947fb4
+IOR (0x 17000600, 0x 01947fb4) n.e.d.
+0x02032332
+IOR (0x 17000604, 0x 02032332) n.e.d.
+0x00000000
+IOR (0x 17000608, 0x 00000000) n.e.d.
+0xffffffff
+IOR (0x 1700060c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000610, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000614, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000618, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700061c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000620, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000624, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000628, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700062c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000630, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000634, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000638, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700063c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000640, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000644, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000648, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700064c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000650, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000654, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000658, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700065c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000660, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000664, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000668, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700066c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000670, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000674, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000678, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700067c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000680, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000684, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000688, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700068c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000690, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000694, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000698, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700069c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170006fc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000700, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000704, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000708, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700070c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000710, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000714, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000718, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700071c, 0x ffffffff) n.e.d.
+0xffff0404
+IOR (0x 17000720, 0x ffff0404) n.e.d.
+0xffffffff
+IOR (0x 17000724, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000728, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700072c, 0x ffffffff) n.e.d.
+0x00000000
+IOR (0x 17000730, 0x 00000000) n.e.d.
+0x06ffff0e
+IOR (0x 17000734, 0x 06ffff0e) n.e.d.
+0x03ffff0b
+IOR (0x 17000738, 0x 03ffff0b) n.e.d.
+0xffffffff
+IOR (0x 1700073c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000740, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000744, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000748, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700074c, 0x ffffffff) n.e.d.
+0x20271f26
+IOR (0x 17000750, 0x 20271f26) n.e.d.
+0xffffffff
+IOR (0x 17000754, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000758, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700075c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000760, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000764, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000768, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700076c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000770, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000774, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000778, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700077c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000780, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000784, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000788, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700078c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000790, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000794, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 17000798, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 1700079c, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007a0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007a4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007a8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007ac, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007b0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007b4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007b8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007bc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007c0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007c4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007c8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007cc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007d0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007d4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007d8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007dc, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007e0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007e4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007e8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007ec, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007f0, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007f4, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007f8, 0x ffffffff) n.e.d.
+0xffffffff
+IOR (0x 170007fc, 0x ffffffff) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test: UPDATE UID
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test: OpenRma API in SORT lifecycle
+START
+-----------------------------------------------------------------------------------
+
+IOW (0x 28002004, 0x 00000014)
+IOW (0x 28002008, 0x 120029f0)
+IOW (0x 2800200c, 0x 01947fb4)
+IOW (0x 28002010, 0x 02032332)
+IOW (0x 28002014, 0x 00000000)
+IOW (0x 28002018, 0x 2800201c)
+IOW (0x 2800201c, 0x f1d4ee8e)
+IOW (0x 28002020, 0x dc84f5e1)
+IOW (0x 28002024, 0x 7e8af911)
+IOW (0x 28002028, 0x c92e5a00)
+IOW (0x 2800202c, 0x ff8c4ffb)
+IOW (0x 28002030, 0x c1eef217)
+IOW (0x 28002034, 0x e06f900f)
+IOW (0x 28002038, 0x f19eb565)
+IOW (0x 2800203c, 0x 28fb1869)
+IOW (0x 28002040, 0x 237ebfb1)
+IOW (0x 28002044, 0x 81bdccd5)
+IOW (0x 28002048, 0x 3c2f0fdf)
+IOW (0x 2800204c, 0x f0227bbc)
+IOW (0x 28002050, 0x b9d31b03)
+IOW (0x 28002054, 0x f5175a29)
+IOW (0x 28002058, 0x 5a8762ba)
+IOW (0x 2800205c, 0x fe3dfdae)
+IOW (0x 28002060, 0x 5f7edd85)
+IOW (0x 28002064, 0x c2794c50)
+IOW (0x 28002068, 0x 3fa179ca)
+IOW (0x 2800206c, 0x 96c2b019)
+IOW (0x 28002070, 0x 997cc569)
+IOW (0x 28002074, 0x be7187fc)
+IOW (0x 28002078, 0x 4cdcd34a)
+IOW (0x 2800207c, 0x bdfb8ac8)
+IOW (0x 28002080, 0x abdd1657)
+IOW (0x 28002084, 0x 55123e4c)
+IOW (0x 28002088, 0x dcbe767f)
+IOW (0x 2800208c, 0x 7e444e37)
+IOW (0x 28002090, 0x a6c39dbd)
+IOW (0x 28002094, 0x c5d87e00)
+IOW (0x 28002098, 0x bd3df680)
+IOW (0x 2800209c, 0x 6dc9e3b2)
+IOW (0x 280020a0, 0x b1c40b04)
+IOW (0x 280020a4, 0x d19cb84f)
+IOW (0x 280020a8, 0x 6ac38fe9)
+IOW (0x 280020ac, 0x 4f146cd0)
+IOW (0x 280020b0, 0x 16f0872c)
+IOW (0x 280020b4, 0x b32a6ef4)
+IOW (0x 280020b8, 0x 25d165b7)
+IOW (0x 280020bc, 0x dcb3d813)
+IOW (0x 280020c0, 0x 2da51e1c)
+IOW (0x 280020c4, 0x 0e462c20)
+IOW (0x 280020c8, 0x eccf8de2)
+IOW (0x 280020cc, 0x 08781545)
+IOW (0x 280020d0, 0x 2289b3cb)
+IOW (0x 280020d4, 0x 09de0b1d)
+IOW (0x 280020d8, 0x 5545ff1b)
+IOW (0x 280020dc, 0x 77752ea1)
+IOW (0x 280020e0, 0x a36a742d)
+IOW (0x 280020e4, 0x f8edf41e)
+IOW (0x 280020e8, 0x 88200799)
+IOW (0x 280020ec, 0x 82158490)
+IOW (0x 280020f0, 0x 42d48d25)
+IOW (0x 280020f4, 0x 2821a9b9)
+IOW (0x 280020f8, 0x 83f18680)
+IOW (0x 280020fc, 0x 0301c165)
+IOW (0x 28002100, 0x cdfa2d9d)
+IOW (0x 28002104, 0x 2234e925)
+IOW (0x 28002108, 0x 920b9326)
+IOW (0x 2800210c, 0x cc4597e5)
+IOW (0x 28002110, 0x 8d265253)
+IOW (0x 28002114, 0x 82875fd4)
+IOW (0x 28002118, 0x 6d0991f6)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 29000000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000b2
+IOR (0x 28002000, 0x f00000b2) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+INFO: 0x f00000b2, expected 0x a0000000, FAIL
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test: OpenRma API in SORT lifecycle
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test: OpenRma API in SORT lifecycle
+START
+-----------------------------------------------------------------------------------
+
+0x00000000
+IOR (0x 4022010c, 0x 00000000) n.e.d.
+INFO: 0x 00000000, expected 0x 000000ea, FAIL
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test: OpenRma API in SORT lifecycle
+___________________________________________________________________________________
+
+Execution time is 3 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

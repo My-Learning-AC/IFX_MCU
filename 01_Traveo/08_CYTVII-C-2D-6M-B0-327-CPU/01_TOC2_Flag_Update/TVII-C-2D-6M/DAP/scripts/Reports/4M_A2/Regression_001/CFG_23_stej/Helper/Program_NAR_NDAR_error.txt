@@ -1,0 +1,2 @@
+Error: Failed to enable the FPB
+Error: timed out while waiting for target halted

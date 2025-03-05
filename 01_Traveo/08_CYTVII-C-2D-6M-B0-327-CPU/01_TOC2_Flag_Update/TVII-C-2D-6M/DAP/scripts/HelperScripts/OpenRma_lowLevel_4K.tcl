@@ -1,0 +1,1078 @@
+#source [find interface/jlink.cfg]
+source [find HelperScripts/SROM_Defines.tcl]
+source [find HelperScripts/utility_srom.tcl]
+source [find HelperScripts/CustomFunctions.tcl]
+
+acquire_TestMode_SROM;
+
+global CYREG_IPC_STRUCT_LOCK_STATUS;
+
+#set _CHIPNAME generic_dap_access
+#source [find target/swj-dp.tcl]
+#swj_newdap $_CHIPNAME cpu -irlen 4 -ircapture 0x1 -irmask 0xf
+#dap create $_CHIPNAME.dap -chain-position $_CHIPNAME.cpu
+
+# Writes 'val' to address 'addr' via AP 'ap'
+proc mww_ll { ap addr val } {
+	global _CHIPNAME
+	$_CHIPNAME.dap apreg $ap 0x04 $addr
+	$_CHIPNAME.dap apreg $ap 0x0C $val
+}
+
+# Reads and displays data from address 'addr' via AP 'ap'
+proc mdw_ll { ap addr } {
+	global _CHIPNAME
+	$_CHIPNAME.dap apreg $ap 0x04 $addr
+	$_CHIPNAME.dap apreg $ap 0x0C
+}
+
+# Reads data from address 'addr' via AP 'ap' and returns it
+# Can be used to read data and pass it to other commands
+proc mrw_ll { ap addr } {
+	global _CHIPNAME
+	$_CHIPNAME.dap apreg $ap 0x04 $addr
+	set ap [ocd_$_CHIPNAME.dap apreg $ap 0x0C]
+	regsub -all {(\s*\n)+} $ap "" ap
+	return $ap
+}
+
+
+init
+#mww_ll 0 0x4026207C 0x1;
+#re_boot;
+#shutdown;
+
+# Now you can access memory via SYSAP :
+puts "Acquire Check"
+IOWap 0 0x08001000 0x12345678
+IORap 0 0x08001000
+IORap 0 0x4022004C
+
+
+
+puts "API parameters"
+mww_ll 0 0x08001404 0x00000014
+mww_ll 0 0x08001408 0x120029f0
+mww_ll 0 0x0800140c 0x9E352240
+mww_ll 0 0x08001410 0x03E4371C
+mww_ll 0 0x08001414 0x00061920
+mww_ll 0 0x08001418 0x0800141c;
+mww_ll 0 0x0800141C 0xf5309b7e
+mww_ll 0 0x08001420 0x794258ee
+mww_ll 0 0x08001424 0xc9413cc6
+mww_ll 0 0x08001428 0xd649127e
+mww_ll 0 0x0800142C 0x723bffa5
+mww_ll 0 0x08001430 0xa74094b9
+mww_ll 0 0x08001434 0x8edc48ed
+mww_ll 0 0x08001438 0x82389e5e
+mww_ll 0 0x0800143C 0x0d89bb20
+mww_ll 0 0x08001440 0xfc3d0432
+mww_ll 0 0x08001444 0xa415e0b5
+mww_ll 0 0x08001448 0x85ddab46
+mww_ll 0 0x0800144C 0xa4b285db
+mww_ll 0 0x08001450 0x178e9d28
+mww_ll 0 0x08001454 0xf419e8fb
+mww_ll 0 0x08001458 0xdfdc091b
+mww_ll 0 0x0800145C 0xd0aa685c
+mww_ll 0 0x08001460 0x14f550cb
+mww_ll 0 0x08001464 0x4083d2f7
+mww_ll 0 0x08001468 0xa67f5df3
+mww_ll 0 0x0800146C 0x1a837e47
+mww_ll 0 0x08001470 0x227fe7cb
+mww_ll 0 0x08001474 0x7c166eb7
+mww_ll 0 0x08001478 0xb333f74a
+mww_ll 0 0x0800147C 0x71372cf0
+mww_ll 0 0x08001480 0x6c9668a2
+mww_ll 0 0x08001484 0x8cbdca57
+mww_ll 0 0x08001488 0x708b4287
+mww_ll 0 0x0800148C 0x415806d2
+mww_ll 0 0x08001490 0xc36a269e
+mww_ll 0 0x08001494 0x48d1508b
+mww_ll 0 0x08001498 0x091e4398
+mww_ll 0 0x0800149C 0x847b4cec
+mww_ll 0 0x080014A0 0x25d18557
+mww_ll 0 0x080014A4 0x620df111
+mww_ll 0 0x080014A8 0x373652d1
+mww_ll 0 0x080014AC 0xe7586d23
+mww_ll 0 0x080014B0 0x435939e8
+mww_ll 0 0x080014B4 0x7fe96d8e
+mww_ll 0 0x080014B8 0xf1b77708
+mww_ll 0 0x080014BC 0x8fd47577
+mww_ll 0 0x080014C0 0x3fe90922
+mww_ll 0 0x080014C4 0x63332e35
+mww_ll 0 0x080014C8 0x1de000fd
+mww_ll 0 0x080014CC 0xfe6e76ec
+mww_ll 0 0x080014D0 0x8d439848
+mww_ll 0 0x080014D4 0xb9708561
+mww_ll 0 0x080014D8 0x5e9641ed
+mww_ll 0 0x080014DC 0xf7f34977
+mww_ll 0 0x080014E0 0x1c5a709a
+mww_ll 0 0x080014E4 0x4dd79e6d
+mww_ll 0 0x080014E8 0x8a8c3fe4
+mww_ll 0 0x080014EC 0x0bdbc197
+mww_ll 0 0x080014F0 0xbeef6c32
+mww_ll 0 0x080014F4 0xf125a9ce
+mww_ll 0 0x080014F8 0x63289aaa
+mww_ll 0 0x080014FC 0xbe68eb1e
+mww_ll 0 0x08001500 0x9833f339
+mww_ll 0 0x08001504 0xd734c2e2
+mww_ll 0 0x08001508 0x35cb32cf
+mww_ll 0 0x0800150C 0x0fe91a6d
+mww_ll 0 0x08001510 0x055a34a1
+mww_ll 0 0x08001514 0xb99eba46
+mww_ll 0 0x08001518 0xea87e14f
+mww_ll 0 0x0800151C 0xbaed4f11
+mww_ll 0 0x08001520 0xa9fa79c8
+mww_ll 0 0x08001524 0x71e9a541
+mww_ll 0 0x08001528 0x81a573e1
+mww_ll 0 0x0800152C 0xe6510200
+mww_ll 0 0x08001530 0x148c2d1b
+mww_ll 0 0x08001534 0x5cd28304
+mww_ll 0 0x08001538 0x8323bdbf
+mww_ll 0 0x0800153C 0xd1ea9410
+mww_ll 0 0x08001540 0x015982d9
+mww_ll 0 0x08001544 0xb1ca9a8a
+mww_ll 0 0x08001548 0x74a1b98b
+mww_ll 0 0x0800154C 0x7260506a
+mww_ll 0 0x08001550 0x7deb5a4a
+mww_ll 0 0x08001554 0x04118218
+mww_ll 0 0x08001558 0x57e1e282
+mww_ll 0 0x0800155C 0xe772aa4d
+mww_ll 0 0x08001560 0xfae98cbd
+mww_ll 0 0x08001564 0x23baacc7
+mww_ll 0 0x08001568 0xfe2516ed
+mww_ll 0 0x0800156C 0xbf47210a
+mww_ll 0 0x08001570 0x0e8ee284
+mww_ll 0 0x08001574 0x9cbf7add
+mww_ll 0 0x08001578 0x9e0518f4
+mww_ll 0 0x0800157C 0x17ffb70f
+mww_ll 0 0x08001580 0x6ebb0a48
+mww_ll 0 0x08001584 0x836d8cec
+mww_ll 0 0x08001588 0x3a557b32
+mww_ll 0 0x0800158C 0xe7d7a47b
+mww_ll 0 0x08001590 0x358e0cfb
+mww_ll 0 0x08001594 0xa35272f8
+mww_ll 0 0x08001598 0xd31f96d7
+mww_ll 0 0x0800159C 0x16fc65d4
+mww_ll 0 0x080015A0 0xdc52b3c5
+mww_ll 0 0x080015A4 0xa627f90a
+mww_ll 0 0x080015A8 0x41ba19c5
+mww_ll 0 0x080015AC 0xac45b303
+mww_ll 0 0x080015B0 0xbe98f3cf
+mww_ll 0 0x080015B4 0xfd29a6e6
+mww_ll 0 0x080015B8 0xa14dd1ca
+mww_ll 0 0x080015BC 0x334b9afc
+mww_ll 0 0x080015C0 0x8737654e
+mww_ll 0 0x080015C4 0x0ca40958
+mww_ll 0 0x080015C8 0x99ca0c46
+mww_ll 0 0x080015CC 0xd397687b
+mww_ll 0 0x080015D0 0x90960854
+mww_ll 0 0x080015D4 0x03a9ea84
+mww_ll 0 0x080015D8 0x08591e85
+mww_ll 0 0x080015DC 0x274325fb
+mww_ll 0 0x080015E0 0xa3e9da14
+mww_ll 0 0x080015E4 0x060d5db1
+mww_ll 0 0x080015E8 0x9389db5f
+mww_ll 0 0x080015EC 0xc555a11d
+mww_ll 0 0x080015F0 0xb67edb48
+mww_ll 0 0x080015F4 0x39362104
+mww_ll 0 0x080015F8 0x25632391
+mww_ll 0 0x080015FC 0x763787ef
+mww_ll 0 0x08001600 0x40df3572
+mww_ll 0 0x08001604 0x70bc128d
+mww_ll 0 0x08001608 0x3ffc055d
+mww_ll 0 0x0800160C 0x97693e55
+mww_ll 0 0x08001610 0xa3b8f241
+mww_ll 0 0x08001614 0x1d42de1c
+mww_ll 0 0x08001618 0x9c6c23cd
+
+mdw_ll 0 0x08001404
+mdw_ll 0 0x08001408
+mdw_ll 0 0x0800140c
+mdw_ll 0 0x08001410
+mdw_ll 0 0x08001414
+mdw_ll 0 0x08001418
+mdw_ll 0 0x0800141C
+mdw_ll 0 0x08001420
+mdw_ll 0 0x08001424
+mdw_ll 0 0x08001428
+mdw_ll 0 0x0800142C
+mdw_ll 0 0x08001430
+mdw_ll 0 0x08001434
+mdw_ll 0 0x08001438
+mdw_ll 0 0x0800143C
+mdw_ll 0 0x08001440
+mdw_ll 0 0x08001444
+mdw_ll 0 0x08001448
+mdw_ll 0 0x0800144C
+mdw_ll 0 0x08001450
+mdw_ll 0 0x08001454
+mdw_ll 0 0x08001458
+mdw_ll 0 0x0800145C
+mdw_ll 0 0x08001460
+mdw_ll 0 0x08001464
+mdw_ll 0 0x08001468
+mdw_ll 0 0x0800146C
+mdw_ll 0 0x08001470
+mdw_ll 0 0x08001474
+mdw_ll 0 0x08001478
+mdw_ll 0 0x0800147C
+mdw_ll 0 0x08001480
+mdw_ll 0 0x08001484
+mdw_ll 0 0x08001488
+mdw_ll 0 0x0800148C
+mdw_ll 0 0x08001490
+mdw_ll 0 0x08001494
+mdw_ll 0 0x08001498
+mdw_ll 0 0x0800149C
+mdw_ll 0 0x080014A0
+mdw_ll 0 0x080014A4
+mdw_ll 0 0x080014A8
+mdw_ll 0 0x080014AC
+mdw_ll 0 0x080014B0
+mdw_ll 0 0x080014B4
+mdw_ll 0 0x080014B8
+mdw_ll 0 0x080014BC
+mdw_ll 0 0x080014C0
+mdw_ll 0 0x080014C4
+mdw_ll 0 0x080014C8
+mdw_ll 0 0x080014CC
+mdw_ll 0 0x080014D0
+mdw_ll 0 0x080014D4
+mdw_ll 0 0x080014D8
+mdw_ll 0 0x080014DC
+mdw_ll 0 0x080014E0
+mdw_ll 0 0x080014E4
+mdw_ll 0 0x080014E8
+mdw_ll 0 0x080014EC
+mdw_ll 0 0x080014F0
+mdw_ll 0 0x080014F4
+mdw_ll 0 0x080014F8
+mdw_ll 0 0x080014FC
+mdw_ll 0 0x08001500
+mdw_ll 0 0x08001504
+mdw_ll 0 0x08001508
+mdw_ll 0 0x0800150C
+mdw_ll 0 0x08001510
+mdw_ll 0 0x08001514
+mdw_ll 0 0x08001518
+mdw_ll 0 0x0800151C
+mdw_ll 0 0x08001520
+mdw_ll 0 0x08001524
+mdw_ll 0 0x08001528
+mdw_ll 0 0x0800152C
+mdw_ll 0 0x08001530
+mdw_ll 0 0x08001534
+mdw_ll 0 0x08001538
+mdw_ll 0 0x0800153C
+mdw_ll 0 0x08001540
+mdw_ll 0 0x08001544
+mdw_ll 0 0x08001548
+mdw_ll 0 0x0800154C
+mdw_ll 0 0x08001550
+mdw_ll 0 0x08001554
+mdw_ll 0 0x08001558
+mdw_ll 0 0x0800155C
+mdw_ll 0 0x08001560
+mdw_ll 0 0x08001564
+mdw_ll 0 0x08001568
+mdw_ll 0 0x0800156C
+mdw_ll 0 0x08001570
+mdw_ll 0 0x08001574
+mdw_ll 0 0x08001578
+mdw_ll 0 0x0800157C
+mdw_ll 0 0x08001580
+mdw_ll 0 0x08001584
+mdw_ll 0 0x08001588
+mdw_ll 0 0x0800158C
+mdw_ll 0 0x08001590
+mdw_ll 0 0x08001594
+mdw_ll 0 0x08001598
+mdw_ll 0 0x0800159C
+mdw_ll 0 0x080015A0
+mdw_ll 0 0x080015A4
+mdw_ll 0 0x080015A8
+mdw_ll 0 0x080015AC
+mdw_ll 0 0x080015B0
+mdw_ll 0 0x080015B4
+mdw_ll 0 0x080015B8
+mdw_ll 0 0x080015BC
+mdw_ll 0 0x080015C0
+mdw_ll 0 0x080015C4
+mdw_ll 0 0x080015C8
+mdw_ll 0 0x080015CC
+mdw_ll 0 0x080015D0
+mdw_ll 0 0x080015D4
+mdw_ll 0 0x080015D8
+mdw_ll 0 0x080015DC
+mdw_ll 0 0x080015E0
+mdw_ll 0 0x080015E4
+mdw_ll 0 0x080015E8
+mdw_ll 0 0x080015EC
+mdw_ll 0 0x080015F0
+mdw_ll 0 0x080015F4
+mdw_ll 0 0x080015F8
+mdw_ll 0 0x080015FC
+mdw_ll 0 0x08001600
+mdw_ll 0 0x08001604
+mdw_ll 0 0x08001608
+mdw_ll 0 0x0800160C
+mdw_ll 0 0x08001610
+mdw_ll 0 0x08001614
+mdw_ll 0 0x08001618
+
+
+mww_ll 0 0x08001400 0x29000000
+mdw_ll 0 0x08001400
+puts "IPC Acquire "
+mdw_ll 0 0x40220060
+mww_ll 0 0x40220060 0x80000f03
+mdw_ll 0 0x40220060
+
+puts "SRAM SCRATCH into IPC2 DATA0"
+mww_ll 0 0x4022006c 0x08001400
+mdw_ll 0 0x4022006c 
+puts "Notify"
+mww_ll 0 0x40220068 0x00000001
+
+
+#mdw_ll 0 0x40221000;
+#puts "INTR Addr"
+
+puts "Wait for IPC Release"
+after 100
+for {set i 0} {$i<100} {incr i} {
+	mdw_ll 0 $CYREG_IPC_STRUCT_LOCK_STATUS;
+}
+
+
+puts "Read IPC DATA"
+mdw_ll 0 0x4022006c
+mdw_ll 0 0x08001400
+
+mdw_ll 0 0x402200EC
+mdw_ll 0 0x4022006C;
+
+puts "Test Addr"
+mdw_ll 0 0x40221008;
+
+puts "INTR Addr"
+mdw_ll 0 0x40221000;
+
+puts "EFUSE for lifecycle";
+mdw_ll 0 0x402C0800;
+
+puts "Interrupt checks";
+mdw_ll 1 0xE000E100;
+mww_ll 1 0xE000E100 0x3;
+mdw_ll 1 0xE000E100;
+
+mdw_ll 0 0x40208000;
+
+mdw_ll 1 0xE000E400;
+mww_ll 1 0xE000E400 0x1;
+mdw_ll 1 0xE000E400;
+
+#puts "Silicon ID";
+SROM_SiliconID $SYS_CALL_GREATER32BIT 0x1;
+
+mdw_ll 0 0x17002018;
+
+#shutdown;
+
+after 100;
+puts "\nFault Status register\n";
+#STATUS
+mdw_ll 0 0x4010000C
+
+puts "\nFault DATA register\n";
+#DATA
+mdw_ll 0 0x40100010
+mdw_ll 0 0x40100014
+mdw_ll 0 0x40100018
+mdw_ll 0 0x4010001C
+
+puts "\nFault Pending register\n";
+#Pending
+mdw_ll 0 0x40100040
+mdw_ll 0 0x40100044
+mdw_ll 0 0x40100048
+mdw_ll 0 0x17000004;
+
+puts " SRAM location 0x28010000"
+mdw_ll 0 0x08010000
+puts " FlashBoot location"
+mdw_ll 0 0x17002000
+puts " SFLASH Row 0"
+mdw_ll 0 0x17000000
+puts " FM CTL"
+mdw_ll 0 0x40240000
+puts " WOUNDING"
+mdw_ll 0 0x402020c0
+puts " PROTECTION Register"
+mdw_ll 0 0x402020c4
+
+puts "Read SFLASH"
+
+set SFLASH_START_ADDR 0x17000000;
+set SFLASH_SIZE	0x8000;
+
+Enable_MainFlash_Operations;
+Enable_WorkFlash_Operations;
+IOW $CYREG_MAIN_FLASH_SAFETY 0x1;
+IOW $CYREG_WORK_FLASH_SAFETY 0x1;
+
+mww_ll 0 0x40210050 0xFFFFFFFF;
+mww_ll 0 0x40210054 0xFFFFFFFF;
+mww_ll 0 0x40210058 0xFFFFFFFF;
+mdw_ll 0 0x4021000C;
+mdw_ll 0 0x40210010;
+mdw_ll 0 0x40210014;
+mdw_ll 0 0x40210018;
+
+set SFLASH_END_ADDR	[expr $SFLASH_START_ADDR + $SFLASH_SIZE - 1] ;
+
+puts [format "Silicon ID low-level"]
+
+
+#Read_GPRs_For_Debug;
+
+mdw_ll 0 0x4022000C;
+mdw_ll 0 0x4022002C;
+mdw_ll 0 0x4022004C;
+mdw_ll 0 0x4022006C;
+mdw_ll 0 0x4022008C;
+mdw_ll 0 0x402200AC;
+mdw_ll 0 0x402200CC;
+mdw_ll 0 0x402200EC;
+
+mdw_ll 0 0x4021000C;
+mdw_ll 0 0x40210010;
+mdw_ll 0 0x40210014;
+mdw_ll 0 0x40210018;
+# for {set i $SFLASH_START_ADDR} {$i < $SFLASH_END_ADDR} {incr i 4} {
+	# set read [mdw_ll 0 $i];
+	# puts [format "0x%x => $read" $i];
+# }
+
+set PKEY [ReturnSFlashRow 50];
+set UID [ReturnSFlashRow 3];
+# lset PKEY 0 0x00000448;
+test_compare 0xa0000000 [SROM_WriteRow $SYS_CALL_GREATER32BIT 0 0x17006400 0 $UID];
+
+puts "API parameters"
+mww_ll 0 0x08001404 0x00000014
+mww_ll 0 0x08001408 0x120029f0
+mww_ll 0 0x0800140c 0x9E352240
+mww_ll 0 0x08001410 0x03E4371C
+mww_ll 0 0x08001414 0x00061920
+mww_ll 0 0x08001418 0x0800141c;
+mww_ll 0 0x0800141C 0xf5309b7e
+mww_ll 0 0x08001420 0x794258ee
+mww_ll 0 0x08001424 0xc9413cc6
+mww_ll 0 0x08001428 0xd649127e
+mww_ll 0 0x0800142C 0x723bffa5
+mww_ll 0 0x08001430 0xa74094b9
+mww_ll 0 0x08001434 0x8edc48ed
+mww_ll 0 0x08001438 0x82389e5e
+mww_ll 0 0x0800143C 0x0d89bb20
+mww_ll 0 0x08001440 0xfc3d0432
+mww_ll 0 0x08001444 0xa415e0b5
+mww_ll 0 0x08001448 0x85ddab46
+mww_ll 0 0x0800144C 0xa4b285db
+mww_ll 0 0x08001450 0x178e9d28
+mww_ll 0 0x08001454 0xf419e8fb
+mww_ll 0 0x08001458 0xdfdc091b
+mww_ll 0 0x0800145C 0xd0aa685c
+mww_ll 0 0x08001460 0x14f550cb
+mww_ll 0 0x08001464 0x4083d2f7
+mww_ll 0 0x08001468 0xa67f5df3
+mww_ll 0 0x0800146C 0x1a837e47
+mww_ll 0 0x08001470 0x227fe7cb
+mww_ll 0 0x08001474 0x7c166eb7
+mww_ll 0 0x08001478 0xb333f74a
+mww_ll 0 0x0800147C 0x71372cf0
+mww_ll 0 0x08001480 0x6c9668a2
+mww_ll 0 0x08001484 0x8cbdca57
+mww_ll 0 0x08001488 0x708b4287
+mww_ll 0 0x0800148C 0x415806d2
+mww_ll 0 0x08001490 0xc36a269e
+mww_ll 0 0x08001494 0x48d1508b
+mww_ll 0 0x08001498 0x091e4398
+mww_ll 0 0x0800149C 0x847b4cec
+mww_ll 0 0x080014A0 0x25d18557
+mww_ll 0 0x080014A4 0x620df111
+mww_ll 0 0x080014A8 0x373652d1
+mww_ll 0 0x080014AC 0xe7586d23
+mww_ll 0 0x080014B0 0x435939e8
+mww_ll 0 0x080014B4 0x7fe96d8e
+mww_ll 0 0x080014B8 0xf1b77708
+mww_ll 0 0x080014BC 0x8fd47577
+mww_ll 0 0x080014C0 0x3fe90922
+mww_ll 0 0x080014C4 0x63332e35
+mww_ll 0 0x080014C8 0x1de000fd
+mww_ll 0 0x080014CC 0xfe6e76ec
+mww_ll 0 0x080014D0 0x8d439848
+mww_ll 0 0x080014D4 0xb9708561
+mww_ll 0 0x080014D8 0x5e9641ed
+mww_ll 0 0x080014DC 0xf7f34977
+mww_ll 0 0x080014E0 0x1c5a709a
+mww_ll 0 0x080014E4 0x4dd79e6d
+mww_ll 0 0x080014E8 0x8a8c3fe4
+mww_ll 0 0x080014EC 0x0bdbc197
+mww_ll 0 0x080014F0 0xbeef6c32
+mww_ll 0 0x080014F4 0xf125a9ce
+mww_ll 0 0x080014F8 0x63289aaa
+mww_ll 0 0x080014FC 0xbe68eb1e
+mww_ll 0 0x08001500 0x9833f339
+mww_ll 0 0x08001504 0xd734c2e2
+mww_ll 0 0x08001508 0x35cb32cf
+mww_ll 0 0x0800150C 0x0fe91a6d
+mww_ll 0 0x08001510 0x055a34a1
+mww_ll 0 0x08001514 0xb99eba46
+mww_ll 0 0x08001518 0xea87e14f
+mww_ll 0 0x0800151C 0xbaed4f11
+mww_ll 0 0x08001520 0xa9fa79c8
+mww_ll 0 0x08001524 0x71e9a541
+mww_ll 0 0x08001528 0x81a573e1
+mww_ll 0 0x0800152C 0xe6510200
+mww_ll 0 0x08001530 0x148c2d1b
+mww_ll 0 0x08001534 0x5cd28304
+mww_ll 0 0x08001538 0x8323bdbf
+mww_ll 0 0x0800153C 0xd1ea9410
+mww_ll 0 0x08001540 0x015982d9
+mww_ll 0 0x08001544 0xb1ca9a8a
+mww_ll 0 0x08001548 0x74a1b98b
+mww_ll 0 0x0800154C 0x7260506a
+mww_ll 0 0x08001550 0x7deb5a4a
+mww_ll 0 0x08001554 0x04118218
+mww_ll 0 0x08001558 0x57e1e282
+mww_ll 0 0x0800155C 0xe772aa4d
+mww_ll 0 0x08001560 0xfae98cbd
+mww_ll 0 0x08001564 0x23baacc7
+mww_ll 0 0x08001568 0xfe2516ed
+mww_ll 0 0x0800156C 0xbf47210a
+mww_ll 0 0x08001570 0x0e8ee284
+mww_ll 0 0x08001574 0x9cbf7add
+mww_ll 0 0x08001578 0x9e0518f4
+mww_ll 0 0x0800157C 0x17ffb70f
+mww_ll 0 0x08001580 0x6ebb0a48
+mww_ll 0 0x08001584 0x836d8cec
+mww_ll 0 0x08001588 0x3a557b32
+mww_ll 0 0x0800158C 0xe7d7a47b
+mww_ll 0 0x08001590 0x358e0cfb
+mww_ll 0 0x08001594 0xa35272f8
+mww_ll 0 0x08001598 0xd31f96d7
+mww_ll 0 0x0800159C 0x16fc65d4
+mww_ll 0 0x080015A0 0xdc52b3c5
+mww_ll 0 0x080015A4 0xa627f90a
+mww_ll 0 0x080015A8 0x41ba19c5
+mww_ll 0 0x080015AC 0xac45b303
+mww_ll 0 0x080015B0 0xbe98f3cf
+mww_ll 0 0x080015B4 0xfd29a6e6
+mww_ll 0 0x080015B8 0xa14dd1ca
+mww_ll 0 0x080015BC 0x334b9afc
+mww_ll 0 0x080015C0 0x8737654e
+mww_ll 0 0x080015C4 0x0ca40958
+mww_ll 0 0x080015C8 0x99ca0c46
+mww_ll 0 0x080015CC 0xd397687b
+mww_ll 0 0x080015D0 0x90960854
+mww_ll 0 0x080015D4 0x03a9ea84
+mww_ll 0 0x080015D8 0x08591e85
+mww_ll 0 0x080015DC 0x274325fb
+mww_ll 0 0x080015E0 0xa3e9da14
+mww_ll 0 0x080015E4 0x060d5db1
+mww_ll 0 0x080015E8 0x9389db5f
+mww_ll 0 0x080015EC 0xc555a11d
+mww_ll 0 0x080015F0 0xb67edb48
+mww_ll 0 0x080015F4 0x39362104
+mww_ll 0 0x080015F8 0x25632391
+mww_ll 0 0x080015FC 0x763787ef
+mww_ll 0 0x08001600 0x40df3572
+mww_ll 0 0x08001604 0x70bc128d
+mww_ll 0 0x08001608 0x3ffc055d
+mww_ll 0 0x0800160C 0x97693e55
+mww_ll 0 0x08001610 0xa3b8f241
+mww_ll 0 0x08001614 0x1d42de1c
+mww_ll 0 0x08001618 0x9c6c23cd
+
+mdw_ll 0 0x08001404
+mdw_ll 0 0x08001408
+mdw_ll 0 0x0800140c
+mdw_ll 0 0x08001410
+mdw_ll 0 0x08001414
+mdw_ll 0 0x08001418
+mdw_ll 0 0x0800141C
+mdw_ll 0 0x08001420
+mdw_ll 0 0x08001424
+mdw_ll 0 0x08001428
+mdw_ll 0 0x0800142C
+mdw_ll 0 0x08001430
+mdw_ll 0 0x08001434
+mdw_ll 0 0x08001438
+mdw_ll 0 0x0800143C
+mdw_ll 0 0x08001440
+mdw_ll 0 0x08001444
+mdw_ll 0 0x08001448
+mdw_ll 0 0x0800144C
+mdw_ll 0 0x08001450
+mdw_ll 0 0x08001454
+mdw_ll 0 0x08001458
+mdw_ll 0 0x0800145C
+mdw_ll 0 0x08001460
+mdw_ll 0 0x08001464
+mdw_ll 0 0x08001468
+mdw_ll 0 0x0800146C
+mdw_ll 0 0x08001470
+mdw_ll 0 0x08001474
+mdw_ll 0 0x08001478
+mdw_ll 0 0x0800147C
+mdw_ll 0 0x08001480
+mdw_ll 0 0x08001484
+mdw_ll 0 0x08001488
+mdw_ll 0 0x0800148C
+mdw_ll 0 0x08001490
+mdw_ll 0 0x08001494
+mdw_ll 0 0x08001498
+mdw_ll 0 0x0800149C
+mdw_ll 0 0x080014A0
+mdw_ll 0 0x080014A4
+mdw_ll 0 0x080014A8
+mdw_ll 0 0x080014AC
+mdw_ll 0 0x080014B0
+mdw_ll 0 0x080014B4
+mdw_ll 0 0x080014B8
+mdw_ll 0 0x080014BC
+mdw_ll 0 0x080014C0
+mdw_ll 0 0x080014C4
+mdw_ll 0 0x080014C8
+mdw_ll 0 0x080014CC
+mdw_ll 0 0x080014D0
+mdw_ll 0 0x080014D4
+mdw_ll 0 0x080014D8
+mdw_ll 0 0x080014DC
+mdw_ll 0 0x080014E0
+mdw_ll 0 0x080014E4
+mdw_ll 0 0x080014E8
+mdw_ll 0 0x080014EC
+mdw_ll 0 0x080014F0
+mdw_ll 0 0x080014F4
+mdw_ll 0 0x080014F8
+mdw_ll 0 0x080014FC
+mdw_ll 0 0x08001500
+mdw_ll 0 0x08001504
+mdw_ll 0 0x08001508
+mdw_ll 0 0x0800150C
+mdw_ll 0 0x08001510
+mdw_ll 0 0x08001514
+mdw_ll 0 0x08001518
+mdw_ll 0 0x0800151C
+mdw_ll 0 0x08001520
+mdw_ll 0 0x08001524
+mdw_ll 0 0x08001528
+mdw_ll 0 0x0800152C
+mdw_ll 0 0x08001530
+mdw_ll 0 0x08001534
+mdw_ll 0 0x08001538
+mdw_ll 0 0x0800153C
+mdw_ll 0 0x08001540
+mdw_ll 0 0x08001544
+mdw_ll 0 0x08001548
+mdw_ll 0 0x0800154C
+mdw_ll 0 0x08001550
+mdw_ll 0 0x08001554
+mdw_ll 0 0x08001558
+mdw_ll 0 0x0800155C
+mdw_ll 0 0x08001560
+mdw_ll 0 0x08001564
+mdw_ll 0 0x08001568
+mdw_ll 0 0x0800156C
+mdw_ll 0 0x08001570
+mdw_ll 0 0x08001574
+mdw_ll 0 0x08001578
+mdw_ll 0 0x0800157C
+mdw_ll 0 0x08001580
+mdw_ll 0 0x08001584
+mdw_ll 0 0x08001588
+mdw_ll 0 0x0800158C
+mdw_ll 0 0x08001590
+mdw_ll 0 0x08001594
+mdw_ll 0 0x08001598
+mdw_ll 0 0x0800159C
+mdw_ll 0 0x080015A0
+mdw_ll 0 0x080015A4
+mdw_ll 0 0x080015A8
+mdw_ll 0 0x080015AC
+mdw_ll 0 0x080015B0
+mdw_ll 0 0x080015B4
+mdw_ll 0 0x080015B8
+mdw_ll 0 0x080015BC
+mdw_ll 0 0x080015C0
+mdw_ll 0 0x080015C4
+mdw_ll 0 0x080015C8
+mdw_ll 0 0x080015CC
+mdw_ll 0 0x080015D0
+mdw_ll 0 0x080015D4
+mdw_ll 0 0x080015D8
+mdw_ll 0 0x080015DC
+mdw_ll 0 0x080015E0
+mdw_ll 0 0x080015E4
+mdw_ll 0 0x080015E8
+mdw_ll 0 0x080015EC
+mdw_ll 0 0x080015F0
+mdw_ll 0 0x080015F4
+mdw_ll 0 0x080015F8
+mdw_ll 0 0x080015FC
+mdw_ll 0 0x08001600
+mdw_ll 0 0x08001604
+mdw_ll 0 0x08001608
+mdw_ll 0 0x0800160C
+mdw_ll 0 0x08001610
+mdw_ll 0 0x08001614
+mdw_ll 0 0x08001618
+
+
+mww_ll 0 0x08001400 0x29000000
+mdw_ll 0 0x08001400
+puts "IPC Acquire "
+mdw_ll 0 0x40220060
+mww_ll 0 0x40220060 0x80000f03
+mdw_ll 0 0x40220060
+
+puts "SRAM SCRATCH into IPC2 DATA0"
+mww_ll 0 0x4022006c 0x08001400
+mdw_ll 0 0x4022006c 
+puts "Notify"
+mww_ll 0 0x40220068 0x00000001
+
+
+#mdw_ll 0 0x40221000;
+#puts "INTR Addr"
+
+puts "Wait for IPC Release"
+after 100
+for {set i 0} {$i<100} {incr i} {
+	mdw_ll 0 $CYREG_IPC_STRUCT_LOCK_STATUS;
+}
+
+
+puts "Read IPC DATA"
+mdw_ll 0 0x4022006c
+mdw_ll 0 0x08001400
+
+mdw_ll 0 0x402200EC
+mdw_ll 0 0x4022006C;
+
+# mdw_ll 0 0x17006400;
+
+# mdw_ll 0 0x4021000C;
+# mdw_ll 0 0x40210010;
+# mdw_ll 0 0x40210014;
+# mdw_ll 0 0x40210018;
+
+test_compare 0xa0000000 [SROM_WriteRow $SYS_CALL_GREATER32BIT 0 0x17006400 0 $PKEY];
+
+puts "API parameters"
+mww_ll 0 0x08001404 0x00000014
+mww_ll 0 0x08001408 0x120029f0
+mww_ll 0 0x0800140c 0x9E352240
+mww_ll 0 0x08001410 0x03E4371C
+mww_ll 0 0x08001414 0x00061920
+mww_ll 0 0x08001418 0x0800141c;
+mww_ll 0 0x0800141C 0xf5309b7e
+mww_ll 0 0x08001420 0x794258ee
+mww_ll 0 0x08001424 0xc9413cc6
+mww_ll 0 0x08001428 0xd649127e
+mww_ll 0 0x0800142C 0x723bffa5
+mww_ll 0 0x08001430 0xa74094b9
+mww_ll 0 0x08001434 0x8edc48ed
+mww_ll 0 0x08001438 0x82389e5e
+mww_ll 0 0x0800143C 0x0d89bb20
+mww_ll 0 0x08001440 0xfc3d0432
+mww_ll 0 0x08001444 0xa415e0b5
+mww_ll 0 0x08001448 0x85ddab46
+mww_ll 0 0x0800144C 0xa4b285db
+mww_ll 0 0x08001450 0x178e9d28
+mww_ll 0 0x08001454 0xf419e8fb
+mww_ll 0 0x08001458 0xdfdc091b
+mww_ll 0 0x0800145C 0xd0aa685c
+mww_ll 0 0x08001460 0x14f550cb
+mww_ll 0 0x08001464 0x4083d2f7
+mww_ll 0 0x08001468 0xa67f5df3
+mww_ll 0 0x0800146C 0x1a837e47
+mww_ll 0 0x08001470 0x227fe7cb
+mww_ll 0 0x08001474 0x7c166eb7
+mww_ll 0 0x08001478 0xb333f74a
+mww_ll 0 0x0800147C 0x71372cf0
+mww_ll 0 0x08001480 0x6c9668a2
+mww_ll 0 0x08001484 0x8cbdca57
+mww_ll 0 0x08001488 0x708b4287
+mww_ll 0 0x0800148C 0x415806d2
+mww_ll 0 0x08001490 0xc36a269e
+mww_ll 0 0x08001494 0x48d1508b
+mww_ll 0 0x08001498 0x091e4398
+mww_ll 0 0x0800149C 0x847b4cec
+mww_ll 0 0x080014A0 0x25d18557
+mww_ll 0 0x080014A4 0x620df111
+mww_ll 0 0x080014A8 0x373652d1
+mww_ll 0 0x080014AC 0xe7586d23
+mww_ll 0 0x080014B0 0x435939e8
+mww_ll 0 0x080014B4 0x7fe96d8e
+mww_ll 0 0x080014B8 0xf1b77708
+mww_ll 0 0x080014BC 0x8fd47577
+mww_ll 0 0x080014C0 0x3fe90922
+mww_ll 0 0x080014C4 0x63332e35
+mww_ll 0 0x080014C8 0x1de000fd
+mww_ll 0 0x080014CC 0xfe6e76ec
+mww_ll 0 0x080014D0 0x8d439848
+mww_ll 0 0x080014D4 0xb9708561
+mww_ll 0 0x080014D8 0x5e9641ed
+mww_ll 0 0x080014DC 0xf7f34977
+mww_ll 0 0x080014E0 0x1c5a709a
+mww_ll 0 0x080014E4 0x4dd79e6d
+mww_ll 0 0x080014E8 0x8a8c3fe4
+mww_ll 0 0x080014EC 0x0bdbc197
+mww_ll 0 0x080014F0 0xbeef6c32
+mww_ll 0 0x080014F4 0xf125a9ce
+mww_ll 0 0x080014F8 0x63289aaa
+mww_ll 0 0x080014FC 0xbe68eb1e
+mww_ll 0 0x08001500 0x9833f339
+mww_ll 0 0x08001504 0xd734c2e2
+mww_ll 0 0x08001508 0x35cb32cf
+mww_ll 0 0x0800150C 0x0fe91a6d
+mww_ll 0 0x08001510 0x055a34a1
+mww_ll 0 0x08001514 0xb99eba46
+mww_ll 0 0x08001518 0xea87e14f
+mww_ll 0 0x0800151C 0xbaed4f11
+mww_ll 0 0x08001520 0xa9fa79c8
+mww_ll 0 0x08001524 0x71e9a541
+mww_ll 0 0x08001528 0x81a573e1
+mww_ll 0 0x0800152C 0xe6510200
+mww_ll 0 0x08001530 0x148c2d1b
+mww_ll 0 0x08001534 0x5cd28304
+mww_ll 0 0x08001538 0x8323bdbf
+mww_ll 0 0x0800153C 0xd1ea9410
+mww_ll 0 0x08001540 0x015982d9
+mww_ll 0 0x08001544 0xb1ca9a8a
+mww_ll 0 0x08001548 0x74a1b98b
+mww_ll 0 0x0800154C 0x7260506a
+mww_ll 0 0x08001550 0x7deb5a4a
+mww_ll 0 0x08001554 0x04118218
+mww_ll 0 0x08001558 0x57e1e282
+mww_ll 0 0x0800155C 0xe772aa4d
+mww_ll 0 0x08001560 0xfae98cbd
+mww_ll 0 0x08001564 0x23baacc7
+mww_ll 0 0x08001568 0xfe2516ed
+mww_ll 0 0x0800156C 0xbf47210a
+mww_ll 0 0x08001570 0x0e8ee284
+mww_ll 0 0x08001574 0x9cbf7add
+mww_ll 0 0x08001578 0x9e0518f4
+mww_ll 0 0x0800157C 0x17ffb70f
+mww_ll 0 0x08001580 0x6ebb0a48
+mww_ll 0 0x08001584 0x836d8cec
+mww_ll 0 0x08001588 0x3a557b32
+mww_ll 0 0x0800158C 0xe7d7a47b
+mww_ll 0 0x08001590 0x358e0cfb
+mww_ll 0 0x08001594 0xa35272f8
+mww_ll 0 0x08001598 0xd31f96d7
+mww_ll 0 0x0800159C 0x16fc65d4
+mww_ll 0 0x080015A0 0xdc52b3c5
+mww_ll 0 0x080015A4 0xa627f90a
+mww_ll 0 0x080015A8 0x41ba19c5
+mww_ll 0 0x080015AC 0xac45b303
+mww_ll 0 0x080015B0 0xbe98f3cf
+mww_ll 0 0x080015B4 0xfd29a6e6
+mww_ll 0 0x080015B8 0xa14dd1ca
+mww_ll 0 0x080015BC 0x334b9afc
+mww_ll 0 0x080015C0 0x8737654e
+mww_ll 0 0x080015C4 0x0ca40958
+mww_ll 0 0x080015C8 0x99ca0c46
+mww_ll 0 0x080015CC 0xd397687b
+mww_ll 0 0x080015D0 0x90960854
+mww_ll 0 0x080015D4 0x03a9ea84
+mww_ll 0 0x080015D8 0x08591e85
+mww_ll 0 0x080015DC 0x274325fb
+mww_ll 0 0x080015E0 0xa3e9da14
+mww_ll 0 0x080015E4 0x060d5db1
+mww_ll 0 0x080015E8 0x9389db5f
+mww_ll 0 0x080015EC 0xc555a11d
+mww_ll 0 0x080015F0 0xb67edb48
+mww_ll 0 0x080015F4 0x39362104
+mww_ll 0 0x080015F8 0x25632391
+mww_ll 0 0x080015FC 0x763787ef
+mww_ll 0 0x08001600 0x40df3572
+mww_ll 0 0x08001604 0x70bc128d
+mww_ll 0 0x08001608 0x3ffc055d
+mww_ll 0 0x0800160C 0x97693e55
+mww_ll 0 0x08001610 0xa3b8f241
+mww_ll 0 0x08001614 0x1d42de1c
+mww_ll 0 0x08001618 0x9c6c23cd
+
+mdw_ll 0 0x08001404
+mdw_ll 0 0x08001408
+mdw_ll 0 0x0800140c
+mdw_ll 0 0x08001410
+mdw_ll 0 0x08001414
+mdw_ll 0 0x08001418
+mdw_ll 0 0x0800141C
+mdw_ll 0 0x08001420
+mdw_ll 0 0x08001424
+mdw_ll 0 0x08001428
+mdw_ll 0 0x0800142C
+mdw_ll 0 0x08001430
+mdw_ll 0 0x08001434
+mdw_ll 0 0x08001438
+mdw_ll 0 0x0800143C
+mdw_ll 0 0x08001440
+mdw_ll 0 0x08001444
+mdw_ll 0 0x08001448
+mdw_ll 0 0x0800144C
+mdw_ll 0 0x08001450
+mdw_ll 0 0x08001454
+mdw_ll 0 0x08001458
+mdw_ll 0 0x0800145C
+mdw_ll 0 0x08001460
+mdw_ll 0 0x08001464
+mdw_ll 0 0x08001468
+mdw_ll 0 0x0800146C
+mdw_ll 0 0x08001470
+mdw_ll 0 0x08001474
+mdw_ll 0 0x08001478
+mdw_ll 0 0x0800147C
+mdw_ll 0 0x08001480
+mdw_ll 0 0x08001484
+mdw_ll 0 0x08001488
+mdw_ll 0 0x0800148C
+mdw_ll 0 0x08001490
+mdw_ll 0 0x08001494
+mdw_ll 0 0x08001498
+mdw_ll 0 0x0800149C
+mdw_ll 0 0x080014A0
+mdw_ll 0 0x080014A4
+mdw_ll 0 0x080014A8
+mdw_ll 0 0x080014AC
+mdw_ll 0 0x080014B0
+mdw_ll 0 0x080014B4
+mdw_ll 0 0x080014B8
+mdw_ll 0 0x080014BC
+mdw_ll 0 0x080014C0
+mdw_ll 0 0x080014C4
+mdw_ll 0 0x080014C8
+mdw_ll 0 0x080014CC
+mdw_ll 0 0x080014D0
+mdw_ll 0 0x080014D4
+mdw_ll 0 0x080014D8
+mdw_ll 0 0x080014DC
+mdw_ll 0 0x080014E0
+mdw_ll 0 0x080014E4
+mdw_ll 0 0x080014E8
+mdw_ll 0 0x080014EC
+mdw_ll 0 0x080014F0
+mdw_ll 0 0x080014F4
+mdw_ll 0 0x080014F8
+mdw_ll 0 0x080014FC
+mdw_ll 0 0x08001500
+mdw_ll 0 0x08001504
+mdw_ll 0 0x08001508
+mdw_ll 0 0x0800150C
+mdw_ll 0 0x08001510
+mdw_ll 0 0x08001514
+mdw_ll 0 0x08001518
+mdw_ll 0 0x0800151C
+mdw_ll 0 0x08001520
+mdw_ll 0 0x08001524
+mdw_ll 0 0x08001528
+mdw_ll 0 0x0800152C
+mdw_ll 0 0x08001530
+mdw_ll 0 0x08001534
+mdw_ll 0 0x08001538
+mdw_ll 0 0x0800153C
+mdw_ll 0 0x08001540
+mdw_ll 0 0x08001544
+mdw_ll 0 0x08001548
+mdw_ll 0 0x0800154C
+mdw_ll 0 0x08001550
+mdw_ll 0 0x08001554
+mdw_ll 0 0x08001558
+mdw_ll 0 0x0800155C
+mdw_ll 0 0x08001560
+mdw_ll 0 0x08001564
+mdw_ll 0 0x08001568
+mdw_ll 0 0x0800156C
+mdw_ll 0 0x08001570
+mdw_ll 0 0x08001574
+mdw_ll 0 0x08001578
+mdw_ll 0 0x0800157C
+mdw_ll 0 0x08001580
+mdw_ll 0 0x08001584
+mdw_ll 0 0x08001588
+mdw_ll 0 0x0800158C
+mdw_ll 0 0x08001590
+mdw_ll 0 0x08001594
+mdw_ll 0 0x08001598
+mdw_ll 0 0x0800159C
+mdw_ll 0 0x080015A0
+mdw_ll 0 0x080015A4
+mdw_ll 0 0x080015A8
+mdw_ll 0 0x080015AC
+mdw_ll 0 0x080015B0
+mdw_ll 0 0x080015B4
+mdw_ll 0 0x080015B8
+mdw_ll 0 0x080015BC
+mdw_ll 0 0x080015C0
+mdw_ll 0 0x080015C4
+mdw_ll 0 0x080015C8
+mdw_ll 0 0x080015CC
+mdw_ll 0 0x080015D0
+mdw_ll 0 0x080015D4
+mdw_ll 0 0x080015D8
+mdw_ll 0 0x080015DC
+mdw_ll 0 0x080015E0
+mdw_ll 0 0x080015E4
+mdw_ll 0 0x080015E8
+mdw_ll 0 0x080015EC
+mdw_ll 0 0x080015F0
+mdw_ll 0 0x080015F4
+mdw_ll 0 0x080015F8
+mdw_ll 0 0x080015FC
+mdw_ll 0 0x08001600
+mdw_ll 0 0x08001604
+mdw_ll 0 0x08001608
+mdw_ll 0 0x0800160C
+mdw_ll 0 0x08001610
+mdw_ll 0 0x08001614
+mdw_ll 0 0x08001618
+
+
+mww_ll 0 0x08001400 0x29000000
+mdw_ll 0 0x08001400
+puts "IPC Acquire "
+mdw_ll 0 0x40220060
+mww_ll 0 0x40220060 0x80000f03
+mdw_ll 0 0x40220060
+
+puts "SRAM SCRATCH into IPC2 DATA0"
+mww_ll 0 0x4022006c 0x08001400
+mdw_ll 0 0x4022006c 
+puts "Notify"
+mww_ll 0 0x40220068 0x00000001
+
+
+#mdw_ll 0 0x40221000;
+#puts "INTR Addr"
+
+puts "Wait for IPC Release"
+after 100
+for {set i 0} {$i<100} {incr i} {
+	mdw_ll 0 $CYREG_IPC_STRUCT_LOCK_STATUS;
+}
+
+
+puts "Read IPC DATA"
+mdw_ll 0 0x4022006c
+mdw_ll 0 0x08001400
+
+mdw_ll 0 0x402200EC
+mdw_ll 0 0x4022006C;
+
+exit

@@ -1,0 +1,23 @@
+#source [find interface/cmsis-dap.cfg]
+ source [find interface/kitprog3.cfg]
+transport select swd
+source [find target/traveo2_ce_4m_psvp.cfg]
+
+targets $_CHIPNAME.cpu.cm0
+adapter_khz 200
+traveo2 sflash_restrictions 3
+init
+reset init
+halt
+
+puts "Program FlashBoot"
+program flashboot_tviice4m_a0_psvp_3.1.0.559.hex
+
+puts "Update Patch Table address"
+flash rmw 0x17000004 58200017
+
+puts "PSVP doesn't support OTP. Patching TOC1..."
+flash rmw 0x1700782C 00200017
+
+
+shutdown

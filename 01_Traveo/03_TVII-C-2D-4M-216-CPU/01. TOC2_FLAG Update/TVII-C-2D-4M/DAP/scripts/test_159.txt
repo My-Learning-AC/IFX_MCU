@@ -1,0 +1,276 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.973 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+IOW (0x 28008000, 0x 00000100)
+0x00000100
+IOR (0x 28008000, 0x 00000100) n.e.d.
+Region Addr to read protect  = 0x%08x 0x28008000
+Configuring SMPU_STRUCTs
+IOW (0x 40232000, 0x 28008000)
+IOW (0x 40232004, 0x 8800fe76)
+0x28008000
+IOR (0x 40232000, 0x 28008000) n.e.d.
+0x8800ff76
+IOR (0x 40232004, 0x 8800ff76) n.e.d.
+0x00000f03
+IOR (0x 40220040, 0x 00000f03) n.e.d.
+IOW (0x 40220040, 0x 80000f03)
+0x80000f02
+IOR (0x 40220040, 0x 80000f02) n.e.d.
+IOW (0x 4022004c, 0x 28008000)
+0x28008000
+IOR (0x 4022004c, 0x 28008000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+Wait for IPC Release
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+0xf00000f1
+IOR (0x 4022004c, 0x f00000f1) n.e.d.
+0xf00000f1
+IOR (0x 4022004c, 0x f00000f1) n.e.d.
+Test Passed, Hardfault generated during API call
+0x00000100
+IOR (0x 28008000, 0x 00000100) n.e.d.
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

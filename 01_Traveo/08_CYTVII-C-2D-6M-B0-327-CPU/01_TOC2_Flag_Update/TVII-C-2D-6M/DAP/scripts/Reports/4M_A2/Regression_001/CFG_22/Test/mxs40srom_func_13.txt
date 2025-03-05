@@ -1,0 +1,1206 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.974 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf0000002
+IOR (0x 28002000, 0x f0000002) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x6c1002aa
+IOR (0x 40210010, 0x 6c1002aa) n.e.d.
+0xb18e8765
+IOR (0x 40210014, 0x b18e8765) n.e.d.
+0x4a95fd2e
+IOR (0x 40210018, 0x 4a95fd2e) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT STATUS 
+
+0x00000012
+IOR (0x 4021000c, 0x 00000012) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+SiliconID API: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 00000100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa051e850
+IOR (0x 28002000, 0x a051e850) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SiliconID API: End
+retrunVal = 0xa051e850
+protectionState = 1
+lifeCycleStage = 5
+
+****Part is in VIRGIN Protection State****
+
+
+****Part is in SORT lifecycle State****
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0001)
+0x011a0001
+IOR (0x 4022004c, 0x 011a0001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0101)
+0x011a0101
+IOR (0x 4022004c, 0x 011a0101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0201)
+0x011a0201
+IOR (0x 4022004c, 0x 011a0201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0301)
+0x011a0301
+IOR (0x 4022004c, 0x 011a0301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0401)
+0x011a0401
+IOR (0x 4022004c, 0x 011a0401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0501)
+0x011a0501
+IOR (0x 4022004c, 0x 011a0501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0601)
+0x011a0601
+IOR (0x 4022004c, 0x 011a0601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a0701)
+0x011a0701
+IOR (0x 4022004c, 0x 011a0701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1200)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1300)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1400)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1500)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1600)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a1700)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2001)
+0x011a2001
+IOR (0x 4022004c, 0x 011a2001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2101)
+0x011a2101
+IOR (0x 4022004c, 0x 011a2101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2201)
+0x011a2201
+IOR (0x 4022004c, 0x 011a2201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2301)
+0x011a2301
+IOR (0x 4022004c, 0x 011a2301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2401)
+0x011a2401
+IOR (0x 4022004c, 0x 011a2401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2501)
+0x011a2501
+IOR (0x 4022004c, 0x 011a2501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2601)
+0x011a2601
+IOR (0x 4022004c, 0x 011a2601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011a2701)
+0x011a2701
+IOR (0x 4022004c, 0x 011a2701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3000)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3100)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3200)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3300)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3400)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3500)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3600)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 011a3700)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 28002000, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0001)
+0x011b0001
+IOR (0x 4022004c, 0x 011b0001) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0101)
+0x011b0101
+IOR (0x 4022004c, 0x 011b0101) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0201)
+0x011b0201
+IOR (0x 4022004c, 0x 011b0201) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0301)
+0x011b0301
+IOR (0x 4022004c, 0x 011b0301) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0401)
+0x011b0401
+IOR (0x 4022004c, 0x 011b0401) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0501)
+0x011b0501
+IOR (0x 4022004c, 0x 011b0501) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0601)
+0x011b0601
+IOR (0x 4022004c, 0x 011b0601) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_BlowFuseBit: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 011b0701)
+0x011b0701
+IOR (0x 4022004c, 0x 011b0701) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa0000000
+IOR (0x 4022004c, 0x a0000000) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_BlowFuseBit: End, result = 0xa0000000
+INFO: 0x a0000000, PASS
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03006801)
+0x03006801
+IOR (0x 4022004c, 0x 03006801) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ff
+IOR (0x 4022004c, 0x a00000ff) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+INFO: 0x a00000ff, PASS
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 03006900)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ff
+IOR (0x 28002000, 0x a00000ff) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+INFO: 0x a00000ff, PASS
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03006a01)
+0x03006a01
+IOR (0x 4022004c, 0x 03006a01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ff
+IOR (0x 4022004c, 0x a00000ff) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+INFO: 0x a00000ff, PASS
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 03006b00)
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ff
+IOR (0x 28002000, 0x a00000ff) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+INFO: 0x a00000ff, PASS
+
+SROM_ReadFuseByte: Start
+Executing API with SYSCALL_LessThan32bits
+0x00000f02
+IOR (0x 40220040, 0x 00000f02) n.e.d.
+IOW (0x 40220040, 0x 80000f02)
+IOW (0x 4022004c, 0x 03006c01)
+0x03006c01
+IOR (0x 4022004c, 0x 03006c01) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f02
+IOR (0x 4022005c, 0x 00000f02) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xa00000ff
+IOR (0x 4022004c, 0x a00000ff) n.e.d.
+Srom_ReturnCheck: END
+API Call Success!
+SROM_ReadFuseByte: End
+INFO: 0x a00000ff, PASS
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0x6c1002aa
+IOR (0x 40210010, 0x 6c1002aa) n.e.d.
+0xb18e8765
+IOR (0x 40210014, 0x b18e8765) n.e.d.
+0x4a95fd2e
+IOR (0x 40210018, 0x 4a95fd2e) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0xf642e6bb
+IOR (0x 4021001c, 0x f642e6bb) n.e.d.
+
+Read FAULT STATUS 
+
+0x00000012
+IOR (0x 4021000c, 0x 00000012) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+Execution time is 2 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

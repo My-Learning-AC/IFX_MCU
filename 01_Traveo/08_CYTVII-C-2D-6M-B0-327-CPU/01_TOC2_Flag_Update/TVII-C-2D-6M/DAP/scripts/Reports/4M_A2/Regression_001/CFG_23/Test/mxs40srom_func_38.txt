@@ -1,0 +1,225 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.973 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf0000005
+IOR (0x 28002000, 0x f0000005) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+0x00000002
+IOR (0x 402020c4, 0x 00000002) n.e.d.
+
+****Part is in NORMAL Protection State****
+
+CPUSS WOUNDING:
+0x00000000
+IOR (0x 402020c0, 0x 00000000) n.e.d.
+AP_CTL:
+0x00000007
+IOR (0x 40201414, 0x 00000007) n.e.d.
+FLASH_BOOT:
+0x00004000
+IOR (0x 17002000, 0x 00004000) n.e.d.
+PC Value of CM0+:
+0x00020002
+IOR (0x 40234000, 0x 00020002) n.e.d.
+PC Value of Master 0 is 2
+PC Value of Master CM7_0:
+0x00000002
+IOR (0x 40237800, 0x 00000002) n.e.d.
+PC Value of Master 14 is 2
+PC Value of Master CM7_1:
+0x00000000
+IOR (0x 40237400, 0x 00000000) n.e.d.
+PC Value of Master 13 is 0
+PC Value of Master DAP:
+0x00000002
+IOR (0x 40237c00, 0x 00000002) n.e.d.
+PC Value of Master 15 is 2
+IOR (0x 08000e6c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Info : SWD DPIDR 0x6ba02477
+IOW (0x 08000e6c, 0x 000000a5)
+Could not write to 0x08000E6C via AP #0
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 08000e6c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Info : SWD DPIDR 0x6ba02477
+IOR (0x 08000e6c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Value: 0xA5A5A500
+Region Addr to read protect  = 0x%08x 0x08000801
+Configuring SMPU_STRUCTs
+Info : SWD DPIDR 0x6ba02477
+IOW (0x 40232000, 0x 08000800)
+IOW (0x 40232004, 0x 8800045b)
+0x08000800
+IOR (0x 40232000, 0x 08000800) n.e.d.
+0x8800055b
+IOR (0x 40232004, 0x 8800055b) n.e.d.
+0x08000800
+IOR (0x 40232000, 0x 08000800) n.e.d.
+0x8800055b
+IOR (0x 40232004, 0x 8800055b) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running 1. Test : DIRECTEXECUTE API: Code in SRAM Type0
+START
+-----------------------------------------------------------------------------------
+
+SROM_DirectExecute: Start
+sys_call_type 0x00000000...
+func_type 0x00000000...
+funcAddress 0x08000801...
+argument 0x00000000...
+return 0x00000000...
+addr_region_type 0x00000001...
+IOW (0x 28002004, 0x 00000000)
+IOW (0x 28002008, 0x 08000801)
+IOW (0x 2800200c, 0x 00000000)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 0f000000)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+SROM_DirectExecute: End
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed 1. Test : DIRECTEXECUTE API: Code in SRAM Type0
+___________________________________________________________________________________
+
+0x28001bd8
+IOR (0x 4022000c, 0x 28001bd8) n.e.d.
+
+Masking the Fault registers to capture the Fault
+
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Fault Status register
+
+0x8000000f
+IOR (0x 4021000c, 0x 8000000f) n.e.d.
+
+Fault DATA register
+
+0x08000e6c
+IOR (0x 40210010, 0x 08000e6c) n.e.d.
+0x00002f41
+IOR (0x 40210014, 0x 00002f41) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Fault Pending register
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021004c, 0x 00000000) n.e.d.
+
+RAM0_CTL0 ECC_CHECK_DIS(bit 19 should be 0)
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+
+
+
+
+Fault has occured!!
+
+BUS MASTER 15 MPU/SMPU FAULT OCCURED!!
+Data 0: 0x08000e6c
+Data 1: 0x00002f41
+Data 2: 0x00000000
+Data 3: 0x00000000
+IOR (0x 08000e6c, 0x a5a5a500) n.e.d.
+Could not read data, so returning 0xA5A5A500 as error code
+Value: 0xA5A5A500
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running 1. Test : Check if hard fault occurred or not
+START
+-----------------------------------------------------------------------------------
+
+ReadPC: Start
+Info : SWD DPIDR 0x6ba02477
+0x03040000
+IORap (0x e000edf0, 0x 03040000) n.e.d.
+IOWap 1 (0x e000edf0, 0x a05f0003)
+IOWap 1 (0x e000edf4, 0x 00000010)
+0x41000000
+IORap (0x e000edf8, 0x 41000000) n.e.d.
+0x01030003
+IORap (0x e000edf0, 0x 01030003) n.e.d.
+IOWap 1 (0x e000edf0, 0x a05f0001)
+ReadPC: End
+INFO: 0x 00000000, expected 0x 00000003, FAIL
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed 1. Test : Check if hard fault occurred or not
+___________________________________________________________________________________
+
+fail_count = 0
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

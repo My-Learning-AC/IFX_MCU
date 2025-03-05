@@ -1,0 +1,206 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.975 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf00000da
+IOR (0x 28002000, 0x f00000da) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
+0x00000001
+IOR (0x 402020c4, 0x 00000001) n.e.d.
+
+****Part is in VIRGIN Protection State****
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Errata test for 4GB protection on MMIO
+START
+-----------------------------------------------------------------------------------
+
+Configure MPU15 to disable read/write access for 4GB MMIO space starting at address 0x0000_0000 for SYS-AP 0 (DAP)
+IOWap 1 (0x 40237e00, 0x 00000000)
+0x00000000
+IORap (0x 40237e00, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+IOWap 1 (0x 40237e04, 0x 9f000000)
+0x9f000000
+IORap (0x 40237e04, 0x 9f000000) n.e.d.
+INFO: 0x 9f000000, PASS
+
+Read IPC DATA via AP 1 (CM0+)
+0x00000000
+IORap (0x 40220010, 0x 00000000) n.e.d.
+0xf0000006
+IORap (0x 4022000c, 0x f0000006) n.e.d.
+IOWap 1 (0x 40220010, 0x 00000000)
+0x00000000
+IORap (0x 40220010, 0x 00000000) n.e.d.
+IPC Acquire via AP 1 (CM0+) 
+0x00000f02
+IORap (0x 40220040, 0x 00000f02) n.e.d.
+IOWap 1 (0x 40220040, 0x 80000f23)
+0x80000f03
+IORap (0x 40220040, 0x 80000f03) n.e.d.
+API Parameters into IPC3 DATA0 via AP 1 (CM0+)
+IOWap 1 (0x 28002600, 0x 14010100)
+IOWap 1 (0x 28002604, 0x 10000000)
+IOWap 1 (0x 4022004c, 0x 28002600)
+0x28002600
+IORap (0x 4022004c, 0x 28002600) n.e.d.
+Notify via AP 1 (CM0+)
+IOWap 1 (0x 40220048, 0x 00000001)
+Wait for IPC Release via AP 1 (CM0+)
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+0x00000f03
+IORap (0x 4022005c, 0x 00000f03) n.e.d.
+Read IPC DATA via AP 1 (CM0+)
+0xf0000008
+IORap (0x 4022004c, 0x f0000008) n.e.d.
+0x14010100
+IORap (0x 28002600, 0x 14010100) n.e.d.
+0xf0000008
+IORap (0x 4022004c, 0x f0000008) n.e.d.
+INFO: 0x f0000008, PASS
+
+0xf0000006
+IORap (0x 4022000c, 0x f0000006) n.e.d.
+0xf0000006
+IORap (0x 4022002c, 0x f0000006) n.e.d.
+0xf0000008
+IORap (0x 4022004c, 0x f0000008) n.e.d.
+0x00000101
+IORap (0x 4022006c, 0x 00000101) n.e.d.
+0xd3ff6cd5
+IORap (0x 4022008c, 0x d3ff6cd5) n.e.d.
+
+Masking the Fault registers to capture the Fault
+
+IOWap 1 (0x 40210050, 0x ffffffff)
+IOWap 1 (0x 40210054, 0x ffffffff)
+IOWap 1 (0x 40210058, 0x ffffffff)
+
+Fault Status register
+
+0x00000096
+IORap (0x 4010000c, 0x 00000096) n.e.d.
+
+Fault DATA register
+
+0x00000000
+IORap (0x 40100010, 0x 00000000) n.e.d.
+0x00000000
+IORap (0x 40100014, 0x 00000000) n.e.d.
+0x00000000
+IORap (0x 40100018, 0x 00000000) n.e.d.
+0x00000000
+IORap (0x 4010001c, 0x 00000000) n.e.d.
+
+Fault Pending register
+
+0x00000000
+IORap (0x 40100040, 0x 00000000) n.e.d.
+0x00000000
+IORap (0x 40100044, 0x 00000000) n.e.d.
+0x00000000
+IORap (0x 40100048, 0x 00000000) n.e.d.
+0x00000000
+IORap (0x 4010004c, 0x 00000000) n.e.d.
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Errata test for 4GB protection on MMIO
+___________________________________________________________________________________
+
+Execution time is 1 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...

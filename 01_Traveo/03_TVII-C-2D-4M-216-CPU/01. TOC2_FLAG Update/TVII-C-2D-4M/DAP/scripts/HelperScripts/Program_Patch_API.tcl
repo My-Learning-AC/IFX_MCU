@@ -1,0 +1,73 @@
+#source [find interface/cmsis-dap.cfg]
+ source [find interface/kitprog3.cfg]
+transport select swd
+source [find target/traveo2_ce_4m_psvp.cfg]
+
+targets $_CHIPNAME.cpu.cm0
+adapter_khz 200
+traveo2 sflash_restrictions 3
+init
+reset init
+halt
+
+
+
+flash rmw 0x17001400 01480249
+flash rmw 0x17001404 08607047
+flash rmw 0x17001408 addeefbe
+flash rmw 0x1700140C 0c002240
+
+flash rmw 0x17001200 32000000
+flash rmw 0x17001204 01140017
+flash rmw 0x17001208 FFFFFFFF
+flash rmw 0x1700120C FFFFFFFF
+flash rmw 0x17001210 01140017 
+flash rmw 0x17001214 FFFFFFFF 
+flash rmw 0x17001218 FFFFFFFF
+flash rmw 0x1700121C FFFFFFFF
+flash rmw 0x17001220 FFFFFFFF
+flash rmw 0x17001224 FFFFFFFF
+flash rmw 0x17001228 FFFFFFFF
+flash rmw 0x1700122C FFFFFFFF
+flash rmw 0x17001230 FFFFFFFF
+flash rmw 0x17001234 FFFFFFFF
+flash rmw 0x17001238 FFFFFFFF
+flash rmw 0x1700123C FFFFFFFF
+flash rmw 0x17001240 FFFFFFFF
+flash rmw 0x17001244 FFFFFFFF
+flash rmw 0x17001248 FFFFFFFF
+flash rmw 0x1700124C FFFFFFFF
+flash rmw 0x17001250 FFFFFFFF
+flash rmw 0x17001254 FFFFFFFF
+flash rmw 0x17001258 FFFFFFFF
+flash rmw 0x1700125C FFFFFFFF
+flash rmw 0x17001260 FFFFFFFF
+flash rmw 0x17001264 FFFFFFFF
+flash rmw 0x17001268 FFFFFFFF
+flash rmw 0x1700126C FFFFFFFF
+flash rmw 0x17001270 FFFFFFFF
+flash rmw 0x17001274 FFFFFFFF
+flash rmw 0x17001278 FFFFFFFF
+flash rmw 0x1700127C 01140017
+flash rmw 0x17001280 01140017
+flash rmw 0x17001284 01140017
+flash rmw 0x17001288 FFFFFFFF
+flash rmw 0x1700128C FFFFFFFF
+flash rmw 0x17001290 FFFFFFFF
+flash rmw 0x17001294 FFFFFFFF
+flash rmw 0x17001298 FFFFFFFF
+flash rmw 0x1700129C FFFFFFFF
+flash rmw 0x170012A0 FFFFFFFF
+flash rmw 0x170012A4 FFFFFFFF
+flash rmw 0x170012A8 FFFFFFFF
+flash rmw 0x170012AC FFFFFFFF
+flash rmw 0x170012B0 FFFFFFFF
+flash rmw 0x170012B4 FFFFFFFF
+flash rmw 0x170012B8 FFFFFFFF
+flash rmw 0x170012BC FFFFFFFF
+flash rmw 0x170012C0 01140017
+flash rmw 0x170012C4 01140017
+flash rmw 0x170012C8 FFFFFFFF
+flash rmw 0x170012CC FFFFFFFF
+
+flash rmw 0x17000004 17001200

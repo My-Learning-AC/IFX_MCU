@@ -1,0 +1,667 @@
+Open On-Chip Debugger 0.11.0+dev-1.2.0.1545 (2021-05-21-09:37)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+DUT NAME_2 : 0x70
+Acquiring using acquire_TestMode_SROM
+DUT name: 0x70
+INIT_ACQUIRE_COUNT: 0
+DUT name: 0x70
+adapter speed: 2000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.2.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 1.1.158
+Info : KitProg3: Pipelined transfers enabled
+Info : VTarget = 4.974 V
+Info : kitprog3: acquiring the device (mode: reset)...
+Info : clock speed 2000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : starting gdb server for traveo2_c2d_4m.cpu.cm70 on 3334
+Info : Listening on port 3334 for gdb connections
+Info : kitprog3: acquiring the device (mode: reset)...
+###############################################################################################
+
+THE DEVICE UNDER TEST IS: TVIIC2D4M_SILICON 
+TEST ID FOR DEVICE UNDER TEST IS: 0x70
+###############################################################################################
+
+Acquire Check:
+0xf00000a8
+IOR (0x 28002000, 0x f00000a8) n.e.d.
+IOW (0x 28002000, 0x deadbeef)
+0xdeadbeef
+IOR (0x 28002000, 0x deadbeef) n.e.d.
+Acquire Check PASS !!
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test for pending fault
+START
+-----------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM0_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201300, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM0_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM1_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 40201380, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM1_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test RAM2_CTL0 ECC_CHECK_DIS after boot
+START
+-----------------------------------------------------------------------------------
+
+0x00030000
+IOR (0x 402013a0, 0x 00030000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test RAM2_CTL0 ECC_CHECK_DIS after boot
+___________________________________________________________________________________
+
+Mask Fault Struct
+IOW (0x 40210050, 0x ffffffff)
+IOW (0x 40210054, 0x ffffffff)
+IOW (0x 40210058, 0x ffffffff)
+
+Read FAULT DATA(0,1,2,3) 
+
+0xa0000000
+IOR (0x 40210010, 0x a0000000) n.e.d.
+0x00002f42
+IOR (0x 40210014, 0x 00002f42) n.e.d.
+0x00000000
+IOR (0x 40210018, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT MASK(0,1,2) 
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 4021001c, 0x 00000000) n.e.d.
+
+Read FAULT STATUS 
+
+0x00000000
+IOR (0x 4021000c, 0x 00000000) n.e.d.
+
+Read FAULT Pending(0,1,2) Faults...
+
+0x00000000
+IOR (0x 40210040, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210044, 0x 00000000) n.e.d.
+0x00000000
+IOR (0x 40210048, 0x 00000000) n.e.d.
+INFO: 0x 00000000, PASS
+
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test for pending fault
+___________________________________________________________________________________
+
+IOW (0x 4024f400, 0x 00000001)
+0x00000001
+IOR (0x 4024f400, 0x 00000001) n.e.d.
+IOW (0x 4024f500, 0x 00000001)
+0x00000001
+IOR (0x 4024f500, 0x 00000001) n.e.d.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : SROM_ProgramRow_Work: WORK FLASH LG Sector
+START
+-----------------------------------------------------------------------------------
+
+ProgramRow: Start
+Num of words is 128
+IOW (0x 28002004, 0x 00000100)
+IOW (0x 28002008, 0x 14000000)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+IOW (0x 28002604, 0x a5a5a5a5)
+IOW (0x 28002608, 0x a5a5a5a5)
+IOW (0x 2800260c, 0x a5a5a5a5)
+IOW (0x 28002610, 0x a5a5a5a5)
+IOW (0x 28002614, 0x a5a5a5a5)
+IOW (0x 28002618, 0x a5a5a5a5)
+IOW (0x 2800261c, 0x a5a5a5a5)
+IOW (0x 28002620, 0x a5a5a5a5)
+IOW (0x 28002624, 0x a5a5a5a5)
+IOW (0x 28002628, 0x a5a5a5a5)
+IOW (0x 2800262c, 0x a5a5a5a5)
+IOW (0x 28002630, 0x a5a5a5a5)
+IOW (0x 28002634, 0x a5a5a5a5)
+IOW (0x 28002638, 0x a5a5a5a5)
+IOW (0x 2800263c, 0x a5a5a5a5)
+IOW (0x 28002640, 0x a5a5a5a5)
+IOW (0x 28002644, 0x a5a5a5a5)
+IOW (0x 28002648, 0x a5a5a5a5)
+IOW (0x 2800264c, 0x a5a5a5a5)
+IOW (0x 28002650, 0x a5a5a5a5)
+IOW (0x 28002654, 0x a5a5a5a5)
+IOW (0x 28002658, 0x a5a5a5a5)
+IOW (0x 2800265c, 0x a5a5a5a5)
+IOW (0x 28002660, 0x a5a5a5a5)
+IOW (0x 28002664, 0x a5a5a5a5)
+IOW (0x 28002668, 0x a5a5a5a5)
+IOW (0x 2800266c, 0x a5a5a5a5)
+IOW (0x 28002670, 0x a5a5a5a5)
+IOW (0x 28002674, 0x a5a5a5a5)
+IOW (0x 28002678, 0x a5a5a5a5)
+IOW (0x 2800267c, 0x a5a5a5a5)
+IOW (0x 28002680, 0x a5a5a5a5)
+IOW (0x 28002684, 0x a5a5a5a5)
+IOW (0x 28002688, 0x a5a5a5a5)
+IOW (0x 2800268c, 0x a5a5a5a5)
+IOW (0x 28002690, 0x a5a5a5a5)
+IOW (0x 28002694, 0x a5a5a5a5)
+IOW (0x 28002698, 0x a5a5a5a5)
+IOW (0x 2800269c, 0x a5a5a5a5)
+IOW (0x 280026a0, 0x a5a5a5a5)
+IOW (0x 280026a4, 0x a5a5a5a5)
+IOW (0x 280026a8, 0x a5a5a5a5)
+IOW (0x 280026ac, 0x a5a5a5a5)
+IOW (0x 280026b0, 0x a5a5a5a5)
+IOW (0x 280026b4, 0x a5a5a5a5)
+IOW (0x 280026b8, 0x a5a5a5a5)
+IOW (0x 280026bc, 0x a5a5a5a5)
+IOW (0x 280026c0, 0x a5a5a5a5)
+IOW (0x 280026c4, 0x a5a5a5a5)
+IOW (0x 280026c8, 0x a5a5a5a5)
+IOW (0x 280026cc, 0x a5a5a5a5)
+IOW (0x 280026d0, 0x a5a5a5a5)
+IOW (0x 280026d4, 0x a5a5a5a5)
+IOW (0x 280026d8, 0x a5a5a5a5)
+IOW (0x 280026dc, 0x a5a5a5a5)
+IOW (0x 280026e0, 0x a5a5a5a5)
+IOW (0x 280026e4, 0x a5a5a5a5)
+IOW (0x 280026e8, 0x a5a5a5a5)
+IOW (0x 280026ec, 0x a5a5a5a5)
+IOW (0x 280026f0, 0x a5a5a5a5)
+IOW (0x 280026f4, 0x a5a5a5a5)
+IOW (0x 280026f8, 0x a5a5a5a5)
+IOW (0x 280026fc, 0x a5a5a5a5)
+IOW (0x 28002700, 0x a5a5a5a5)
+IOW (0x 28002704, 0x a5a5a5a5)
+IOW (0x 28002708, 0x a5a5a5a5)
+IOW (0x 2800270c, 0x a5a5a5a5)
+IOW (0x 28002710, 0x a5a5a5a5)
+IOW (0x 28002714, 0x a5a5a5a5)
+IOW (0x 28002718, 0x a5a5a5a5)
+IOW (0x 2800271c, 0x a5a5a5a5)
+IOW (0x 28002720, 0x a5a5a5a5)
+IOW (0x 28002724, 0x a5a5a5a5)
+IOW (0x 28002728, 0x a5a5a5a5)
+IOW (0x 2800272c, 0x a5a5a5a5)
+IOW (0x 28002730, 0x a5a5a5a5)
+IOW (0x 28002734, 0x a5a5a5a5)
+IOW (0x 28002738, 0x a5a5a5a5)
+IOW (0x 2800273c, 0x a5a5a5a5)
+IOW (0x 28002740, 0x a5a5a5a5)
+IOW (0x 28002744, 0x a5a5a5a5)
+IOW (0x 28002748, 0x a5a5a5a5)
+IOW (0x 2800274c, 0x a5a5a5a5)
+IOW (0x 28002750, 0x a5a5a5a5)
+IOW (0x 28002754, 0x a5a5a5a5)
+IOW (0x 28002758, 0x a5a5a5a5)
+IOW (0x 2800275c, 0x a5a5a5a5)
+IOW (0x 28002760, 0x a5a5a5a5)
+IOW (0x 28002764, 0x a5a5a5a5)
+IOW (0x 28002768, 0x a5a5a5a5)
+IOW (0x 2800276c, 0x a5a5a5a5)
+IOW (0x 28002770, 0x a5a5a5a5)
+IOW (0x 28002774, 0x a5a5a5a5)
+IOW (0x 28002778, 0x a5a5a5a5)
+IOW (0x 2800277c, 0x a5a5a5a5)
+IOW (0x 28002780, 0x a5a5a5a5)
+IOW (0x 28002784, 0x a5a5a5a5)
+IOW (0x 28002788, 0x a5a5a5a5)
+IOW (0x 2800278c, 0x a5a5a5a5)
+IOW (0x 28002790, 0x a5a5a5a5)
+IOW (0x 28002794, 0x a5a5a5a5)
+IOW (0x 28002798, 0x a5a5a5a5)
+IOW (0x 2800279c, 0x a5a5a5a5)
+IOW (0x 280027a0, 0x a5a5a5a5)
+IOW (0x 280027a4, 0x a5a5a5a5)
+IOW (0x 280027a8, 0x a5a5a5a5)
+IOW (0x 280027ac, 0x a5a5a5a5)
+IOW (0x 280027b0, 0x a5a5a5a5)
+IOW (0x 280027b4, 0x a5a5a5a5)
+IOW (0x 280027b8, 0x a5a5a5a5)
+IOW (0x 280027bc, 0x a5a5a5a5)
+IOW (0x 280027c0, 0x a5a5a5a5)
+IOW (0x 280027c4, 0x a5a5a5a5)
+IOW (0x 280027c8, 0x a5a5a5a5)
+IOW (0x 280027cc, 0x a5a5a5a5)
+IOW (0x 280027d0, 0x a5a5a5a5)
+IOW (0x 280027d4, 0x a5a5a5a5)
+IOW (0x 280027d8, 0x a5a5a5a5)
+IOW (0x 280027dc, 0x a5a5a5a5)
+IOW (0x 280027e0, 0x a5a5a5a5)
+IOW (0x 280027e4, 0x a5a5a5a5)
+IOW (0x 280027e8, 0x a5a5a5a5)
+IOW (0x 280027ec, 0x a5a5a5a5)
+IOW (0x 280027f0, 0x a5a5a5a5)
+IOW (0x 280027f4, 0x a5a5a5a5)
+IOW (0x 280027f8, 0x a5a5a5a5)
+IOW (0x 280027fc, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 30010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000a8
+IOR (0x 28002000, 0x f00000a8) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+ProgramRow: End
+INFO: 0x f00000a8, PASS
+
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : SROM_ProgramRow_Work: WORK FLASH LG Sector
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : SROM_ProgramRow_Work: WORK FLASH LG Sector
+START
+-----------------------------------------------------------------------------------
+
+ProgramRow: Start
+Num of words is 128
+IOW (0x 28002004, 0x 00000101)
+IOW (0x 28002008, 0x 14000000)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+IOW (0x 28002604, 0x a5a5a5a5)
+IOW (0x 28002608, 0x a5a5a5a5)
+IOW (0x 2800260c, 0x a5a5a5a5)
+IOW (0x 28002610, 0x a5a5a5a5)
+IOW (0x 28002614, 0x a5a5a5a5)
+IOW (0x 28002618, 0x a5a5a5a5)
+IOW (0x 2800261c, 0x a5a5a5a5)
+IOW (0x 28002620, 0x a5a5a5a5)
+IOW (0x 28002624, 0x a5a5a5a5)
+IOW (0x 28002628, 0x a5a5a5a5)
+IOW (0x 2800262c, 0x a5a5a5a5)
+IOW (0x 28002630, 0x a5a5a5a5)
+IOW (0x 28002634, 0x a5a5a5a5)
+IOW (0x 28002638, 0x a5a5a5a5)
+IOW (0x 2800263c, 0x a5a5a5a5)
+IOW (0x 28002640, 0x a5a5a5a5)
+IOW (0x 28002644, 0x a5a5a5a5)
+IOW (0x 28002648, 0x a5a5a5a5)
+IOW (0x 2800264c, 0x a5a5a5a5)
+IOW (0x 28002650, 0x a5a5a5a5)
+IOW (0x 28002654, 0x a5a5a5a5)
+IOW (0x 28002658, 0x a5a5a5a5)
+IOW (0x 2800265c, 0x a5a5a5a5)
+IOW (0x 28002660, 0x a5a5a5a5)
+IOW (0x 28002664, 0x a5a5a5a5)
+IOW (0x 28002668, 0x a5a5a5a5)
+IOW (0x 2800266c, 0x a5a5a5a5)
+IOW (0x 28002670, 0x a5a5a5a5)
+IOW (0x 28002674, 0x a5a5a5a5)
+IOW (0x 28002678, 0x a5a5a5a5)
+IOW (0x 2800267c, 0x a5a5a5a5)
+IOW (0x 28002680, 0x a5a5a5a5)
+IOW (0x 28002684, 0x a5a5a5a5)
+IOW (0x 28002688, 0x a5a5a5a5)
+IOW (0x 2800268c, 0x a5a5a5a5)
+IOW (0x 28002690, 0x a5a5a5a5)
+IOW (0x 28002694, 0x a5a5a5a5)
+IOW (0x 28002698, 0x a5a5a5a5)
+IOW (0x 2800269c, 0x a5a5a5a5)
+IOW (0x 280026a0, 0x a5a5a5a5)
+IOW (0x 280026a4, 0x a5a5a5a5)
+IOW (0x 280026a8, 0x a5a5a5a5)
+IOW (0x 280026ac, 0x a5a5a5a5)
+IOW (0x 280026b0, 0x a5a5a5a5)
+IOW (0x 280026b4, 0x a5a5a5a5)
+IOW (0x 280026b8, 0x a5a5a5a5)
+IOW (0x 280026bc, 0x a5a5a5a5)
+IOW (0x 280026c0, 0x a5a5a5a5)
+IOW (0x 280026c4, 0x a5a5a5a5)
+IOW (0x 280026c8, 0x a5a5a5a5)
+IOW (0x 280026cc, 0x a5a5a5a5)
+IOW (0x 280026d0, 0x a5a5a5a5)
+IOW (0x 280026d4, 0x a5a5a5a5)
+IOW (0x 280026d8, 0x a5a5a5a5)
+IOW (0x 280026dc, 0x a5a5a5a5)
+IOW (0x 280026e0, 0x a5a5a5a5)
+IOW (0x 280026e4, 0x a5a5a5a5)
+IOW (0x 280026e8, 0x a5a5a5a5)
+IOW (0x 280026ec, 0x a5a5a5a5)
+IOW (0x 280026f0, 0x a5a5a5a5)
+IOW (0x 280026f4, 0x a5a5a5a5)
+IOW (0x 280026f8, 0x a5a5a5a5)
+IOW (0x 280026fc, 0x a5a5a5a5)
+IOW (0x 28002700, 0x a5a5a5a5)
+IOW (0x 28002704, 0x a5a5a5a5)
+IOW (0x 28002708, 0x a5a5a5a5)
+IOW (0x 2800270c, 0x a5a5a5a5)
+IOW (0x 28002710, 0x a5a5a5a5)
+IOW (0x 28002714, 0x a5a5a5a5)
+IOW (0x 28002718, 0x a5a5a5a5)
+IOW (0x 2800271c, 0x a5a5a5a5)
+IOW (0x 28002720, 0x a5a5a5a5)
+IOW (0x 28002724, 0x a5a5a5a5)
+IOW (0x 28002728, 0x a5a5a5a5)
+IOW (0x 2800272c, 0x a5a5a5a5)
+IOW (0x 28002730, 0x a5a5a5a5)
+IOW (0x 28002734, 0x a5a5a5a5)
+IOW (0x 28002738, 0x a5a5a5a5)
+IOW (0x 2800273c, 0x a5a5a5a5)
+IOW (0x 28002740, 0x a5a5a5a5)
+IOW (0x 28002744, 0x a5a5a5a5)
+IOW (0x 28002748, 0x a5a5a5a5)
+IOW (0x 2800274c, 0x a5a5a5a5)
+IOW (0x 28002750, 0x a5a5a5a5)
+IOW (0x 28002754, 0x a5a5a5a5)
+IOW (0x 28002758, 0x a5a5a5a5)
+IOW (0x 2800275c, 0x a5a5a5a5)
+IOW (0x 28002760, 0x a5a5a5a5)
+IOW (0x 28002764, 0x a5a5a5a5)
+IOW (0x 28002768, 0x a5a5a5a5)
+IOW (0x 2800276c, 0x a5a5a5a5)
+IOW (0x 28002770, 0x a5a5a5a5)
+IOW (0x 28002774, 0x a5a5a5a5)
+IOW (0x 28002778, 0x a5a5a5a5)
+IOW (0x 2800277c, 0x a5a5a5a5)
+IOW (0x 28002780, 0x a5a5a5a5)
+IOW (0x 28002784, 0x a5a5a5a5)
+IOW (0x 28002788, 0x a5a5a5a5)
+IOW (0x 2800278c, 0x a5a5a5a5)
+IOW (0x 28002790, 0x a5a5a5a5)
+IOW (0x 28002794, 0x a5a5a5a5)
+IOW (0x 28002798, 0x a5a5a5a5)
+IOW (0x 2800279c, 0x a5a5a5a5)
+IOW (0x 280027a0, 0x a5a5a5a5)
+IOW (0x 280027a4, 0x a5a5a5a5)
+IOW (0x 280027a8, 0x a5a5a5a5)
+IOW (0x 280027ac, 0x a5a5a5a5)
+IOW (0x 280027b0, 0x a5a5a5a5)
+IOW (0x 280027b4, 0x a5a5a5a5)
+IOW (0x 280027b8, 0x a5a5a5a5)
+IOW (0x 280027bc, 0x a5a5a5a5)
+IOW (0x 280027c0, 0x a5a5a5a5)
+IOW (0x 280027c4, 0x a5a5a5a5)
+IOW (0x 280027c8, 0x a5a5a5a5)
+IOW (0x 280027cc, 0x a5a5a5a5)
+IOW (0x 280027d0, 0x a5a5a5a5)
+IOW (0x 280027d4, 0x a5a5a5a5)
+IOW (0x 280027d8, 0x a5a5a5a5)
+IOW (0x 280027dc, 0x a5a5a5a5)
+IOW (0x 280027e0, 0x a5a5a5a5)
+IOW (0x 280027e4, 0x a5a5a5a5)
+IOW (0x 280027e8, 0x a5a5a5a5)
+IOW (0x 280027ec, 0x a5a5a5a5)
+IOW (0x 280027f0, 0x a5a5a5a5)
+IOW (0x 280027f4, 0x a5a5a5a5)
+IOW (0x 280027f8, 0x a5a5a5a5)
+IOW (0x 280027fc, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 30010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000a8
+IOR (0x 28002000, 0x f00000a8) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+ProgramRow: End
+INFO: 0x f00000a8, PASS
+
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : SROM_ProgramRow_Work: WORK FLASH LG Sector
+___________________________________________________________________________________
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Running Test : SROM_ProgramRow_Work: WORK FLASH LG Sector
+START
+-----------------------------------------------------------------------------------
+
+ProgramRow: Start
+Num of words is 128
+IOW (0x 28002004, 0x 0000010a)
+IOW (0x 28002008, 0x 14000000)
+Data Taken from SRAM
+IOW (0x 2800200c, 0x 28002600)
+IOW (0x 28002600, 0x a5a5a5a5)
+IOW (0x 28002604, 0x a5a5a5a5)
+IOW (0x 28002608, 0x a5a5a5a5)
+IOW (0x 2800260c, 0x a5a5a5a5)
+IOW (0x 28002610, 0x a5a5a5a5)
+IOW (0x 28002614, 0x a5a5a5a5)
+IOW (0x 28002618, 0x a5a5a5a5)
+IOW (0x 2800261c, 0x a5a5a5a5)
+IOW (0x 28002620, 0x a5a5a5a5)
+IOW (0x 28002624, 0x a5a5a5a5)
+IOW (0x 28002628, 0x a5a5a5a5)
+IOW (0x 2800262c, 0x a5a5a5a5)
+IOW (0x 28002630, 0x a5a5a5a5)
+IOW (0x 28002634, 0x a5a5a5a5)
+IOW (0x 28002638, 0x a5a5a5a5)
+IOW (0x 2800263c, 0x a5a5a5a5)
+IOW (0x 28002640, 0x a5a5a5a5)
+IOW (0x 28002644, 0x a5a5a5a5)
+IOW (0x 28002648, 0x a5a5a5a5)
+IOW (0x 2800264c, 0x a5a5a5a5)
+IOW (0x 28002650, 0x a5a5a5a5)
+IOW (0x 28002654, 0x a5a5a5a5)
+IOW (0x 28002658, 0x a5a5a5a5)
+IOW (0x 2800265c, 0x a5a5a5a5)
+IOW (0x 28002660, 0x a5a5a5a5)
+IOW (0x 28002664, 0x a5a5a5a5)
+IOW (0x 28002668, 0x a5a5a5a5)
+IOW (0x 2800266c, 0x a5a5a5a5)
+IOW (0x 28002670, 0x a5a5a5a5)
+IOW (0x 28002674, 0x a5a5a5a5)
+IOW (0x 28002678, 0x a5a5a5a5)
+IOW (0x 2800267c, 0x a5a5a5a5)
+IOW (0x 28002680, 0x a5a5a5a5)
+IOW (0x 28002684, 0x a5a5a5a5)
+IOW (0x 28002688, 0x a5a5a5a5)
+IOW (0x 2800268c, 0x a5a5a5a5)
+IOW (0x 28002690, 0x a5a5a5a5)
+IOW (0x 28002694, 0x a5a5a5a5)
+IOW (0x 28002698, 0x a5a5a5a5)
+IOW (0x 2800269c, 0x a5a5a5a5)
+IOW (0x 280026a0, 0x a5a5a5a5)
+IOW (0x 280026a4, 0x a5a5a5a5)
+IOW (0x 280026a8, 0x a5a5a5a5)
+IOW (0x 280026ac, 0x a5a5a5a5)
+IOW (0x 280026b0, 0x a5a5a5a5)
+IOW (0x 280026b4, 0x a5a5a5a5)
+IOW (0x 280026b8, 0x a5a5a5a5)
+IOW (0x 280026bc, 0x a5a5a5a5)
+IOW (0x 280026c0, 0x a5a5a5a5)
+IOW (0x 280026c4, 0x a5a5a5a5)
+IOW (0x 280026c8, 0x a5a5a5a5)
+IOW (0x 280026cc, 0x a5a5a5a5)
+IOW (0x 280026d0, 0x a5a5a5a5)
+IOW (0x 280026d4, 0x a5a5a5a5)
+IOW (0x 280026d8, 0x a5a5a5a5)
+IOW (0x 280026dc, 0x a5a5a5a5)
+IOW (0x 280026e0, 0x a5a5a5a5)
+IOW (0x 280026e4, 0x a5a5a5a5)
+IOW (0x 280026e8, 0x a5a5a5a5)
+IOW (0x 280026ec, 0x a5a5a5a5)
+IOW (0x 280026f0, 0x a5a5a5a5)
+IOW (0x 280026f4, 0x a5a5a5a5)
+IOW (0x 280026f8, 0x a5a5a5a5)
+IOW (0x 280026fc, 0x a5a5a5a5)
+IOW (0x 28002700, 0x a5a5a5a5)
+IOW (0x 28002704, 0x a5a5a5a5)
+IOW (0x 28002708, 0x a5a5a5a5)
+IOW (0x 2800270c, 0x a5a5a5a5)
+IOW (0x 28002710, 0x a5a5a5a5)
+IOW (0x 28002714, 0x a5a5a5a5)
+IOW (0x 28002718, 0x a5a5a5a5)
+IOW (0x 2800271c, 0x a5a5a5a5)
+IOW (0x 28002720, 0x a5a5a5a5)
+IOW (0x 28002724, 0x a5a5a5a5)
+IOW (0x 28002728, 0x a5a5a5a5)
+IOW (0x 2800272c, 0x a5a5a5a5)
+IOW (0x 28002730, 0x a5a5a5a5)
+IOW (0x 28002734, 0x a5a5a5a5)
+IOW (0x 28002738, 0x a5a5a5a5)
+IOW (0x 2800273c, 0x a5a5a5a5)
+IOW (0x 28002740, 0x a5a5a5a5)
+IOW (0x 28002744, 0x a5a5a5a5)
+IOW (0x 28002748, 0x a5a5a5a5)
+IOW (0x 2800274c, 0x a5a5a5a5)
+IOW (0x 28002750, 0x a5a5a5a5)
+IOW (0x 28002754, 0x a5a5a5a5)
+IOW (0x 28002758, 0x a5a5a5a5)
+IOW (0x 2800275c, 0x a5a5a5a5)
+IOW (0x 28002760, 0x a5a5a5a5)
+IOW (0x 28002764, 0x a5a5a5a5)
+IOW (0x 28002768, 0x a5a5a5a5)
+IOW (0x 2800276c, 0x a5a5a5a5)
+IOW (0x 28002770, 0x a5a5a5a5)
+IOW (0x 28002774, 0x a5a5a5a5)
+IOW (0x 28002778, 0x a5a5a5a5)
+IOW (0x 2800277c, 0x a5a5a5a5)
+IOW (0x 28002780, 0x a5a5a5a5)
+IOW (0x 28002784, 0x a5a5a5a5)
+IOW (0x 28002788, 0x a5a5a5a5)
+IOW (0x 2800278c, 0x a5a5a5a5)
+IOW (0x 28002790, 0x a5a5a5a5)
+IOW (0x 28002794, 0x a5a5a5a5)
+IOW (0x 28002798, 0x a5a5a5a5)
+IOW (0x 2800279c, 0x a5a5a5a5)
+IOW (0x 280027a0, 0x a5a5a5a5)
+IOW (0x 280027a4, 0x a5a5a5a5)
+IOW (0x 280027a8, 0x a5a5a5a5)
+IOW (0x 280027ac, 0x a5a5a5a5)
+IOW (0x 280027b0, 0x a5a5a5a5)
+IOW (0x 280027b4, 0x a5a5a5a5)
+IOW (0x 280027b8, 0x a5a5a5a5)
+IOW (0x 280027bc, 0x a5a5a5a5)
+IOW (0x 280027c0, 0x a5a5a5a5)
+IOW (0x 280027c4, 0x a5a5a5a5)
+IOW (0x 280027c8, 0x a5a5a5a5)
+IOW (0x 280027cc, 0x a5a5a5a5)
+IOW (0x 280027d0, 0x a5a5a5a5)
+IOW (0x 280027d4, 0x a5a5a5a5)
+IOW (0x 280027d8, 0x a5a5a5a5)
+IOW (0x 280027dc, 0x a5a5a5a5)
+IOW (0x 280027e0, 0x a5a5a5a5)
+IOW (0x 280027e4, 0x a5a5a5a5)
+IOW (0x 280027e8, 0x a5a5a5a5)
+IOW (0x 280027ec, 0x a5a5a5a5)
+IOW (0x 280027f0, 0x a5a5a5a5)
+IOW (0x 280027f4, 0x a5a5a5a5)
+IOW (0x 280027f8, 0x a5a5a5a5)
+IOW (0x 280027fc, 0x a5a5a5a5)
+Executing API with SYSCALL_GreaterThan32bits
+IOW (0x 28002000, 0x 30010100)
+0x00000f22
+IOR (0x 40220040, 0x 00000f22) n.e.d.
+IOW (0x 40220040, 0x 80000f22)
+IOW (0x 4022004c, 0x 28002000)
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+IOW (0x 40220048, 0x 00000001)
+0x00000f22
+IOR (0x 4022005c, 0x 00000f22) n.e.d.
+Srom_ReturnCheck: START
+Return status of the SROM API
+0xf00000a8
+IOR (0x 28002000, 0x f00000a8) n.e.d.
+Srom_ReturnCheck: END
+Reason not listed. Update the table from BROS
+ProgramRow: End
+INFO: 0x f00000a8, PASS
+
+0x28002000
+IOR (0x 4022004c, 0x 28002000) n.e.d.
+Execution time is 1 s
+-----------------------------------------------------------------------------------
+
+END
+Completed Test : SROM_ProgramRow_Work: WORK FLASH LG Sector
+___________________________________________________________________________________
+
+Execution time is 2 s
+shutdown command invoked
+Info : traveo2_c2d_4m.dap: powering down debug domain...
