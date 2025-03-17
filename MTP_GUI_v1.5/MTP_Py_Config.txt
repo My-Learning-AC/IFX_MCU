@@ -1,0 +1,393 @@
+# MTP_Py_Config.txt file
+
+[Board_Specifics]
+
+# Path for storing the test reports of the device that has been tested
+PathForReport = C:\Test_Reports\
+
+# Aurix Flasher Tool path for programming the Aurix devices
+AurixFlasherToolPath = C:\Infineon\AURIXFlasherSoftwareTool-3.0.2
+
+# AutoFlashUtility Tool path for programming the Traveo and PSoC devices
+AutoFlashUtilityToolPath = C:\Program Files (x86)\Infineon\Auto Flash Utility 1.3\bin
+
+# List of boards of all Automotive MCU family devices
+BoardFamily = 
+	(
+		( 
+			"Aurix",
+				( "TC4Dx", "KIT_A3G_TC4D7_LITE" ),
+		),
+		( 
+			"Traveo",
+				( "CYTVII-B-E-BB", "TVII_Baseboard" ),
+				( "CYTVII-B-E-1M", "1M-100", "1M-176", "1M-SK" ),
+				( "CYTVII-B-E-2M", "2M-100", "2M-176", "2M-SK" ),
+				( "CYTVII-B-E-4M", "4M-100-LITE" ),
+				( "CYTVII-B-H-4M", "4M-176", "4M-272" ),
+				( "CYTVII-B-H-8M", "8M-176", "8M-320", "8M-176-LITE" ),
+				( "CYTVII-B-H-16M", "16M-176", "16M-320" ),
+				( "CYTVII-C-E-4M", "4M-176" ),
+				( "CYTVII-C-2D-4M", "4M-216", "4M-272-LITE" ),
+				( "CYTVII-C-2D-6M", "6M-327", "6M-500" ),
+		),
+		( 
+			"PSoC",
+				( "SHIELD-KIT", "CY8CKIT-026" ),
+				( "PSOC4", "4700S-PLUS" ),
+				( "PSoC-HV", "HVPA-SPM-C" ),
+				( "CYHVPA", "128K-32" ),
+				( "PSOC4-HVMS", "HVMS-64K_EVK", "HVMS-128K_LITE", "HVMS-64K_LITE" ),
+				( "PSoC4-HVPA", "HVPA-144K_LITE" ),
+		),
+	)
+
+# List of all the tests for each MCU device from all Automotive MCU families 
+BoardsList  = 
+	(
+		
+		##################################      AURIX DEVICES      ########################################
+
+		( 
+			"KIT_A3G_TC4D7_LITE", "C:/MTP_SREC_FILES/TC4Dx/KIT_A3G_TC4D7_LITE", "",
+			( 
+				"TEST_GPIO",
+				"TEST_LED",
+				"TEST_USER_BUTTON",
+				"TEST_POTENTIOMETER",
+				"TEST_EEPROM",
+				"TEST_CAN",
+				"TEST_ETHERNET"		   
+			)
+		),
+
+		##################################      TRAVEO DEVICES      ########################################
+
+		(
+			"TVII_Baseboard", "C:/MTP_SREC_FILES/TVII-B-E-BB/TVII_Baseboard", "traveo2_00.cfg",
+			(       
+				"GPIO",
+				"LED",
+				"BUTTON",
+				"POT",
+				"SPI_CAN",
+				"NORMAL_CAN",
+				"LIN",
+				"EEPROM"
+			)
+		),		   
+		(
+			"1M-100", "C:/MTP_SREC_FILES/TVII-B-E-1M/1M-100", "traveo2_00.cfg",
+			(
+				"Reset Button",
+				"User Button & User-LED",
+				"Soft UART GPIO",
+				"UART"
+			)
+		),
+		(
+			"1M-176", "C:/MTP_SREC_FILES/TVII-B-E-1M/1M-176", "traveo2_00.cfg",
+			(
+				"Reset Button",
+				"User Button & User-LED",
+				"Soft UART GPIO",
+				"UART"
+			)
+		),
+		( 
+			"1M-SK", "C:/MTP_SREC_FILES/TVII-B-E-1M/1M-SK", "traveo2_1m_a0.cfg",
+			(
+				"GPIO headers",
+				"User LEDs",
+				"User Button",
+				"Potentiometer",
+				"CAN-FD"
+			)
+		), 
+		( 
+			"2M-100", "C:/MTP_SREC_FILES/TVII-B-E-2M/2M-100", "traveo2_2m.cfg",
+			(
+				"Reset Button",
+				"User Button & User-LED",
+				"Soft UART GPIO",
+				"UART"
+			)
+		),
+		( 
+			"2M-176", "C:/MTP_SREC_FILES/TVII-B-E-2M/2M-176", "traveo2_2m.cfg",
+			(
+				"Reset Button",
+				"User Button & User-LED",
+				"Soft UART GPIO",
+				"UART"
+			)
+		),
+		( 
+			"2M-SK", "C:/MTP_SREC_FILES/TVII-B-E-2M/2M-SK", "traveo2_2m.cfg",
+			(
+				"Reset Button",
+				"User-LED",
+				"User-SW1",
+				"Pot",
+				"Soft-UART GPIO"
+			)
+		),
+		( 
+			"4M-100-LITE", "C:/MTP_SREC_FILES/TVII-B-E-4M/4M-100-LITE", "traveo2_be_4m.cfg",
+			(	
+				"GPIO Header",
+				"User LEDs",
+				"User Buttons", 
+				"Potentiometer",
+				"CANFD",
+				"WCO"
+			)
+		),
+		( 
+			"4M-272", "C:/MTP_SREC_FILES/TVII-B-H-4M/4M-272", "traveo2_4m.cfg",
+			( 
+				"",
+				"GPIO",
+				"USER-BUTTON",
+				"USER-LED",
+				"I2S",
+				"SDCARD",
+				"HYPERFLASH",
+				"QSPI",
+				"AUTO_ETH",
+				"WCO"
+			)
+		),
+		( 
+			"8M-176", "C:/MTP_SREC_FILES/TVII-B-H-8M/8M-176", "traveo2_8m.cfg",
+			( 
+				"",
+				"GPIO",
+				"USER-BUTTON",
+				"USER-LED",
+				"I2S",
+				"SDCARD",
+				"HYPERFLASH",
+				"QSPI",
+				"AUTO_ETH",
+				"WCO"
+			)
+		),
+		( 
+			"8M-176-LITE", "C:/MTP_SREC_FILES/TVII-B-H-8M/8M-176-LITE", "traveo2_8m.cfg",
+			( 
+				"GPIO Headers",
+				"User LEDs",
+				"User Buttons",
+				"Potentiometer",
+				"QSPI",
+				"CANFD",
+				"Ethernet",	
+				"WCO"	  
+			)
+		),
+		( 
+			"8M-320", "C:/MTP_SREC_FILES/TVII-B-H-8M/8M-320", "traveo2_8m.cfg",
+			( 
+				"",
+				"GPIO",
+				"USER-BUTTON",
+				"USER-LED",
+				"I2S",
+				"SDCARD",
+				"HYPERFLASH",
+				"QSPI",
+				"AUTO_ETH",
+				"WCO"
+			)
+		),
+		( 
+			"16M-176", "C:/MTP_SREC_FILES/TVII-B-H-16M/16M-176", "traveo2_8m.cfg",
+			(
+				"RESET",
+				"GPIO",
+				"USER-LED1",
+				"USER-LED2",
+				"USER-BUTTON1",
+				"USER-BUTTON2",
+				"AUDIO_I2S",
+				"QSPI",
+				"HYPERFLASH",
+				"HYPERRAM",
+				"SDCARD",
+				"AUTO_ETH",
+				"WCO"
+			)
+		),
+		( 
+			"16M-320", "C:/MTP_SREC_FILES/TVII-B-H-16M/16M-320", "traveo2_8m.cfg",
+			( 
+				"",
+				"USER-LED",
+				"USER-BUTTON",
+				"SERIAL-IO",
+				"SDCARD",
+				"I2S",
+				"QSPI",
+				"HYPERFLASH",
+				"HYPERRAM",
+				"AUTO-ETHERNET",
+				"GIG-ETHERNET",
+				"WCO"
+			)
+		),
+		( 
+			"4M-176","C:/MTP_SREC_FILES/TVII-C-E-4M/4M-176","traveo2_ce_4m.cfg",
+			(
+				"Reset",
+				"USER-LEDS",
+				"USER-BUTTONS",
+				"POTENTIOMETER",
+				"LCD",
+				"CAN-FD",
+				"LIN",
+				"PWM",
+				"TDM",
+				"SMIF",
+				"GPIO"
+			)
+		),
+		( 
+			"4M-216","C:/MTP_SREC_FILES/TVII-C-2D-4M/4M-216","traveo2_c2d_4m.cfg",
+			( 
+				"TEST_USER_LEDs",
+				"TEST_USER_BUTTONs",
+				"TEST_POTENTIOMETER",
+				"TEST_HYPER_FLASH",
+				"TEST_HYPER_RAM",
+				"TEST_AUDIO_TDM",
+				"TEST_CANFD",
+				"TEST_LIN",
+				"TEST_GIGABIT_ETHERNET",
+				"TEST_FPD_DISPLAY"
+			)
+		),
+		( 
+			"4M-272-LITE", "C:/MTP_SREC_FILES/TVII-C-2D-4M/4M-272-LITE", "traveo2_c2d_4m.cfg",
+			( 
+				"GPIO Headers",
+				"User LEDs",
+				"User Button",
+				"Potentiometer",
+				"HyperFlash",
+				"HyperRAM",
+				"Fpd-Display",
+				"RGB-FX3"
+			)
+		),
+		( 
+			"6M-500", "C:/MTP_SREC_FILES/TVII-C-2D-6M/6M-500", "traveo2_6m.cfg",
+			( 
+				"",
+				"TEST_FPD_LINK_0",
+				"TEST_FPD_LINK_1",
+				"TEST_BUTTON",
+				"TEST_LED",
+				"TEST_POT_1",
+				"TEST_POT_2",
+				"TEST_I2S",
+				"TEST_SEMPERFLASH",
+				"TEST_HYPERRAM",
+				"TEST_GIG_ETH",
+				"TEST_CAN",
+				"TEST_LIN",
+				"TEST_WCO"
+			)
+		),
+
+		##################################      PSoC DEVICES      ########################################
+
+		( 
+			"CY8CKIT-026", "C:/MTP_SREC_FILES/SHIELD-KIT/CY8CKIT-026", "traveo2_1m_a0.cfg",
+			(
+				"CAN 1",
+				"CAN 2",
+				"LIN 1",
+				"LIN 2"
+			)
+		),
+		( 
+			"HVMS-128K_LITE", "C:/MTP_SREC_FILES/PSOC4-HVMS/HVMS-128K_LITE", "psoc4.cfg",
+			(       
+				"GPIO",
+				"LED1",
+				"LED2",
+				"BUTTON",
+				"POT",
+				"CAPSENSE"
+			)
+		),
+		( 
+			"HVMS-64K_LITE", "C:/MTP_SREC_FILES/PSOC4-HVMS/HVMS-64K_LITE", "psoc4.cfg",
+			(       
+				"GPIO",
+				"LED1",
+				"LED2",
+				"BUTTON",
+				"POT",
+				"CAPSENSE"
+			)
+		),
+		( 
+			"HVPA-144K_LITE", "C:/MTP_SREC_FILES/PSoC4-HVPA/HVPA-144K_LITE", "psoc4.cfg",
+			(       
+				"GPIO",
+				"LED",
+				"BUTTON",
+				"DIP",
+				"PSEUDO-LOAD_POT",
+				"POT"
+			)
+		),
+		( 
+			"HVMS-64K_EVK", "C:/MTP_SREC_FILES/PSOC4-HVMS/HVMS-64K_EVK", "psoc4.cfg",
+			(       
+				"LED1",
+				"LED2",
+				"BUTTON",
+				"POT",
+				"CAPSENSE_ONBOARD_TWO_BUTTON",
+				"CAPSENSE_8X9_TOUCHPAD",
+				"CAPSENSE_1X6_SLIDER_AND_6_BUTTON",
+				"LIN"       
+			)
+		),
+		( 
+			"4700S-PLUS", "C:/MTP_SREC_FILES/PSOC4/4700S-PLUS", "psoc4.cfg",
+			(       
+				"LED",
+				"BTN",
+				"GPIO",
+				"TOUCH"
+			)
+		),
+		( 
+			"128K-32", "C:/MTP_SREC_FILES/CYHVPA/128K-32", "psoc4hv_a0.cfg",
+			(
+				"Reset, Shunt and Supply Voltage",
+				"User-LED",
+				"User Push Button",
+				"User DIP Switch",
+				"Potentiometer",
+				"LIN"
+			)
+		),
+		( 
+			"HVPA-SPM-C", "C:/MTP_SREC_FILES/PSoC-HV/HVPA-SPM-C", "psoc4hv_a0.cfg",
+			( 
+				"TEST_LED",
+				"TEST_PSEUDO_VOLTAGE_SENSOR",
+				"TEST_PSEUDO_CURRENT_SENSOR",
+				"TEST_PSEUDO_TEMPERATURE_SENSOR",
+				"TEST_PSEUDO_ROOM_TEMPERATURE_SENSOR",
+				"TEST_CANFD"
+			)
+		),
+	)
+
+# End of MTP_Py_Config.txt file
